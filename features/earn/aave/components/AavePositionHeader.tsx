@@ -11,7 +11,7 @@ import React, { useEffect, useState } from 'react'
 
 import { useAaveContext } from '../../../aave/AaveContextProvider'
 import { AaveStEthYieldsResponse } from '../../../aave/common'
-import { AaveHeaderProps } from '../../../aave/common/StrategyConfigTypes'
+import { AaveHeaderProps, StrategyConfig } from '../../../aave/common/StrategyConfigTypes'
 import { PreparedAaveTotalValueLocked } from '../../../aave/helpers/aavePrepareAaveTotalValueLocked'
 
 const tokenPairList = {
@@ -119,10 +119,16 @@ function AavePositionHeader({
 }
 
 export function headerWithDetails(minimumRiskRatio: IRiskRatio) {
-  return function AavePositionHeaderWithDetails({ strategyName }: { strategyName: string }) {
-    const { aaveTotalValueLocked$, aaveReserveStEthData$ } = useAaveContext()
+  return function AavePositionHeaderWithDetails({
+    strategyConfig,
+  }: {
+    strategyConfig: StrategyConfig
+  }) {
+    const { aaveTotalValueLocked$, aaveReserveConfigurationData$ } = useAaveContext()
     const [tvlState, tvlStateError] = useObservable(aaveTotalValueLocked$)
-    const [aaveReserveConfigData, aaveReserveConfigDataError] = useObservable(aaveReserveStEthData$)
+    const [aaveReserveConfigData, aaveReserveConfigDataError] = useObservable(
+      aaveReserveConfigurationData$({ token: strategyConfig.tokens.collateral }),
+    )
 
     return (
       <WithErrorHandler error={[tvlStateError, aaveReserveConfigDataError]}>
@@ -133,7 +139,7 @@ export function headerWithDetails(minimumRiskRatio: IRiskRatio) {
           {([_tvlState, _aaveReserveConfigData]) => (
             <AavePositionHeader
               maxRisk={new RiskRatio(_aaveReserveConfigData.ltv, RiskRatio.TYPE.LTV)}
-              strategyName={strategyName}
+              strategyName={strategyConfig.name}
               aaveTVL={_tvlState}
               minimumRiskRatio={minimumRiskRatio}
             />
