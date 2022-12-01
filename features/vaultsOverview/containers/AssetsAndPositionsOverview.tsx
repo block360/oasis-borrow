@@ -5,7 +5,7 @@ import { Trans, useTranslation } from 'next-i18next'
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { Box, Card, Flex, Grid, Link, SxStyleProp, Text } from 'theme-ui'
-
+import { StatefulTooltip } from '../../../components/Tooltip'
 import { getToken } from '../../../blockchain/tokensMetadata'
 import { PieChart } from '../../../components/dumb/PieChart'
 import { AppLink } from '../../../components/Links'
@@ -22,69 +22,93 @@ function tokenColor(symbol: string) {
 
 function AssetRow(props: PositionView) {
   return (
-    <Flex
-      sx={{
-        alignItems: 'center',
-        color: '#708390',
-        '&:hover': {
-          backgroundColor: '#F1F3F4',
-        },
-        cursor: 'pointer',
-        pt: '11px',
-        pb: '11px',
-        pl: '12px',
-        pr: '14px',
-        borderRadius: '12px',
+    <StatefulTooltip
+      containerSx={{ position: 'relative' }}
+      tooltipSx={{
+        p: '4px 4px 3px',
+        borderRadius: '4px',
+        background: 'darkgray',
+        bottom: -2,
+        right: '30%',
       }}
-      title={`${props.title}  |  ${props.proportion && formatPercent(props.proportion)}  |  $${
-        props.contentsUsd && formatAmount(props.contentsUsd, 'USD')
-      }`}
+      tooltip={
+        <Text
+          sx={{
+            fontFamily: 'GSU Font, Open Sans',
+            color: 'white',
+            fontSize: '11px',
+            lineHeight: 1,
+          }}
+        >{`${props.title}  |  ${props.proportion && formatPercent(props.proportion)}  |  $${
+          props.contentsUsd && formatAmount(props.contentsUsd, 'USD')
+        }`}</Text>
+      }
     >
-      <Icon
-        name={getToken(props.token).iconCircle}
-        size="32px"
-        sx={{ verticalAlign: 'sub', flexShrink: 0 }}
-      />
-      <Text
-        variant="paragraph2"
+      <Flex
         sx={{
-          fontWeight: 'semiBold',
-          ml: '8px',
-          whiteSpace: 'nowrap',
-          textOverflow: 'ellipsis',
-          overflow: 'hidden',
-          fontFamily: 'GSU Font, Open Sans',
+          alignItems: 'center',
+          color: '#708390',
+          '&:hover': {
+            backgroundColor: '#F1F3F4',
+          },
+          cursor: 'pointer',
+          pt: '11px',
+          pb: '11px',
+          pl: '12px',
+          pr: '14px',
+          borderRadius: '12px',
         }}
       >
-        {props.title}
-      </Text>
-      {props.proportion && (
+        <Icon
+          name={getToken(props.token).iconCircle}
+          size="32px"
+          sx={{ verticalAlign: 'sub', flexShrink: 0 }}
+        />
         <Text
-          variant="paragraph3"
+          variant="paragraph2"
           sx={{
-            ml: '8px',
-          }}
-        >
-          {formatPercent(props.proportion)}
-        </Text>
-      )}
-      {props.contentsUsd && (
-        <Text
-          variant="paragraph3"
-          sx={{
+            fontWeight: 'semiBold',
             ml: '8px',
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
             overflow: 'hidden',
-            fontFamily: '"GSU Font", "Open Sans"',
+            fontFamily: 'GSU Font, Open Sans',
           }}
         >
-          (${formatAmount(props.contentsUsd, 'USD')})
+          {props.title}
         </Text>
-      )}
-      {props.actions && <Icon name="dots_v" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />}
-      {props.url && <Icon name="arrow_right" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />}
-    </Flex>
+        {props.proportion && (
+          <Text
+            variant="paragraph3"
+            sx={{
+              ml: '8px',
+            }}
+          >
+            {formatPercent(props.proportion)}
+          </Text>
+        )}
+        {props.contentsUsd && (
+          <Text
+            variant="paragraph3"
+            sx={{
+              ml: '8px',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden',
+              fontFamily: '"GSU Font", "Open Sans"',
+            }}
+          >
+            (${formatAmount(props.contentsUsd, 'USD')})
+          </Text>
+        )}
+        {props.actions && (
+          <Icon name="dots_v" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />
+        )}
+        {props.url && (
+          <Icon name="arrow_right" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />
+        )}
+      </Flex>
+    </StatefulTooltip>
   )
 }
 
