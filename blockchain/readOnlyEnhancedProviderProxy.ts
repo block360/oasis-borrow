@@ -15,6 +15,7 @@ function fixChainId(chainId: string | number) {
 }
 
 const READ_ONLY_RPC_CALLS = ['eth_call', 'eth_getTransactionReceipt', 'eth_getTransactionByHash']
+let jsonRpcBatchProvider: JsonRpcBatchProvider | undefined = undefined
 
 function getHandler(chainIdPromise: Promise<number | string>): ProxyHandler<any> {
   const getReadOnlyProviderAsync = (() => {
@@ -22,10 +23,14 @@ function getHandler(chainIdPromise: Promise<number | string>): ProxyHandler<any>
     return async function (chainIdPromise: Promise<number | string>) {
       if (!provider) {
         const chainId = fixChainId(await chainIdPromise)
-
-        provider = skipCache(chainId.toString())
-          ? new JsonRpcBatchProvider(networksById[chainId].infuraUrl, chainId)
-          : new JsonRpcCachedProvider(networksById[chainId].infuraUrl, chainId)
+        if (jsonRpcBatchProvider === undefined) {
+          jsonRpcBatchProvider = new JsonRpcBatchProvider(networksById[chainId].infuraUrl, chainId)
+          provider = skipCache(chainId.toString())
+            ? jsonRpcBatchProvider
+            : new JsonRpcCachedProvider(networksById[chainId].infuraUrl, chainId)
+        } else {
+          provider = jsonRpcBatchProvider
+        }
       }
       return provider
     }
