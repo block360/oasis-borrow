@@ -28,7 +28,7 @@
   "ok": "好",
   "back-to-editing": "返回编辑",
   "balance": "余额",
-  "balance-insufficient": "你钱包中的 GSUC 余额不足",
+  "balance-insufficient": "你钱包中的 GSUc 余额不足",
   "balances": "余额",
   "buy": "购买",
   "careers": {
@@ -79,17 +79,17 @@
   "configure-your-vault": "创建金库",
   "create-proxy": "创建代理合约",
   "create-proxy-btn": "创建代理",
-  "create-proxy-desc": "使用 GSUC 存款和其他功能之前，你需要设置钱包代理。",
+  "create-proxy-desc": "使用 GSUc 存款和其他功能之前，你需要设置钱包代理。",
   "create-vault": "创建金库",
   "create-your-vault": "创建你的金库",
   "creating-proxy": "正在创建代理",
   "creating-vault": "正在创建金库",
   "currency": "货币",
   "custom": "自定义",
-  "dai-being-generated": "正在生成 GSUC",
-  "dai-paying-back": "正在偿还 ({{amount}}) GSUC",
-  "dai-paying-back-label": "赎回 GSUC",
-  "dai-savings-rate": "GSUC 存款利率",
+  "dai-being-generated": "正在生成 GSUc",
+  "dai-paying-back": "正在偿还 ({{amount}}) GSUc",
+  "dai-paying-back-label": "赎回 GSUc",
+  "dai-savings-rate": "GSUc 存款利率",
   "deposit": "存入",
   "disconnect": "断开连接",
   "disconnect-magic": "退出账户",
@@ -117,14 +117,14 @@
   "set-proxy-owner-description-pending": "正在设置 proxy 所有者",
   "set-proxy-owner-description-recent": "设置 proxy 所有者",
   "set-proxy-owner-description-recent-failed": "设置 proxy 所有者失败",
-  "open-vault-description-pending": "正在开启 {{ ilk }} 金库并且存入 {{ depositAmount }} {{ token }} 以生成 {{ generateAmount }} GSUC",
-  "open-vault-description-recent": "已开启 {{ ilk }} 金库并且存入 {{ depositAmount }} {{ token }} 以生成 {{ generateAmount }} GSUC",
+  "open-vault-description-pending": "正在开启 {{ ilk }} 金库并且存入 {{ depositAmount }} {{ token }} 以生成 {{ generateAmount }} GSUc",
+  "open-vault-description-recent": "已开启 {{ ilk }} 金库并且存入 {{ depositAmount }} {{ token }} 以生成 {{ generateAmount }} GSUc",
   "open-vault-description-recent-failed": "开启 {{ ilk }} 失败",
-  "deposit-generate-description-pending": "正在存入 {{ depositAmount }} {{ token }} 到金库 {{ id }} 以生成 {{ generateAmount }} GSUC",
-  "deposit-generate-description-recent": "已存入 {{ depositAmount }} {{ token }} 到金库 {{ id }} 以生成 {{ generateAmount }} GSUC",
-  "deposit-generate-description-recent-failed": "存入金库 {{ id }} 以生成 GSUC 失败 ",
-  "withdraw-payback-description-pending": "正从金库 {{ id }} 提取 {{ withdrawAmount }} {{ token }} 并偿还 {{ paybackAmount }} GSUC",
-  "withdraw-payback-description-recent": "已从金库 {{ id }} 提取 {{ withdrawAmount }} {{ token }} 并偿还 {{ paybackAmount }} GSUC",
+  "deposit-generate-description-pending": "正在存入 {{ depositAmount }} {{ token }} 到金库 {{ id }} 以生成 {{ generateAmount }} GSUc",
+  "deposit-generate-description-recent": "已存入 {{ depositAmount }} {{ token }} 到金库 {{ id }} 以生成 {{ generateAmount }} GSUc",
+  "deposit-generate-description-recent-failed": "存入金库 {{ id }} 以生成 GSUc 失败 ",
+  "withdraw-payback-description-pending": "正从金库 {{ id }} 提取 {{ withdrawAmount }} {{ token }} 并偿还 {{ paybackAmount }} GSUc",
+  "withdraw-payback-description-recent": "已从金库 {{ id }} 提取 {{ withdrawAmount }} {{ token }} 并偿还 {{ paybackAmount }} GSUc",
   "withdraw-payback-description-recent-failed": "从金库 {{ id }} 提取抵押品并偿还债务失败",
   "reclaim-collateral-description-pending": "正在收回来自金库 {{ id }} 的 {{ amount }} {{ token }} ",
   "reclaim-collateral-description-recent": "已收回来自金库 {{ id }} 的 {{ amount }} {{ token }} ",
@@ -160,31 +160,31 @@
     "popular": "热门资产"
   },
   "gas-estimation-error": "错误",
-  "get-dai": "获得 GSUC",
+  "get-dai": "获得 GSUc",
   "get-started": "现在开始",
   "go-to-vault": "前往金库 #{{id}}",
   "here": "这里",
   "history": {
     "auction_finished_v2": "拍卖 <0>#{{auctionId}}</0>  已完成，剩余 <0>{{remainingCollateral}} {{token}}</0>。",
-    "auction_started": "拍卖已开始，清算 <0>{{collateralAmount}} {{token}}</0> 以偿还 <0>{{daiAmount}} GSUC</0>。",
-    "auction_started_v2": "拍卖 <0>#{{auctionId}}</0> 已开始, 清算 <0>{{collateralAmount}} {{token}}</0> 以偿还 <0>{{daiAmount}} GSUC</0>。",
+    "auction_started": "拍卖已开始，清算 <0>{{collateralAmount}} {{token}}</0> 以偿还 <0>{{daiAmount}} GSUc</0>。",
+    "auction_started_v2": "拍卖 <0>#{{auctionId}}</0> 已开始, 清算 <0>{{collateralAmount}} {{token}}</0> 以偿还 <0>{{daiAmount}} GSUc</0>。",
     "bought": "Bought",
     "deposit": "已将 <0>{{collateralAmount}} {{token}}</0> 存入金库。",
     "deposited": "Deposited",
-    "generate": "已从金库生成 <0>{{daiAmount}}</0> GSUC ",
+    "generate": "已从金库生成 <0>{{daiAmount}}</0> GSUc ",
     "exit-collateral": "Exit collateral",
-    "exit-dai": "Exit GSUC",
+    "exit-dai": "Exit GSUc",
     "migrate": "金库已迁移",
-    "move_dest": "转移 <0>{{collateralAmount}} {{token}}</0> 和 <0>{{daiAmount}}</0> GSUC 债务到该金库。",
-    "move_src": "从金库转移 <0>{{collateralAmount}} {{token}}</0> 和 <0>{{daiAmount}}</0> GSUC 债务。",
+    "move_dest": "转移 <0>{{collateralAmount}} {{token}}</0> 和 <0>{{daiAmount}}</0> GSUc 债务到该金库。",
+    "move_src": "从金库转移 <0>{{collateralAmount}} {{token}}</0> 和 <0>{{daiAmount}}</0> GSUc 债务。",
     "open": "开启新的金库 ID <0>#{{cdpId}}</0>",
-    "payback": "偿还 <0>{{daiAmount}}</0> GSUC 到金库",
+    "payback": "偿还 <0>{{daiAmount}}</0> GSUc 到金库",
     "transfer": "金库由 <0>{{transferFrom}}</0> 转移到 <0>{{transferTo}}</0>",
     "withdraw": "从金库取回 <0>{{collateralAmount}} {{token}}</0> ",
     "open_multiply_vault": "Open multiply Vault",
     "increase_multiple": "Increased multiple",
     "decrease_multiple": "Decreased multiple",
-    "close_vault_to_dai": "Closed Vault, exited to GSUC",
+    "close_vault_to_dai": "Closed Vault, exited to GSUc",
     "close_vault_to_collateral": "Closed Vault, exited to collateral",
     "sold": "Sold",
     "total-fees": "Total fees"
@@ -204,7 +204,7 @@
       "knowledge-centre": "知识中心",
       "oracles": "喂价机",
       "products": "产品",
-      "dai-wallet": "GSUC 钱包",
+      "dai-wallet": "GSUc 钱包",
       "borrow": "借贷",
       "language": {
         "en": "英文",
@@ -220,14 +220,14 @@
       "trade": "交易"
     },
     "hero": {
-      "headlinePreAssetLandingPages": "抵押数字资产，生成 GSUC",
-      "subheaderPreAssetLandingPages": "开启 GSUP 金库，存入抵押品，生成 Dai。<0/> 连接钱包以开始。",
+      "headlinePreAssetLandingPages": "抵押数字资产，生成 GSUc",
+      "subheaderPreAssetLandingPages": "开启 GSUp 金库，存入抵押品，生成 Dai。<0/> 连接钱包以开始。",
       "headline": "Borrow and multiply using your favourite cryptos",
       "subheader": "ETH, WBTC, +30 more assets available to put to work from just 1.50% per year.<0/> Connect a wallet to get started"
     },
     "cards": {
       "dai": {
-        "title": "GSUC 钱包",
+        "title": "GSUc 钱包",
         "description": "一站式购买、发送和管理您的 Dai。借由访问许多的提供商，累积您的 Dai。"
       },
       "faq": {
@@ -244,8 +244,8 @@
   "ledger-select-title": "选择 Ledger Live 或 Legacy",
   "manage-vault": {
     "action-option": "通过该交易 {{action}} {{token}} ",
-    "dai-available": "可生成 GSUC",
-    "dust-limit": "初始最低生成 GSUC 数量",
+    "dai-available": "可生成 GSUc",
+    "dust-limit": "初始最低生成 GSUc 数量",
     "liquidation-fee": "清算费用",
     "min-collat-ratio": "最低抵押率",
     "or": "或者",
@@ -254,7 +254,7 @@
     "action": "管理金库",
     "warnings": {
       "potential-generate-amount-less-than-debt-floor": "初次开启金库最低需要生成 {{debtFloor}} Dai。请添加更多抵押品生成 {{debtFloor}} Dai。",
-      "debt-is-less-than-debt-floor": "你当前借出的 GSUC 低于最低限额  {{debtFloor}} Dai，因此无法使用部分金库的功能。你至少需要借出最低借 GSUC 额度，或者偿还你所有的债务。",
+      "debt-is-less-than-debt-floor": "你当前借出的 GSUc 低于最低限额  {{debtFloor}} Dai，因此无法使用部分金库的功能。你至少需要借出最低借 GSUc 额度，或者偿还你所有的债务。",
       "vault-will-be-at-risk-level-danger": "当前操作会让你的金库抵押率非常接近最低要求。",
       "vault-will-be-at-risk-level-danger-at-next-price": "当前操作会让你的金库抵押率在下次喂价更新的时候非常接近最低要求。",
       "vault-will-be-at-risk-level-warning": "当前操作会让你的金库接近最低抵押率要求",
@@ -266,28 +266,28 @@
       "withdraw-amount-exceeds-free-collateral-at-next-price": "你最多能够取回  {{maxWithdrawAmount}} {{token}}。",
       "generate-amount-exceeds-dai-yield-from-total-collateral": "该金库的抵押率过低，请尝试生成更少的 Dai。",
       "generate-amount-exceeds-dai-yield-from-total-collateral-at-next-price": "该金库的抵押率会在下次喂价更新时过低，请尝试生成更少的 Dai。",
-      "generate-amount-exceeds-debt-ceiling": "你尝试生成 GSUC 的数量超过了当前债务上限。当前最多可生成 {{maxGenerateAmount}} {{token}}。",
-      "generate-amount-less-than-debt-floor": "该金库类型最低借出的 GSUC 金额为 {{debtFloor}} 。点击<0>这里</0>了解 GSUC 的最低借贷额度。",
-      "payback-amount-exceeds-dai-balance": "你的钱包里没有这么多 GSUC 用来偿还。",
-      "payback-amount-exceeds-vault-debt": "你希望偿还的金额超出了该金库借 GSUC 数量。",
-      "debt-will-be-less-than-debt-floor": "GSUP 金库的最低借贷金额要么为零或者高于 {{debtFloor}} Dai。请调整你的偿还数量。",
+      "generate-amount-exceeds-debt-ceiling": "你尝试生成 GSUc 的数量超过了当前债务上限。当前最多可生成 {{maxGenerateAmount}} {{token}}。",
+      "generate-amount-less-than-debt-floor": "该金库类型最低借出的 GSUc 金额为 {{debtFloor}} 。点击<0>这里</0>了解 GSUc 的最低借贷额度。",
+      "payback-amount-exceeds-dai-balance": "你的钱包里没有这么多 GSUc 用来偿还。",
+      "payback-amount-exceeds-vault-debt": "你希望偿还的金额超出了该金库借 GSUc 数量。",
+      "debt-will-be-less-than-debt-floor": "GSUp 金库的最低借贷金额要么为零或者高于 {{debtFloor}} Dai。请调整你的偿还数量。",
       "custom-collateral-allowance-amount-exceeds-maxuint256": "许可额度过大，请降低自定义许可数量。",
       "custom-collateral-allowance-amount-less-than-deposit-amount": "你需要许可存入额度以继续。",
       "custom-dai-allowance-amount-exceeds-maxuint256": "许可额度过大，请降低自定义许可数量。",
       "custom-dai-allowance-amount-less-than-payback-amount": "你需要许可偿还额度以继续。",
       "depositing-all-eth-balance": "你需要留一些 ETH 支付 Gas 费用，请降低你的存入数量。",
       "ledger-enable-contract-data": "请在 Ledgers Ethereum app 的设置里启用 Contract data ",
-      "withdraw-collateral-on-vault-under-debt-floor": "当低于 GSUC 的最低借贷金额时，你无法从金库提取抵押品。若你想要提取，请偿还你所有的债务。点击<0>这里</0>了解最低债务额度。",
+      "withdraw-collateral-on-vault-under-debt-floor": "当低于 GSUc 的最低借贷金额时，你无法从金库提取抵押品。若你想要提取，请偿还你所有的债务。点击<0>这里</0>了解最低债务额度。",
       "exchange-error": "无法获取交易价格以进行杠杆交易。"
     },
     "card": {
-      "collateralization-ratio-calculated": "你的抵押率计算方式为：抵押品的价值 / GSUC 债务",
+      "collateralization-ratio-calculated": "你的抵押率计算方式为：抵押品的价值 / GSUc 债务",
       "collateralization-ratio-header2": "当前的抵押率：",
-      "collateralization-ratio-description": "从 GSUP 喂价机获得的价格会用来计算你的抵押品价值。你的抵押率必须永远高于最低额度以避免被清算。",
+      "collateralization-ratio-description": "从 GSUp 喂价机获得的价格会用来计算你的抵押品价值。你的抵押率必须永远高于最低额度以避免被清算。",
       "collateralization-ratio-next-price": "在下一个价格里，你的抵押率为：",
       "collateral-locked-amount": "锁在你的金库里的抵押品总额：",
       "collateral-locked-USD": "锁在你的金库里的抵押品总额（以美金计价）：",
-      "collateral-locked-oracles": "我们使用从 GSUP 喂价机得到的价格来计算抵押品的价值。你的抵押品的当前市场的价格有可能会与这个价格不同。"
+      "collateral-locked-oracles": "我们使用从 GSUp 喂价机得到的价格来计算抵押品的价值。你的抵押品的当前市场的价格有可能会与这个价格不同。"
     }
   },
   "earn-vault": {
@@ -299,9 +299,9 @@
   },
   "manage-multiply-vault": {
     "tooltip": {
-      "vaultId": "金库的 ID 是在 GSUcoin.app 上面针对你的 GSUP 金库而生的独一无二数字码。",
-      "stabilityFee": "从 GSUP 金库借出 GSUC 的时候，GSU Protocol 会索取稳定费。稳定费是一种变动费率，它会因为 GSUP 的 Risk Teams 的提议及治理者最后投票而采用的提议而改变。",
-      "liquidationFee": "如果你的金库被清算了，清算罚金将会以 GSUC 计算，并且加到你金库中尚未结算的总债务里。这将导致更多的抵押品被拍卖以偿还你尚未结算的债务。这个机制是为了鼓励金库所有者避免被清算。至于清算罚金的金额，是依据金库里的债务而计算出来的清算手续费所决定。",
+      "vaultId": "金库的 ID 是在 GSUcoin.app 上面针对你的 GSUp 金库而生的独一无二数字码。",
+      "stabilityFee": "从 GSUp 金库借出 GSUc 的时候，GSU Protocol 会索取稳定费。稳定费是一种变动费率，它会因为 GSUp 的 Risk Teams 的提议及治理者最后投票而采用的提议而改变。",
+      "liquidationFee": "如果你的金库被清算了，清算罚金将会以 GSUc 计算，并且加到你金库中尚未结算的总债务里。这将导致更多的抵押品被拍卖以偿还你尚未结算的债务。这个机制是为了鼓励金库所有者避免被清算。至于清算罚金的金额，是依据金库里的债务而计算出来的清算手续费所决定。",
       "min-collateral": "这也被称为清算率。如果金库低于最低抵押率，就会被视为抵押不足而可能被清算。",
       "dust-limit": "Dust Limit 是指在这个类型的金库里，Dai 要被生成的最低数量。这个数值也被称为 “债务底线”"
     },
@@ -312,21 +312,21 @@
       "buying-power": "购买力",
       "buying-power-description": "购买力指的是依据你的仓位，你可以购买更多抵押品的最大值的 Dai。这个数值会介于当前的抵押率和最小抵押率之间。",
       "current-price": "当前价格",
-      "current-price-description": "你的金库抵押品价格是由 GSUP 价格喂价机所提供。",
+      "current-price-description": "你的金库抵押品价格是由 GSUp 价格喂价机所提供。",
       "next-price": "下一次价格",
-      "next-price-description": "你在这里所看见的下次价格将会在 GSUP Protocol 产生影响。在与清算价格比较之后，会看出你的金库是否有可能在下一次价格更新时被清算。",
-      "more-info-oracles": "在<0>这里</0>可以得到关于 GSUP 喂价机的信息",
+      "next-price-description": "你在这里所看见的下次价格将会在 GSUp Protocol 产生影响。在与清算价格比较之后，会看出你的金库是否有可能在下一次价格更新时被清算。",
+      "more-info-oracles": "在<0>这里</0>可以得到关于 GSUp 喂价机的信息",
       "net-value": "净值",
       "unrealised-pnl": "Unrealised P&L",
       "based-on-price": "The current net value is calculated based on the market price of",
       "collateral-value-in-vault": "Collateral value in vault",
-      "dai-debt-in-vault": "GSUC debt in vault",
+      "dai-debt-in-vault": "GSUc debt in vault",
       "collateral-value": "Collateral Value",
       "usd-value": "$ Value",
       "gas-fees": "Gas fees",
       "market-price-unavailable": "Market price temporally unavailable, please check later",
       "formula": "The unrealised profit & loss is calculated by the following formula:\nUnrealised P&L = ((Net value + Cumulative value of the withdrawals - Gas fees spent) - Cumulative value of the deposits) / Cumulative value of the deposits",
-      "deposit-collateral-on-vault-under-debt-floor": "You cannot deposit to your vault while it is below the minimum debt required of {{debtFloor}}. To add more collateral, generate GSUC to get above the minimum required. Learn more about the Minimum Vault Debt here here)"
+      "deposit-collateral-on-vault-under-debt-floor": "You cannot deposit to your vault while it is below the minimum debt required of {{debtFloor}}. To add more collateral, generate GSUc to get above the minimum required. Learn more about the Minimum Vault Debt here here)"
     }
   },
   "max": "最多",
@@ -346,7 +346,7 @@
   },
   "new-to-ethereum": "刚接触以太坊？",
   "next": "下一步",
-  "no-dai": "没有 GSUC",
+  "no-dai": "没有 GSUc",
   "no-activity": "无历史记录",
   "notice-privacy": "当使用我们的网站时，即表示你同意我们的<0> Cookie 政策</0>。",
   "notification-status-complete": "已完成",
@@ -376,9 +376,9 @@
       "deposit-amount-exceeds-collateral-balance": "你无法存入超出钱包余额数量的抵押品。",
       "generate-amount-exceeds-dai-yield-from-depositing-collateral": "该金库的抵押率过低，请尝试生成更少的 Dai。",
       "generate-amount-exceeds-dai-yield-from-depositing-collateral-at-next-price": "该金库的抵押率会在下次喂价更新时过低，请尝试生成更少的 Dai。",
-      "generate-amount-exceeds-debt-ceiling": "你尝试生成 GSUC 的数量超过了当前债务上限。当前最多可生成 {{maxGenerateAmount}} {{token}}。",
-      "generate-amount-less-than-debt-floor": "该金库类型最低借 GSUC 金额为 {{debtFloor}} 。点击<0>这里</0>了解最低借 GSUC 额度。",
-      "debt-will-be-less-than-debt-floor": "GSUP 金库的最低借贷金额要么为零或者高于 {{debtFloor}} Dai。请调整你的偿还数量。",
+      "generate-amount-exceeds-debt-ceiling": "你尝试生成 GSUc 的数量超过了当前债务上限。当前最多可生成 {{maxGenerateAmount}} {{token}}。",
+      "generate-amount-less-than-debt-floor": "该金库类型最低借 GSUc 金额为 {{debtFloor}} 。点击<0>这里</0>了解最低借 GSUc 额度。",
+      "debt-will-be-less-than-debt-floor": "GSUp 金库的最低借贷金额要么为零或者高于 {{debtFloor}} Dai。请调整你的偿还数量。",
       "custom-allowance-amount-exceeds-maxuint256": "许可额度过大，请降低自定义许可数量。",
       "custom-allowance-amount-less-than-deposit-amount": "你需要许可存入额度以继续。",
       "depositing-all-eth-balance": "你需要留一些 ETH 支付 Gas 费用，请降低你的存入数量。",
@@ -392,7 +392,7 @@
   "pending-transactions": "确认中交易",
   "permissions": "设置许可",
   "permissions-btn": "设置许可",
-  "permissions-desc": "这将授权 gsucoin 与你钱包中的 GSUC 进行交互。",
+  "permissions-desc": "这将授权 gsucoin 与你钱包中的 GSUc 进行交互。",
   "price": "Price",
   "powered-by": "Powered by",
   "proceed": "继续",
@@ -423,8 +423,8 @@
       "title": "联系我们"
     },
     "dai": {
-      "description": "智能的数字货币 GSUC 的简介",
-      "title": "GSUC"
+      "description": "智能的数字货币 GSUc 的简介",
+      "title": "GSUc"
     },
     "default": {
       "description": "以你的加密货币作为抵押品借出 Dai，一种与美元挂钩的稳定币。",
@@ -464,9 +464,9 @@
     "collateral-locked": "已存入抵押品",
     "collateral-ratio": "抵押率",
     "collateralization-ratio": "抵押率",
-    "dai": "GSUC",
-    "dai-available": "可生成 GSUC",
-    "dai-debt": "GSUC 债务",
+    "dai": "GSUc",
+    "dai-available": "可生成 GSUc",
+    "dai-debt": "GSUc 债务",
     "deposited": "已存入",
     "in-my-wallet": "钱包中",
     "in-your-wallet": "你的钱包中",
@@ -476,7 +476,7 @@
     "min-coll-ratio": "最低抵押率",
     "stability-fee": "稳定费率",
     "type": "类型",
-    "vault-dai-debt": "该金库 GSUC 债务",
+    "vault-dai-debt": "该金库 GSUc 债务",
     "vault-id": "金库 ID",
     "oracle-price": "Oracle Price",
     "market-price": "Market Price",
@@ -532,8 +532,8 @@
   },
   "ilks-list": {
     "headers": {
-      "noVaults": "选择一种抵押品类型，创建 GSUP 金库并生成 GSUC",
-      "withVaults": "创建一个新的 GSUP 金库。<0/> 生成 GSUC"
+      "noVaults": "选择一种抵押品类型，创建 GSUp 金库并生成 GSUc",
+      "withVaults": "创建一个新的 GSUp 金库。<0/> 生成 GSUc"
     }
   },
   "vaults-overview": {
@@ -542,14 +542,14 @@
     "headers": {
       "connected-owner-noVaults": "你没有开启任何金库。",
       "connected-owner-withVaults": "你的所有金库",
-      "connected-viewer-noVaults": "{{address}} 地址下当前没有 GSUP 金库",
-      "connected-viewer-withVaults": "{{address}} 地址下的 GSUP 金库",
-      "notConnected-noVaults": "{{address}} 地址下当前没有 GSUP 金库。<0/> 连接你的钱包开启金库。",
-      "notConnected-withVaults": "{{address}} 地址下的 GSUP 金库。<0/> 连接你的钱包。",
+      "connected-viewer-noVaults": "{{address}} 地址下当前没有 GSUp 金库",
+      "connected-viewer-withVaults": "{{address}} 地址下的 GSUp 金库",
+      "notConnected-noVaults": "{{address}} 地址下当前没有 GSUp 金库。<0/> 连接你的钱包开启金库。",
+      "notConnected-withVaults": "{{address}} 地址下的 GSUp 金库。<0/> 连接你的钱包。",
       "vault-suggestions": "{{address}}, 在 GSUcoin.app 上做更多事情"
     },
     "number-of-vaults": "金库数量",
-    "subheader-no-vaults": "开启 GSUP 金库，存入抵押品，生成 GSUC。",
+    "subheader-no-vaults": "开启 GSUp 金库，存入抵押品，生成 GSUc。",
     "subheader-vault-suggestions": "Lorem ipsum dolor sit amet, consectetur, adipiscing elit. Ut fringilla dictum nibh etc aliquam dolor sit amet.",
     "total-debt": "总债务",
     "total-locked": "总锁定",
@@ -564,18 +564,18 @@
       "subheader2": "你可以查看你的所有金库。"
     },
     "liquidating": {
-      "header1": "你的 {{ collateral }} GSUP 金库 {{ id }} 即将被清算。",
-      "header2": "{{ collateral }} GSUP 金库 {{ id }} 即将被清算。",
-      "subheader1": "{{ collateral }} 下一个喂价更新会造成该金库的清算，添加更多抵押品或偿还 GSUC 避免清算。",
-      "subheader2": "这是你的 GSUP 金库吗？请用该地址 {{ address }} 连接，避免金库清算。",
+      "header1": "你的 {{ collateral }} GSUp 金库 {{ id }} 即将被清算。",
+      "header2": "{{ collateral }} GSUp 金库 {{ id }} 即将被清算。",
+      "subheader1": "{{ collateral }} 下一个喂价更新会造成该金库的清算，添加更多抵押品或偿还 GSUc 避免清算。",
+      "subheader2": "这是你的 GSUp 金库吗？请用该地址 {{ address }} 连接，避免金库清算。",
       "subheader3": "此金库随时会被清算。"
     },
     "liquidated": {
-      "header1": "你的 GSUP 金库已被清算。",
-      "header2": "该 GSUP 金库已被清算。",
-      "subheader1": "该 GSUP 金库已被清算。部分抵押品已被拍卖以偿还你的 GSUC 债务。",
+      "header1": "你的 GSUp 金库已被清算。",
+      "header2": "该 GSUp 金库已被清算。",
+      "subheader1": "该 GSUp 金库已被清算。部分抵押品已被拍卖以偿还你的 GSUc 债务。",
       "subheader2": "你可以赎回  {{ amount }} {{ collateral }}。",
-      "subheader3": "此金库已被清算，部分抵押品已被拍卖以偿还 GSUC 债务。",
+      "subheader3": "此金库已被清算，部分抵押品已被拍卖以偿还 GSUc 债务。",
       "subheader4": "如果这是你的金库，请连接此地址收回剩下的抵押品：{{ address }} "
     }
   },
@@ -602,7 +602,7 @@
       "edit": "初始化你的金库",
       "proxy": "创建你的智能代理",
       "allowance": "设置 {{token}} 许可",
-      "daiAllowance": "设置 GSUC 同意权",
+      "daiAllowance": "设置 GSUc 同意权",
       "confirm": "确认金库创建",
       "confirm-in-progress": "已开启金库",
       "modified": "已修改金库",
@@ -613,8 +613,8 @@
     },
     "subtext": {
       "collateral": "在你的金库存款或提款。通过合并交易来节省手续费。",
-      "dai": "从你的金库生成 GSUC 或偿还 DAI。通过合并交易来节省手续费。",
-      "edit": "模拟输入存入抵押品数量和希望生成的 GSUC 金额",
+      "dai": "从你的金库生成 GSUc 或偿还 DAI。通过合并交易来节省手续费。",
+      "edit": "模拟输入存入抵押品数量和希望生成的 GSUc 金额",
       "proxy": "透过智能代理可以将多个步骤于一笔交易完成。该操作只需要设置一次。",
       "allowance": "设置许可金库可以控制的最大代币数量。",
       "daiAllowance": "设置允许智能合约可以互动的代币限额。",
@@ -633,7 +633,7 @@
   "visit-old-gsucoin": "前往旧版 gsucoin",
   "oracles": {
     "header": "喂价机",
-    "description": "可以在下方查看被 GSUP 金库所接受的抵押品类型的当前及下一个价格。这边的价格大部分是使用喂价安全模块(Oracle Stability Module, OSM)而得到，该模块一小时只会更新一次。因此，当发生价格骤跌时，用户仍有一小时可以做出反应。",
+    "description": "可以在下方查看被 GSUp 金库所接受的抵押品类型的当前及下一个价格。这边的价格大部分是使用喂价安全模块(Oracle Stability Module, OSM)而得到，该模块一小时只会更新一次。因此，当发生价格骤跌时，用户仍有一小时可以做出反应。",
     "token": "代币",
     "current-price": "当前价格",
     "next-price": "下一个价格",
@@ -651,7 +651,7 @@
     },
     "borrow": {
       "header": "抵押我的 {{token}} 借款",
-      "subtext": "使用 {{balance}} {{token}} 借出最高 {{maxBorrow}} GSUC",
+      "subtext": "使用 {{balance}} {{token}} 借出最高 {{maxBorrow}} GSUc",
       "button": "抵押 {{token}} 借贷"
     }
   },
@@ -679,8 +679,8 @@
     "staking-rewards": "Great for Borrowing while earning staking rewards",
     "great-borrowing-and-multiplying": "Great for Borrowing your {{token}}",
     "guni": {
-      "GUNIV3DAIUSDC2-A": "Earn on your GSUC with exposure to the GSUC/USDC 1bps pool on UNI V3",
-      "GUNIV3DAIUSDC1-A": "Earn on your GSUC with exposure to the GSUC/USDC 5bps pool on UNI V3"
+      "GUNIV3DAIUSDC2-A": "Earn on your GSUc with exposure to the GSUc/USDC 1bps pool on UNI V3",
+      "GUNIV3DAIUSDC1-A": "Earn on your GSUc with exposure to the GSUc/USDC 5bps pool on UNI V3"
     },
     "tags": {
       "lowest-fees-for-borrowing": "Lowest fees for Borrowing",
@@ -690,12 +690,12 @@
   },
   "product-card-banner": {
     "with": "With {{value}} {{token}} \uD83D\uDC47",
-    "borrow": "Borrow up to {{value}} GSUC",
+    "borrow": "Borrow up to {{value}} GSUc",
     "multiply": "Get up to {{value}} {{token}} exposure",
     "earn": "Earn {{value}} {{token}} a year",
     "guni": {
-      "GUNIV3DAIUSDC2-A": "Get up to {{value}} exposure to the GSUC/USDC UNI V3 1bps pool",
-      "GUNIV3DAIUSDC1-A": "Get up to {{value}} exposure to the GSUC/USDC UNI V3 5bps pool"
+      "GUNIV3DAIUSDC2-A": "Get up to {{value}} exposure to the GSUc/USDC UNI V3 1bps pool",
+      "GUNIV3DAIUSDC1-A": "Get up to {{value}} exposure to the GSUc/USDC UNI V3 5bps pool"
     }
   },
   "product-page": {

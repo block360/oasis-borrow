@@ -23,7 +23,6 @@ export const ASSETS_PAGES = [
     borrowIlks: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
     // multiplyIlks: ['WBTC-B', 'WBTC-A', 'RENBTC-A', 'WBTC-C'],
     // borrowIlks: ['WBTC-C', 'RENBTC-A', 'WBTC-A', 'WBTC-B'],
-
   },
   //@GSUpro removes the token assets
   // {
@@ -49,8 +48,8 @@ export const ASSETS_PAGES = [
   //@GSUpro removes the token assets end
   {
     slug: 'gsuc',
-    header: 'GSUC',
-    symbol: 'GSUC',
+    header: 'GSUc',
+    symbol: 'GSUc',
     icon: 'gsu_circle_color',
     descriptionKey: 'assets.dai.description',
     link: 'assets.dai.link',

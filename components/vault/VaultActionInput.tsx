@@ -110,12 +110,12 @@ export function VaultActionInput({
       ? currencyCode === 'DAI'
         ? 'GSUc'
         : getToken(currencyCode).symbol
-      : 'USD'
+      : 'GSU'
   const auxiliarySymbol = auxiliaryCurrencyCode
     ? auxiliaryCurrencyCode === 'DAI'
       ? 'GSUc'
       : getToken(auxiliaryCurrencyCode).symbol
-    : 'USD'
+    : 'GSU'
 
   const toggleResolved = typeof defaultToggle === 'boolean' ? defaultToggle : toggleStatus
 

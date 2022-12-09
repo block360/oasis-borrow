@@ -58,7 +58,11 @@ function ContentCardLiquidationPriceModal({
           ? t('manage-multiply-vault.card.liquidation-price-description')
           : t('manage-multiply-vault.card.liquidation-price-description-AUTO')}
       </Text>
-      <Card as="p" variant="vaultDetailsCardModal" sx={{ my: 2 }}>
+      <Card
+        as="p"
+        variant="vaultDetailsCardModal"
+        sx={{ fontFamily: '"GSU Font","Open Sans"', my: 2 }}
+      >
         {liquidationPriceFormatted}
       </Card>
       {liquidationPriceCurrentPriceDifference && (

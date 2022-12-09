@@ -1,6 +1,6 @@
 {
   "name": "gsucoin",
-  "description": "Generate GSUC on GSUcoin using crypto as your collateral",
+  "description": "Generate GSUc on GSUcoin using crypto as your collateral",
   "iconPath": "static/img/logo.svg",
   "short_name": "gsucoin",
   "display": "standalone",

@@ -51,7 +51,11 @@ const COLLATERAL_COLUMNS: ColumnDef<CollateralPrice, CollateralPricesWithFilters
         {label}
       </TableSortHeader>
     ),
-    cell: ({ currentPrice }) => <Text>${formatAmount(currentPrice, 'USD')}</Text>,
+    cell: ({ currentPrice }) => (
+      <Text sx={{ fontFamily: '"GSU Font","Open Sans"' }}>
+        ${formatAmount(currentPrice, 'USD')}
+      </Text>
+    ),
   },
   {
     headerLabel: 'oracles.next-price',
@@ -63,6 +67,7 @@ const COLLATERAL_COLUMNS: ColumnDef<CollateralPrice, CollateralPricesWithFilters
     cell: ({ nextPrice, percentageChange }) => (
       <Text
         sx={{
+          fontFamily: '"GSU Font","Open Sans"',
           color: getPercentageColor(percentageChange),
         }}
       >

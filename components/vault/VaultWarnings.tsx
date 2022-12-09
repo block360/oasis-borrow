@@ -8,7 +8,7 @@ import { Trans, useTranslation } from 'next-i18next'
 import React from 'react'
 import { Dictionary } from 'ts-essentials'
 
-const SupportLink = <AppLink sx={{ color: 'warning100' }} href="mailto:support@oasis.app" />
+const SupportLink = <AppLink sx={{ color: 'warning100' }} href="mailto:support@gsucoin.app" />
 const ConstantMultipleKBLink = (
   <AppLink sx={{ color: 'warning100' }} href="https://kb.oasis.app/help/" />
 )

@@ -51,22 +51,22 @@ export function ManageVaultDetailsSummary({
     <VaultDetailsSummaryContainer>
       <VaultDetailsSummaryItem
         label={t('system.vault-dai-debt')}
-        //@GSUpro update phrase DAI to GSUC
+        //@GSUpro update phrase DAI to GSUc
         value={
           <>
             {formatAmount(debt, 'DAI')}
-            {` GSUC`}
+            {` GSUc`}
           </>
         }
         valueAfter={
           showAfterPill && (
             <>
               {formatAmount(afterDebt, 'DAI')}
-              {` GSUC`}
+              {` GSUc`}
             </>
           )
         }
-        //@GSUpro update phrase DAI to GSUC end
+        //@GSUpro update phrase DAI to GSUc end
         afterPillColors={afterPillColors}
       />
 
@@ -90,22 +90,22 @@ export function ManageVaultDetailsSummary({
       />
       <VaultDetailsSummaryItem
         label={t('system.available-to-generate')}
-        //@GSUpro update phrase DAI to GSUC
+        //@GSUpro update phrase DAI to GSUc
         value={
           <>
             {formatAmount(daiYieldFromLockedCollateral, 'DAI')}
-            {` GSUC`}
+            {` GSUc`}
           </>
         }
         valueAfter={
           showAfterPill && (
             <>
               {formatAmount(daiYieldFromTotalCollateral, 'DAI')}
-              {` GSUC`}
+              {` GSUc`}
             </>
           )
         }
-        //@GSUpro update phrase DAI to GSUC end
+        //@GSUpro update phrase DAI to GSUc end
         afterPillColors={afterPillColors}
       />
     </VaultDetailsSummaryContainer>

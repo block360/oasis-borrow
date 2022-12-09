@@ -33,10 +33,7 @@ export interface ProductCardData {
   isFull: boolean
 }
 
-export type ProductLandingPagesFiltersKeys =
-  | 'Featured'
-  | 'ETH'
-  | 'BTC'
+export type ProductLandingPagesFiltersKeys = 'Featured' | 'ETH' | 'BTC'
 // | 'UNI LP'
 // | 'LINK'
 // | 'UNI'
@@ -46,10 +43,7 @@ export type ProductLandingPagesFiltersKeys =
 // | 'GUSD'
 // | 'Curve LP'
 
-type ProductLandingPagesFiltersIcons =
-  | 'star_circle'
-  | 'eth_circle'
-  | 'btc_circle'
+type ProductLandingPagesFiltersIcons = 'star_circle' | 'eth_circle' | 'btc_circle'
 // | 'uni_lp_circle'
 // | 'link_circle'
 // | 'uni_circle'
@@ -307,97 +301,85 @@ export const productCardsConfig: {
   // @GSUpro remove links to oasis
   descriptionLinks: {
     'ETH-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (ETH-A)',
+      link: '/inprogress',
+      name: 'GSUp (ETH-A)',
     },
     'ETH-B': {
-      link:
-        '/inprogress',
-      name: 'GSUP (ETH-B)',
+      link: '/inprogress',
+      name: 'GSUp (ETH-B)',
     },
     'ETH-C': {
-      link:
-        '/inprogress',
-      name: 'GSUP (ETH-C)',
+      link: '/inprogress',
+      name: 'GSUp (ETH-C)',
     },
     'WSTETH-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (WSTETH-A)',
+      link: '/inprogress',
+      name: 'GSUp (WSTETH-A)',
     },
     'WSTETH-B': {
-      link:
-        '/inprogress',
-      name: 'GSUP (WSTETH-B)',
+      link: '/inprogress',
+      name: 'GSUp (WSTETH-B)',
     },
     'WBTC-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (WBTC-A)',
+      link: '/inprogress',
+      name: 'GSUp (WBTC-A)',
     },
     'WBTC-B': {
-      link:
-        '/inprogress',
-      name: 'GSUP (WBTC-B)',
+      link: '/inprogress',
+      name: 'GSUp (WBTC-B)',
     },
     'WBTC-C': {
-      link:
-        '/inprogress',
-      name: 'GSUP (WBTC-C)',
+      link: '/inprogress',
+      name: 'GSUp (WBTC-C)',
     },
     'RENBTC-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (RENBTC-A)',
+      link: '/inprogress',
+      name: 'GSUp (RENBTC-A)',
     },
     // 'LINK-A': {
     //   link:
     //     '/inprogress',
-    //   name: 'GSUP (LINK-A)',
+    //   name: 'GSUp (LINK-A)',
     // },
     // 'MANA-A': {
     //   link:
     //     '/inprogress',
-    //   name: 'GSUP (MANA-A)',
+    //   name: 'GSUp (MANA-A)',
     // },
     // 'MATIC-A': {
     //   link:
     //     '/inprogress',
-    //   name: 'GSUP (MATIC-A)',
+    //   name: 'GSUp (MATIC-A)',
     // },
     // 'GUSD-A': {
     //   link:
     //     '/inprogress',
-    //   name: 'GSUP (GUSD-A)',
+    //   name: 'GSUp (GUSD-A)',
     // },
     // 'YFI-A': {
     //   link:
     //     '/inprogress',
-    //   name: 'GSUP (YFI-A)',
+    //   name: 'GSUp (YFI-A)',
     // },
     'GUNIV3DAIUSDC1-A': {
       link: '/inprogress',
-      name: 'GSUP/Gelato/Uniswap',
+      name: 'GSUp/Gelato/Uniswap',
     },
     'GUNIV3DAIUSDC2-A': {
       link: '/inprogress',
-      name: 'GSUP/Gelato/Uniswap',
+      name: 'GSUp/Gelato/Uniswap',
     },
     'UNIV2USDCETH-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP/Uniswap',
+      link: '/inprogress',
+      name: 'GSUp/Uniswap',
     },
     'UNIV2DAIUSDC-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP/Uniswap',
+      link: '/inprogress',
+      name: 'GSUp/Uniswap',
     },
     'CRVV1ETHSTETH-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP/Curve/Lido',
+      link: '/inprogress',
+      name: 'GSUp/Curve/Lido',
     },
   },
 }

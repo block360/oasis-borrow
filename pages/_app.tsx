@@ -48,6 +48,8 @@ const OpenSansBold = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-Bold
 const OpenSansLight = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-Light')
 const OpenSansMedium = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-Medium')
 const OpenSansSemiBold = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-SemiBold')
+const GSUFontRegular = staticFilesRuntimeUrl('/static/fonts/GSUFont/GSU-Regular')
+const GSUFontBold = staticFilesRuntimeUrl('/static/fonts/GSUFont/GSU-Bold')
 //@GSUpro add fonts ends
 const globalStyles = `
   html,
@@ -131,6 +133,20 @@ const globalStyles = `
   font-family: 'Open Sans';
   src: url('${OpenSansLight}.ttf') format('truetype');
   font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GSU font';
+  src: url('${GSUFontRegular}.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GSU font';
+  src: url('${GSUFontBold}.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }

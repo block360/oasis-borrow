@@ -73,7 +73,7 @@ export function ManageVaultChangesInformation(
       <VaultChangesInformationItem
         label={`${t('system.liquidation-price')}`}
         value={
-          <Flex>
+          <Flex sx={{ fontFamily: '"GSU Font", "Open Sans"' }}>
             {`$${formatCryptoBalance(liquidationPrice || zero)}`}
             <VaultChangesInformationArrow />
             {`$${formatCryptoBalance(afterLiquidationPrice || zero)}`}
@@ -82,15 +82,15 @@ export function ManageVaultChangesInformation(
       />
       <VaultChangesInformationItem
         label={`${t('system.vault-dai-debt')}`}
-        //@GSUpro update phrase DAI to GSUC
+        //@GSUpro update phrase DAI to GSUc
         value={
           <Flex>
-            {`${formatCryptoBalance(debt || zero)} GSUC`}
+            {`${formatCryptoBalance(debt || zero)} GSUc`}
             <VaultChangesInformationArrow />
-            {`${formatCryptoBalance(afterDebt || zero)} GSUC`}
+            {`${formatCryptoBalance(afterDebt || zero)} GSUc`}
           </Flex>
         }
-        //@GSUpro update phrase DAI to GSUC end
+        //@GSUpro update phrase DAI to GSUc end
       />
       <VaultChangesInformationItem
         label={`${t('system.available-to-withdraw')}`}
@@ -104,15 +104,15 @@ export function ManageVaultChangesInformation(
       />
       <VaultChangesInformationItem
         label={`${t('system.available-to-generate')}`}
-        //@GSUpro update phrase DAI to GSUC
+        //@GSUpro update phrase DAI to GSUc
         value={
           <Flex>
-            {`${formatCryptoBalance(daiYieldFromLockedCollateral || zero)} GSUC`}
+            {`${formatCryptoBalance(daiYieldFromLockedCollateral || zero)} GSUc`}
             <VaultChangesInformationArrow />
-            {`${formatCryptoBalance(daiYieldFromTotalCollateral || zero)} GSUC`}
+            {`${formatCryptoBalance(daiYieldFromTotalCollateral || zero)} GSUc`}
           </Flex>
         }
-        //@GSUpro update phrase DAI to GSUC end
+        //@GSUpro update phrase DAI to GSUc end
       />
       {txnCostDisplay}
     </VaultChangesInformationContainer>

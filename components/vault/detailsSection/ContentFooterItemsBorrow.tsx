@@ -30,18 +30,18 @@ export function ContentFooterItemsBorrow({
   const { t } = useTranslation()
   //@GSUpro update phrase DAI to GSUC
   const formatted = {
-    debt: `${formatAmount(debt, 'DAI')} GSUC`,
+    debt: `${formatAmount(debt, 'DAI')} GSUc`,
     freeCollateral: `${formatAmount(freeCollateral, token)} ${token}`,
-    afterDebt: `${formatAmount(afterDebt, 'DAI')} GSUC`,
+    afterDebt: `${formatAmount(afterDebt, 'DAI')} GSUc`,
     afterFreeCollateral: `${formatAmount(
       !afterFreeCollateral.isNegative() ? afterFreeCollateral : zero,
       token,
     )} ${token}`,
-    daiYieldFromLockedCollateral: `${formatAmount(daiYieldFromLockedCollateral, 'DAI')} GSUC`,
+    daiYieldFromLockedCollateral: `${formatAmount(daiYieldFromLockedCollateral, 'DAI')} GSUc`,
     daiYieldFromTotalCollateral: `${formatAmount(
       !daiYieldFromTotalCollateral.isNegative() ? daiYieldFromTotalCollateral : zero,
       'DAI',
-    )} GSUC`,
+    )} GSUc`,
   }
   //@GSUpro update phrase DAI to GSUC end
   return (

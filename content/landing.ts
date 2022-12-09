@@ -11,7 +11,7 @@ export const LANDING_PILLS = [
   },
   {
     icon: 'gsu_circle_color',
-    label: 'GSUC',
+    label: 'GSUc',
     link: '/asset/gsuc',
   },
   //@GSUpro remove assets

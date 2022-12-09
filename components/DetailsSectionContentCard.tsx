@@ -45,6 +45,7 @@ export function DetailsSectionContentCardChangePill({
       as="p"
       variant="label"
       sx={{
+        fontFamily: '"GSU Font","Open Sans"',
         px: 3,
         py: 1,
         ...(variant === 'positive' && {
@@ -159,6 +160,7 @@ export function DetailsSectionContentCard({
         as="p"
         variant="header2"
         sx={{
+          fontFamily: '"GSU Font", "Open Sans"',
           fontSize: '32px',
           maxWidth: '100%',
           lineHeight: 'loose',

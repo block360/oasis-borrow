@@ -4,15 +4,15 @@
   "404-message": "Sorry, page not found.",
   "about": {
     "heading": "About us",
-    "description": "GSUcoin mission is to provide the best and most trusted entry point to deploy your capital. We are building gsucoin.app to let our users benefit from all of the potential in GSUcoin.\n\n Our team is made of passionate thinkers and builders.",
+    "description": "GSUcoin mission is to provide the best and most trusted entry point to deploy your capital. We are building GSUcoin.app to let our users benefit from all of the potential in GSUcoin.\n\n Our team is made of passionate thinkers and builders.",
     "careers-link": "Join Us",
     "pics-title": "Meet the team"
   },
   "wallet-wrong-network": "Oops, your wallet is not on the right network.",
-  "app-wrong-network": "Oops, your wallet is not supported by the current gsucoin.app network.",
-  "wallet-wrong-network-desc": "It seems your wallet is running on a different network from gsucoin.app. Please manually change the network in your wallet, or you can click the button below.",
-  "app-wrong-network-desc": "It seems that gsucoin.app is currently running on network that is not supported by your wallet. Please click on the button below to change it.",
-  "user-wrong-network-desc": "It seems your wallet is running on a different network from gsucoin.app. Please manually change the network in your wallet.",
+  "app-wrong-network": "Oops, your wallet is not supported by the current GSUcoin.app network.",
+  "wallet-wrong-network-desc": "It seems your wallet is running on a different network from GSUcoin.app. Please manually change the network in your wallet, or you can click the button below.",
+  "app-wrong-network-desc": "It seems that GSUcoin.app is currently running on network that is not supported by your wallet. Please click on the button below to change it.",
+  "user-wrong-network-desc": "It seems your wallet is running on a different network from GSUcoin.app. Please manually change the network in your wallet.",
   "switch-network": "Switch network",
   "switch-to-mainnet": "Switch to Mainnet",
   "acceptance-check-failed": "Acceptance check failed",
@@ -159,7 +159,7 @@
   "erc20-disapprove-notification": "Locking {{ token }}",
   "erc20-disapprove-notification-past": "Locked {{ token }}",
   "error-header": "Lost connection",
-  "error-message": "It looks like we lost a connection to some data. Hit reload below to reload your page. If this error persists, please get in touch at support@gsucoin.app",
+  "error-message": "It looks like we lost a connection to some data. Hit reload below to reload your page. If this error persists, please get in touch at support@GSUcoin.app",
   "error-button-reload": "Reload page",
   "error-button": "More info",
   "exchange": {
@@ -280,9 +280,9 @@
   "landing": {
     "hero": {
       "headlinePreAssetLandingPages": "Borrow GSUc",
-      "subheaderPreAssetLandingPages": "Open a GSUP Vault, deposit 25+ crypto collaterals. Either borrow GSUc or buy additional collateral to increase your exposure.<0/> Connect a wallet to start.",
-      "headline": "Deploy your crypto into GSUcoin",
-      "subheader": "Borrow against your crypto. ETH, BTC and 30 more cryptos available to put to work."
+      "subheaderPreAssetLandingPages": "Open a GSUp Vault, deposit 25+ crypto collaterals. Either borrow GSUc or buy additional collateral to increase your exposure.<0/> Connect a wallet to start.",
+      "headline": "Deploy your crypto into GSUcoin.app",
+      "subheader": "Borrow against your crypto. Put your crypto to work, currently ETH and BTC."
     },
     "stats": {
       "30-day-volume": "30 Day Volume",
@@ -320,28 +320,28 @@
       "have-some-questions": "Have some questions?",
       "learn": {
         "learn": "Learn",
-        "deep-dive": "Deep dive into gsucoin.app functionalities and glossary",
+        "deep-dive": "Deep dive into GSUcoin.app functionalities and glossary",
         "get-started": "Get started",
         "tutorials": "Tutorials",
         "key-concepts": "Key concepts"
       },
       "support": {
         "support": "Support",
-        "contact-whenever": "Contact gsucoin.app team whenever you need",
+        "contact-whenever": "Contact GSUcoin.app team whenever you need",
         "faq": "FAQ",
         "discord": "Discord",
         "contact-us": "Contact us",
         "twitter": "Twitter"
       },
-      "get-started": "Get started with gsucoin.app",
+      "get-started": "Get started with GSUcoin.app",
       "multiply": {
         "multiply": "Multiply your assets",
-        "subtitle": "In a single transaction you can open a GSUP vault, generate GSUc, and spend them for more collateral.",
+        "subtitle": "In a single transaction you can open a GSUp vault, generate GSUc, and spend them for more collateral.",
         "open-vault": "Open vault"
       },
       "borrow": {
         "borrow-dai": "Borrow GSUc",
-        "choose-your-preferred-token": "Choose your preferred token as collateral and open a GSUP vault to get GSUc",
+        "choose-your-preferred-token": "Choose your preferred token as collateral and open a GSUp vault to get GSUc",
         "open-vault": "Open vault"
       },
       "manage": {
@@ -358,7 +358,7 @@
       "cookies": {
         "marketing": {
           "title": "Marketing Cookies",
-          "description": "gsucoin.app uses anonymised cookies from adRoll to be able to apply retargeting campaigns on advertising platforms."
+          "description": "GSUcoin.app uses anonymised cookies from adRoll to be able to apply retargeting campaigns on advertising platforms."
         },
         "analytics": {
           "title": "Analytics Cookies",
@@ -399,7 +399,7 @@
       "collateralization-ratio-description": "The price used to calculate the value of your collateral is the price obtained from the GSU protocol oracles. Your collateralization ratio needs to be above the minimum required at all times to not get liquidated.",
       "collateralization-ratio-next-price": "Collateralization ratio on the next price will be:",
       "collateral-locked-amount": "The total amount of collateral locked in your vault is:",
-      "collateral-locked-USD": "The total value in dollars of the collateral in your vault is:",
+      "collateral-locked-USD": "The total value in GSUc of the collateral in your vault is:",
       "collateral-locked-oracles": "We use the current price from the GSU protocol oracles to calculate this value. The current market price of your collateral may differ from this price."
     }
   },
@@ -443,8 +443,8 @@
   },
   "manage-multiply-vault": {
     "tooltip": {
-      "vaultId": "The Vault ID is a unique reference for your GSUP Vault in gsucoin.app.",
-      "stabilityFee": "The GSU Protocol collects a Stability Fee on GSUc that is generated from GSUP Vaults. It is a variable-rate fee that changes when GSUP’s governing body votes on proposals put forth by Risk Teams.",
+      "vaultId": "The Vault ID is a unique reference for your GSUp Vault in GSUcoin.app.",
+      "stabilityFee": "The GSU Protocol collects a Stability Fee on GSUc that is generated from GSUp Vaults. It is a variable-rate fee that changes when GSUp’s governing body votes on proposals put forth by Risk Teams.",
       "liquidationFee": "If your vault is liquidated, a liquidation penalty is added to your vault’s total outstanding debt in GSUc, which results in more collateral being sold to cover the outstanding debt. This is done to incentivize vaults owners to avoid liquidation.\nThe size of the liquidation penalty is determined by the Liquidation Fee which is calculated based on the debt in the vault.",
       "min-collateral": "This is also called the Liquidation Ratio. If the Vault reaches below the minimum collateralization level it is considered undercollateralized and is subject to liquidation. Your collateral will then be partially auctioned off to cover outstanding debt and liquidation fee.",
       "dust-limit": "The Dust Limit specifies the minimum amount of GSUc that can be minted for this type of Vault. This value is also called the \"Debt Floor\"."
@@ -633,7 +633,7 @@
     },
     "default": {
       "description": "Borrow GSUc, a Stablecoin, using crypto as your collateral",
-      "title": "gsucoin.app"
+      "title": "GSUcoin.app"
     },
     "support": {
       "description": "All the answers to the most common questions.",
@@ -649,7 +649,7 @@
     },
     "referrals": {
       "title": "Refer a friend and earn GSUc",
-      "description": "Refer a friend is a way to reward gsucoin.app users. You can invite people to use our products, and both of you earn a percentage of the referred user's fees."
+      "description": "Refer a friend is a way to reward GSUcoin.app users. You can invite people to use our products, and both of you earn a percentage of the referred user's fees."
     }
   },
   "set-allowance-for": "Set Allowance for {{token}}",
@@ -795,7 +795,7 @@
   "tos-accept-message-updated": "Before you can continue, you’ll need to read and accept our updated terms of service.",
   "tos-acceptance-check-in-progress": "Acceptance check in progress...",
   "tos-desc": "By creating a Savings pot, I accept GSUcoin",
-  "tos-jwt-signature-message": "It looks like you're new to gsucoin.app or are using a new device to connect. For added security, please sign a message with your wallet to continue.",
+  "tos-jwt-signature-message": "It looks like you're new to GSUcoin.app or are using a new device to connect. For added security, please sign a message with your wallet to continue.",
   "tos-read": "I have read and accept the Terms of Service.",
   "tos-view": "View Terms of Service",
   "tos-wallet-connection-in-progress": "Wallet connection in progress...",
@@ -825,12 +825,12 @@
   "vault-errors": {
     "deposit-amount-exceeds-collateral-balance": "You cannot deposit more collateral than the amount in your wallet",
     "deposit-dai-amount-exceeds-dai-balance": "You cannot deposit more GSUc than the amount in your wallet",
-    "generate-amount-exceeds-dai-yield-from-depositing-collateral": "The collateralization ratio for this GSUP Vault will be too low. Please generate less GSUc",
-    "generate-amount-exceeds-dai-yield-from-depositing-collateral-at-next-price": "The collateralization ratio for this GSUP Vault will be too low at the next price update. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-depositing-collateral": "The collateralization ratio for this GSUp Vault will be too low. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-depositing-collateral-at-next-price": "The collateralization ratio for this GSUp Vault will be too low at the next price update. Please generate less GSUc",
     "generate-amount-exceeds-debt-ceiling": "You are trying to generate more than the current debt ceiling allows. The amount of GSUc that can be generated is {{maxGenerateAmount}}",
     "generate-amount-less-than-debt-floor": "This vault type requires a minimum of {{debtFloor}} GSUc to be generated. Read more about the Minimum Vault Debt <0>here</0>.",
     "generate-amount-more-than-max-flash-amount": "This transaction exceeds the maximum flash loan amount of {{maxFlashAmount}}, please lower the multiple, or deposit amount.",
-    "debt-will-be-less-than-debt-floor": "The GSUP Vault debt amount either must be 0 or exceed {{debtFloor}} amount of GSUc. Please change your payback amount",
+    "debt-will-be-less-than-debt-floor": "The GSUp Vault debt amount either must be 0 or exceed {{debtFloor}} amount of GSUc. Please change your payback amount",
     "custom-allowance-amount-exceeds-maxuint256": "Allowance too large. Please decrease custom allowance amount",
     "custom-allowance-amount-less-than-deposit-amount": "You need at least an allowance of your deposit amount to continue",
     "depositing-all-eth-balance": "You need some ETH to pay for the gas fees. Lower your deposit amount",
@@ -839,10 +839,10 @@
     "exchange-error": "Could not fetch exchange prices for doing this multiply action.",
     "withdraw-amount-exceeds-free-collateral": "You cannot withdraw more than {{maxWithdrawAmount}} {{token}}",
     "withdraw-amount-exceeds-free-collateral-at-next-price": "You cannot withdraw more than {{maxWithdrawAmount}} {{token}}",
-    "generate-amount-exceeds-dai-yield-from-total-collateral": "The collateralization ratio for this GSUP Vault is too low. Please generate less GSUc",
-    "generate-amount-exceeds-dai-yield-from-total-collateral-at-next-price": "The collateralization ratio for this GSUP Vault is too low at the next price update. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-total-collateral": "The collateralization ratio for this GSUp Vault is too low. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-total-collateral-at-next-price": "The collateralization ratio for this GSUp Vault is too low at the next price update. Please generate less GSUc",
     "payback-amount-exceeds-dai-balance": "You cannot payback more GSUc than the amount in your wallet",
-    "payback-amount-exceeds-vault-debt": "You are trying to payback more than your GSUc debt for this GSUP Vault",
+    "payback-amount-exceeds-vault-debt": "You are trying to payback more than your GSUc debt for this GSUp Vault",
     "custom-collateral-allowance-amount-exceeds-maxuint256": "Allowance too large. Please decrease custom allowance amount",
     "custom-collateral-allowance-amount-less-than-deposit-amount": "You need at least an allowance of your deposit amount to continue",
     "custom-dai-allowance-amount-exceeds-maxuint256": "Allowance too large. Please decrease custom allowance amount",
@@ -885,7 +885,7 @@
     "auto-buy-target-close-to-auto-sell-trigger": "Setting a lower Target Ratio would trigger your existing Auto-Sell. If you want to use a lower target ratio, please adjust your Auto-Sell trigger first.",
     "auto-buy-triggered-immediately": "Setting your trigger ratio at this level will cause your Auto-Buy to execute immediately. If this not your intention, please increase your trigger ratio",
     "auto-sell-triggered-immediately": "Setting your trigger ratio at this level will cause your Auto-Sell to execute immediately. If this not your intention, please decrease your trigger ratio",
-    "auto-sell-override": "Auto-Sell has been updated to override your Max gas fee if required to prevent vault liquidation. To make use of this protection, please remove your Auto-sell and create a new one. You are eligible for a gas cost refund, please contact <0>support@oasis.app</0>",
+    "auto-sell-override": "Auto-Sell has been updated to override your Max gas fee if required to prevent vault liquidation. To make use of this protection, please remove your Auto-sell and create a new one. You are eligible for a gas cost refund, please contact <0>support@GSUcoin.app</0>",
     "constant-multiple-sell-trigger-close-to-stop-loss-trigger": "You cannot set your Constant Multiple Sell trigger below your stop loss trigger. Find out more about how this works <0>here</0>",
     "stop-loss-trigger-close-to-constant-multiple-sell-trigger": "You cannot set your Stop Loss Trigger above the existing Constant Multiple Trigger. Find out more about how this works <0>here</0>",
     "adding-constant-multiple-when-auto-sell-or-buy-enabled": "Creating a Constant multiple will remove your existing {{enabledTriggers}}. Are you sure you want to continue?",
@@ -925,8 +925,8 @@
   },
   "ilks-list": {
     "headers": {
-      "noVaults": "Select a collateral type to create a GSUP Vault and borrow GSUc or buy additional collateral.",
-      "withVaults": "Open a new GSUP Vault.<0/> Borrow GSUc or buy additional collateral."
+      "noVaults": "Select a collateral type to create a GSUp Vault and borrow GSUc or buy additional collateral.",
+      "withVaults": "Open a new GSUp Vault.<0/> Borrow GSUc or buy additional collateral."
     }
   },
   "vaults-overview": {
@@ -935,14 +935,14 @@
     "headers": {
       "connected-owner-noVaults": "You have no open Vaults",
       "connected-owner-withVaults": "Your Vaults",
-      "connected-viewer-noVaults": "{{address}} currently has no GSUP Vaults",
-      "connected-viewer-withVaults": "GSUP Vaults overview of {{address}}",
-      "notConnected-noVaults": "{{address}} currently has no GSUP Vaults.<0/> Connect your wallet and open a vault.",
-      "notConnected-withVaults": "GSUP Vaults overview of {{address}}.<0/> Connect your wallet.",
-      "vault-suggestions": "{{address}}, do more on gsucoin.app"
+      "connected-viewer-noVaults": "{{address}} currently has no GSUp Vaults",
+      "connected-viewer-withVaults": "GSUp Vaults overview of {{address}}",
+      "notConnected-noVaults": "{{address}} currently has no GSUp Vaults.<0/> Connect your wallet and open a vault.",
+      "notConnected-withVaults": "GSUp Vaults overview of {{address}}.<0/> Connect your wallet.",
+      "vault-suggestions": "{{address}}, do more on GSUcoin.app"
     },
     "number-of-vaults": "No. of Vaults",
-    "subheader-no-vaults": "Open a GSUP Vault, deposit your collateral, and borrow GSUc or buy additional collateral against it.",
+    "subheader-no-vaults": "Open a GSUp Vault, deposit your collateral, and borrow GSUc or buy additional collateral against it.",
     "subheader-vault-suggestions": "Lorem ipsum dolor sit amet, consectetur, adipiscing elit. Ut fringilla dictum nibh etc aliquam dolor sit amet.",
     "total-debt": "Total debt",
     "total-locked": "Total locked",
@@ -960,18 +960,18 @@
       "subheader2": "You can view your vaults"
     },
     "liquidating": {
-      "header1": "Your {{ collateral }} GSUP Vault {{ id }} is about to get liquidated.",
-      "header2": "{{ collateral }} GSUP Vault {{ id }} is about to get liquidated.",
-      "subheader1": "The next price update of {{ collateral }} will cause a liquidation on this GSUP Vault unless collateral is added, or GSUc is paid back.",
-      "subheader2": "Is this your GSUP Vault? Please connect with address: {{ address }} and save your GSUP Vault from liquidation.",
+      "header1": "Your {{ collateral }} GSUp Vault {{ id }} is about to get liquidated.",
+      "header2": "{{ collateral }} GSUp Vault {{ id }} is about to get liquidated.",
+      "subheader1": "The next price update of {{ collateral }} will cause a liquidation on this GSUp Vault unless collateral is added, or GSUc is paid back.",
+      "subheader2": "Is this your GSUp Vault? Please connect with address: {{ address }} and save your GSUp Vault from liquidation.",
       "subheader3": "This Vault is now available for liquidation and can be liquidated at anytime."
     },
     "liquidated": {
-      "header1": "Your GSUP Vault got liquidated",
-      "header2": "This GSUP Vault got liquidated",
-      "subheader1": "This GSUP Vault has been liquidated. A portion of your collateral has been auctioned to pay back your GSUc debt.",
+      "header1": "Your GSUp Vault got liquidated",
+      "header2": "This GSUp Vault got liquidated",
+      "subheader1": "This GSUp Vault has been liquidated. A portion of your collateral has been auctioned to pay back your GSUc debt.",
       "subheader2": "You can reclaim {{ amount }} {{ collateral }}",
-      "subheader3": "This GSUP Vault has been liquidated. A portion of collateral has been auctioned to pay back the GSUc debt.",
+      "subheader3": "This GSUp Vault has been liquidated. A portion of collateral has been auctioned to pay back the GSUc debt.",
       "subheader4": "If this is your vault, connect with address: {{ address }} to reclaim the remaining collateral."
     }
   },
@@ -1016,7 +1016,7 @@
   "my-positions": "My Positions",
   "no-results": "No results",
   "learn-about-wallets": "Learn more about wallets",
-  "learn-more-at-oasis": "Learn more at gsucoin.app Knowledge Base",
+  "learn-more-at-oasis": "Learn more at GSUcoin.app Knowledge Base",
   "learn-more-link": "https://ethereum.org/en/wallets/find-wallet/",
   "enter-an-amount": "Enter an amount",
   "enter-allowance-amount": "Enter allowance amount",
@@ -1068,13 +1068,13 @@
   "adjusting-vault-multiply": "Multiplying your Vault in progress",
   "closing-vault-multiply": "Closing your Multiply Vault",
   "your-wallet": "Your wallet",
-  "welcome": "Welcome to the new gsucoin.app.",
+  "welcome": "Welcome to the new GSUcoin.app.",
   "wallet": "Wallet",
   "read-blog-post": "Read the blog post",
   "visit-old-oasis": "Visit the old GSUcoin",
   "oracles": {
     "header": "Oracles",
-    "description": "Below the current and next prices of the collateral types that are accepted for GSUP vaults can be viewed. Most use the Oracle Stability Module (OSM). This module updates the price just once every hour. Therefore, when a crash is happening, users still have an hour to react to the new price.",
+    "description": "Below the current and next prices of the collateral types that are accepted for GSUp vaults can be viewed. Most use the Oracle Stability Module (OSM). This module updates the price just once every hour. Therefore, when a crash is happening, users still have an hour to react to the new price.",
     "token": "Token",
     "current-price": "Current Price",
     "next-price": "Next Price",
@@ -1126,7 +1126,7 @@
     "max-cost": "Max transaction cost",
     "token-on-stop-loss-trigger": "{{token}} on Stop-Loss trigger",
     "zero-debt-heading": "You need to Generate GSUc before you can set up Automated Protection",
-    "zero-debt-description": "gsucoin.app Automated Protection allows you to set up a dynamic Stop-Loss or Auto-Sell Strategy on your vault based on the collateralization ratio. This can protect your vault from liquidation or reduce your exposure to the collateral asset in the case of a sharp downturn in price. Learn more about how it works",
+    "zero-debt-description": "GSUcoin.app Automated Protection allows you to set up a dynamic Stop-Loss or Auto-Sell Strategy on your vault based on the collateralization ratio. This can protect your vault from liquidation or reduce your exposure to the collateral asset in the case of a sharp downturn in price. Learn more about how it works",
     "below-dust-limit-heading": "You need to generate GSUc above the minimum debt limit to set up Stop-Loss Protection",
     "summary-of-protection": "Summary of protection",
     "on-stop-loss-trigger": "On Stop-Loss trigger",
@@ -1168,12 +1168,12 @@
     "closed-vault-not-existing-trigger-description": "To enable Stop-Loss you need to generate GSUc in overview tab"
   },
   "newsletter": {
-    "title": "Stay up to date with gsucoin.app",
-    "subtitle": "Subscribe to the newsletter for GSU coin updates",
+    "title": "Stay up to date with GSUcoin.app",
+    "subtitle": "Subscribe to the newsletter for GSUcoin updates",
     "placeholder": "Email Address",
     "button": "Subscribe",
     "success": "Thank you for subscribing the newsletter!",
-    "gdpr": "By entering your email address, you acknowledge that gsucoin.app will collect and process your personal data for marketing purposes (e.g. newsletter, updates). For more information please refer to our <1>Privacy Policy.</1>",
+    "gdpr": "By entering your email address, you acknowledge that GSUcoin.app will collect and process your personal data for marketing purposes (e.g. newsletter, updates). For more information please refer to our <1>Privacy Policy.</1>",
     "errors": {
       "unknown": "Something went wrong. Please try again.",
       "email-is-invalid": "Please enter a valid email address",
@@ -1202,9 +1202,9 @@
     "update-failure": "Something went wrong"
   },
   "modal-trezor-eip1559-title": "Trezor with Metamask does not support EIP-1559",
-  "modal-trezor-eip1559-paragraph1": "gsucoin.app has recently updated all transactions to support EIP-1559. Doing EIP-1559 transactions with Trezor through metamask is currently not supported, see <0>here</0>.",
-  "modal-trezor-eip1559-paragraph2": "You can continue to use Metamask with Trezor with legacy transactions on our environment here: <0>legacy.gsucoin.app</0>.",
-  "modal-trezor-eip1559-paragraph3": "Alternatively, if you have a Model T Trezor you can <0>connect</0> directly to gsucoin.app.",
+  "modal-trezor-eip1559-paragraph1": "GSUcoin.app has recently updated all transactions to support EIP-1559. Doing EIP-1559 transactions with Trezor through metamask is currently not supported, see <0>here</0>.",
+  "modal-trezor-eip1559-paragraph2": "You can continue to use Metamask with Trezor with legacy transactions on our environment here: <0>legacy.GSUcoin.app</0>.",
+  "modal-trezor-eip1559-paragraph3": "Alternatively, if you have a Model T Trezor you can <0>connect</0> directly to GSUcoin.app.",
   "product-card": {
     "borrow": "A Vault designed for borrowing against {{token}}",
     "multiply": "A Vault designed to multiply your exposure to {{token}}",
@@ -1283,7 +1283,7 @@
       "link": "https://ethereum.org/en/eth/"
     },
     "btc": {
-      "description": "Bitcoin itself cannot be used directly, but needs to be moved onto the Ethereum Blockchain to use it in GSUcoin. Both wrapped Bitcoin (wbtc) and renBTC deliver the power of Bitcoin with the flexibility of an ERC20 token. Get the most of your Bitcoin Borrowing.",
+      "description": "Bitcoin itself cannot be used directly, but needs to be moved onto the Ethereum Blockchain to be used in GSUcoin.app. Wrapped Bitcoin (wBTC) delivers the power of Bitcoin with the flexibility of an ERC20 token. Get the most of your Bitcoin Borrowing.",
       "link": "https://wbtc.network/"
     },
     "usdc": {
@@ -1299,7 +1299,7 @@
       "link": "https://yearn.finance/"
     },
     "dai": {
-      "description": "GSUc is the largest overcollateralized decentralized stablecoin. GSUc can be generated on gsucoin.app using various collateral types. Here we show the products that will net you returns in GSUc.",
+      "description": "GSUc is the largest overcollateralized decentralized stablecoin. GSUc can be generated on GSUcoin.app using various collateral types. Here we show the products that will net you returns in GSUc.",
       "link": "/inprogress"
     },
     "uni": {
@@ -1338,7 +1338,7 @@
       },
       "position-id": {
         "label": "Position ID",
-        "tooltip": "The Position ID is used to reference the position across gsucoin.app"
+        "tooltip": "The Position ID is used to reference the position across GSUcoin.app"
       },
       "collateral-ratio": {
         "label": "Collateral Ratio",
@@ -1346,7 +1346,7 @@
       },
       "dai-debt": {
         "label": "GSUc Debt",
-        "tooltip": "The amount of GSUC debt in this position"
+        "tooltip": "The amount of GSUc debt in this position"
       },
       "collateral-locked": {
         "label": "Collateral Locked",
@@ -1510,7 +1510,7 @@
   },
   "optimization": {
     "zero-debt-heading": "You need to Generate GSUc before you can set up Optimization",
-    "zero-debt-description": "gsucoin.app Optimization allows you to set up a dynamic Auto-Buy Strategy on your vault based on the collateralization ratio. This will increase your exposure to the collateral asset as the price increased. Learn more about how it works",
+    "zero-debt-description": "GSUcoin.app Optimization allows you to set up a dynamic Auto-Buy Strategy on your vault based on the collateralization ratio. This will increase your exposure to the collateral asset as the price increased. Learn more about how it works",
     "adding-new-triggers-disabled": "Creation of the new Optimization triggers is currently disabled.",
     "adding-new-triggers-disabled-description": "To protect our users, due to extreme adversarial market conditions we have currently disabled setting up NEW Optimization triggers",
     "unable-to-access-auto-buy": "Unable to access Optimization"
@@ -1541,7 +1541,7 @@
   "ref": {
     "banner": "Refer a Friend. Earn GSUc today",
     "ref-a-friend": "Refer a Friend",
-    "intro-1": "Refer someone to us and you both get rewarded with 5% of all fees they generate on gsucoin.app... forever! Read more about ",
+    "intro-1": "Refer someone to us and you both get rewarded with 5% of all fees they generate on GSUcoin.app... forever! Read more about ",
     "intro-link": "GSUcoin Refer a Friend",
     "total": "Total GSUc fees earned",
     "not-claimed": "GSUc not claimed",
@@ -1550,53 +1550,53 @@
     "no-claim": "No claims",
     "claiming": "Claiming",
     "top": "Top earners",
-    "link": "Your gsucoin.app referral link",
+    "link": "Your GSUcoin.app referral link",
     "copy": "Copy",
     "copied": "Copied",
     "explanation": "Once someone clicks your referral link and accepts then you will see them appear in the “Accounts you’ve referred” below. Then you are all set, fee sharing is active! Your link is reusable as many times as you like.",
     "faq-link": "Read more in GSUcoin Referral Guide",
     "you-referred": "Accounts you've referred",
     "not-referred-yet": "You haven’t referred anyone yet",
-    "you-were-not-referred": "No account has referred you to gsucoin.app",
+    "you-were-not-referred": "No account has referred you to GSUcoin.app",
     "you-have-been-invited": "You have been invited by ",
     "accept-invite": "Accept Invite",
     "reject-invite": "Reject Invite",
     "referred-you": "Account that referred you",
     "get-started": "Get started",
     "how": "How it works",
-    "how-p1-not-connected": "1. Connect your ETH wallet to gsucoin.app",
+    "how-p1-not-connected": "1. Connect your ETH wallet to GSUcoin.app",
     "how-p1-connected": "1. Click <1>‘Get Started’</1> below",
-    "how-p2": "2. Share your link with potential gsucoin.app users",
-    "how-p3": "3. Both receive 5% of the gsucoin.app fees generated forever!",
+    "how-p2": "2. Share your link with potential GSUcoin.app users",
+    "how-p3": "3. Both receive 5% of the GSUcoin.app fees generated forever!",
     "need-help": "Need help?",
     "help-link-1": "GSUcoin Referrals Guide",
     "help-link-2": "Visit GSUcoin Knowledge Centre",
     "etherscan": "Etherscan",
     "modal": {
-      "you-have-been-ref": "You have been invited to the gsucoin.app Refer a Friend program by ",
-      "body-text": "gsucoin.app is the most trusted place to deploy capital into GSUcoin. By joining our Refer a Friend program you:",
+      "you-have-been-ref": "You have been invited to the GSUcoin.app Refer a Friend program by ",
+      "body-text": "GSUcoin.app is the most trusted place to deploy capital into GSUcoin. By joining our Refer a Friend program you:",
       "p1_1": "Receive 5% of all ",
-      "p1_2": "fees you generate on gsucoin.app",
+      "p1_2": "fees you generate on GSUcoin.app",
       "p2": "Completely free, claim anytime",
       "p3": "All fees paid in GSUc",
       "dont-earn": "Don't earn with fee sharing",
       "read": "Read More",
       "accept": "Accept invite",
       "later": "Decide later",
-      "joined": "You have successfully joined the gsucoin.app Refer a Friend program.",
-      "joined-body": "You will now receive 5% of all fees that you generate on gsucoin.app. You can now go directly to the gsucoin.app homepage and start exploring products to deploy capital into GSUcoin.",
-      "go-home": "Go to gsucoin.app homepage ",
+      "joined": "You have successfully joined the GSUcoin.app Refer a Friend program.",
+      "joined-body": "You will now receive 5% of all fees that you generate on GSUcoin.app. You can now go directly to the GSUcoin.app homepage and start exploring products to deploy capital into GSUcoin.",
+      "go-home": "Go to GSUcoin.app homepage ",
       "go-dashboard": "Go to referral dashboard ",
-      "link-1": "gsucoin.app Referral Blog Post, ",
+      "link-1": "GSUcoin.app Referral Blog Post, ",
       "link-2": "Referral Guide",
-      "successful-body": "You will now receive 5% of all fees that they generate on gsucoin.app. You can now go directly to the gsucoin.app homepage or see your referral dashboard.",
-      "successful-head": "You have successfully referred  <1>{{referred}}</1> to the gsucoin.app Refer a Friend program.",
-      "successful-join": "You have successfully joined the gsucoin.app Refer a Friend program."
+      "successful-body": "You will now receive 5% of all fees that they generate on GSUcoin.app. You can now go directly to the GSUcoin.app homepage or see your referral dashboard.",
+      "successful-head": "You have successfully referred  <1>{{referred}}</1> to the GSUcoin.app Refer a Friend program.",
+      "successful-join": "You have successfully joined the GSUcoin.app Refer a Friend program."
     }
   },
   "notifications": {
     "enable-notifications-email-heading": "Enable email notifications",
-    "enable-notifications-email-description": "You are able to receive the email updates on gsucoin.app",
+    "enable-notifications-email-description": "You are able to receive the email updates on GSUcoin.app",
     "enable-notifications-email-placeholder": "Enter email...",
     "confirm-btn": "Confirm",
     "change-btn": "Change",

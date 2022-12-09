@@ -32,11 +32,19 @@ function ContentCardCollateralLockedModal({
     <Grid gap={2}>
       <Heading variant="header3">{t('system.collateral-locked')}</Heading>
       <Heading variant="header3">{t('manage-vault.card.collateral-locked-amount')}</Heading>
-      <Card as="p" variant="vaultDetailsCardModal" sx={{ my: 2 }}>
+      <Card
+        as="p"
+        variant="vaultDetailsCardModal"
+        sx={{ fontFamily: '"GSU Font","Open Sans"', my: 2 }}
+      >
         {lockedCollateralFormatted}
       </Card>
       <Heading variant="header3">{t('manage-vault.card.collateral-locked-USD')}</Heading>
-      <Card as="p" variant="vaultDetailsCardModal" sx={{ my: 2 }}>
+      <Card
+        as="p"
+        variant="vaultDetailsCardModal"
+        sx={{ fontFamily: '"GSU Font","Open Sans"', my: 2 }}
+      >
         {lockedCollateralUSDFormatted}
       </Card>
       <Text as="p" variant="subheader" sx={{ fontSize: 2 }}>

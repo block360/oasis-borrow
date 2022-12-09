@@ -12,14 +12,9 @@ import {
 } from 'features/content/support/support'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import getConfig from 'next/config'
 import React, { useState } from 'react'
 import { TRANSITIONS } from 'theme'
 import { Box, Flex, Heading } from 'theme-ui'
-
-const {
-  publicRuntimeConfig: { apiHost },
-} = getConfig()
 
 function Question({ question, answer }: ContentQuestion) {
   const [opened, setOpened] = useState(false)
@@ -79,7 +74,7 @@ function Navigation({ navigation }: { navigation: ContentNavigation[] }) {
       sx={{
         alignItems: 'center',
         //@GSUpro fixes styles
-        justifyContent: ['center', 'center', 'center', 'space-between'],
+        justifyContent: ['center', 'center', 'center', 'start'],
         flexDirection: ['column', 'column', 'column', 'row'],
         //@GSUpro fixes styles end
       }}
@@ -108,7 +103,7 @@ function Navigation({ navigation }: { navigation: ContentNavigation[] }) {
               position: 'absolute',
               width: '4px',
               height: '4px',
-              bg: 'secondary100',
+              bg: 'transparent',
               right: -3,
               top: '50%',
               borderRadius: '50%',
@@ -163,7 +158,7 @@ function SupportPage() {
         {cantFind}
         <AppLink
           //@GSUpro updates link
-          href={`${apiHost}/inprogress`}
+          href={`mailto:support@gsucoin.app`}
           //@GSUpro updates link end
           sx={{ color: 'primary100', textDecoration: 'underline', ml: 1 }}
         >

@@ -6,11 +6,11 @@ import { Position } from './positionsOverviewSummary'
 
 function makerPositionName(vault: VaultWithType): string {
   if (isMakerEarnPosition(vault)) {
-    return `${vault.ilk} gsucoin Earn`
+    return `${vault.ilk} GSUcoin Earn`
   } else if (vault.type === 'borrow') {
-    return `${vault.ilk} gsucoin Borrow`
+    return `${vault.ilk} GSUcoin Borrow`
   } else {
-    return `${vault.ilk} gsucoin Multiply`
+    return `${vault.ilk} GSUcoin Multiply`
   }
 }
 

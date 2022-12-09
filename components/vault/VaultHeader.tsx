@@ -32,8 +32,8 @@ export function VaultIlkDetailsItem({
       onClick={
         isTouchDevice
           ? () => {
-            setTooltipOpen(!tooltipOpen)
-          }
+              setTooltipOpen(!tooltipOpen)
+            }
           : undefined
       }
       sx={{
@@ -51,7 +51,10 @@ export function VaultIlkDetailsItem({
     >
       <Flex sx={{ alignItems: 'center' }}>
         {`${label} `}
-        <Text as="span" sx={{ color: 'primary100', ml: 1, mr: 1 }}>
+        <Text
+          as="span"
+          sx={{ fontFamily: '"GSU Font","Open Sans"', color: 'primary100', ml: 1, mr: 1 }}
+        >
           {value}
         </Text>
         <Flex sx={{ position: 'relative' }}>
@@ -84,7 +87,7 @@ export function VaultHeader(props: {
   return (
     <VaultHeaderContainer header={header} token={token} priceInfo={priceInfo}>
       <VaultIlkDetailsItem
-        label="VaultID"
+        label="Vault ID"
         value={id ? id.toFixed(0) : 'T.B.D'}
         tooltipContent={t('manage-multiply-vault.tooltip.vaultId')}
       />
