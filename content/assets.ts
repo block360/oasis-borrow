@@ -29,7 +29,8 @@ export const ASSETS_PAGES = [
     icon: 'gsu_circle_color',
     descriptionKey: 'assets.dai.description',
     link: 'assets.dai.link',
-    earnIlks: [],
+    // TODO prepare proper handling for DSR
+    earnIlks: ['DSR'],
   },
 ]
 

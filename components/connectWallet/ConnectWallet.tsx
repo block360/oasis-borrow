@@ -20,6 +20,8 @@ import { useAppContext } from 'components/AppContextProvider'
 import { LedgerAccountSelection } from 'components/connectWallet/LedgerAccountSelection'
 import { TrezorAccountSelection } from 'components/connectWallet/TrezorAccountSelection'
 import { AppLink } from 'components/Links'
+import { getCustomNetworkParameter } from 'helpers/getCustomNetworkParameter'
+import { dsrLink } from 'components/productCards/ProductCardEarnDsr'
 import { redirectState$ } from 'features/router/redirectState'
 import { AppSpinner } from 'helpers/AppSpinner'
 import { useObservable } from 'helpers/observableHook'
@@ -383,6 +385,13 @@ export function ConnectWallet() {
     const subscription = web3Context$.subscribe((web3Context) => {
       if (web3Context.status === 'connected') {
         const url = redirectState$.value
+
+        if (url === dsrLink) {
+          replace(`${url}/${web3Context.account}`, getCustomNetworkParameter())
+          redirectState$.next(undefined)
+          return
+        }
+
         if (url !== undefined) {
           replace(url)
           redirectState$.next(undefined)
