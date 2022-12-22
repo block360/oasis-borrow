@@ -68,7 +68,7 @@ export const oasisBaseTheme = {
   },
   fonts: {
     body: '"Inter", "Helvetica Neue", sans-serif',
-    heading: '"FT Polar Trial", "Helvetica Neue", sans-serif',
+    heading: '"Open Sans", "Helvetica Neue", sans-serif',
     monospace: 'monospace',
   },
   //           0   1   2   3   4   5   6   7   8   9  10
