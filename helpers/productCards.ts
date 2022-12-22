@@ -75,21 +75,21 @@ export const supportedBorrowIlks = [
   'ETH-A',
   'ETH-B',
   'ETH-C',
-  'WSTETH-A',
+  // 'WSTETH-A',
   'WBTC-A',
   'WBTC-B',
   'WBTC-C',
-  'RENBTC-A',
-  'LINK-A',
-  'GUSD-A',
-  'YFI-A',
-  'MANA-A',
-  'MATIC-A',
-  'UNIV2USDCETH-A',
-  'UNIV2DAIUSDC-A',
-  'CRVV1ETHSTETH-A',
-  'WSTETH-B',
-  'RETH-A',
+  // 'RENBTC-A',
+  // 'LINK-A',
+  // 'GUSD-A',
+  // 'YFI-A',
+  // 'MANA-A',
+  // 'MATIC-A',
+  // 'UNIV2USDCETH-A',
+  // 'UNIV2DAIUSDC-A',
+  // 'CRVV1ETHSTETH-A',
+  // 'WSTETH-B',
+  // 'RETH-A',
 ]
 
 export const supportedMultiplyIlks = [
@@ -128,18 +128,18 @@ const genericFilters = {
     tokens: ['ETH', 'WETH', 'wstETH', 'stETH', 'RETH'],
   },
   btc: { name: 'BTC', icon: 'btc_circle', urlFragment: 'btc', tokens: ['WBTC', 'renBTC'] },
-  unilp: {
-    name: 'UNI LP',
-    icon: 'uni_lp_circle',
-    urlFragment: 'unilp',
-    tokens: ['GUNIV3DAIUSDC1', 'GUNIV3DAIUSDC2'],
-  },
-  link: { name: 'LINK', icon: 'link_circle', urlFragment: 'link', tokens: ['LINK'] },
-  yfi: { name: 'YFI', icon: 'yfi_circle', urlFragment: 'yfi', tokens: ['YFI'] },
-  mana: { name: 'MANA', icon: 'mana_circle', urlFragment: 'mana', tokens: ['MANA'] },
-  matic: { name: 'MATIC', icon: 'matic_circle', urlFragment: 'matic', tokens: ['MATIC'] },
-  gusd: { name: 'GUSD', icon: 'gusd_circle', urlFragment: 'gusd', tokens: ['GUSD'] },
-  crvlp: { name: 'Curve LP', icon: 'curve_circle', urlFragment: 'crvlp', tokens: [] },
+  // unilp: {
+  //   name: 'UNI LP',
+  //   icon: 'uni_lp_circle',
+  //   urlFragment: 'unilp',
+  //   tokens: ['GUNIV3DAIUSDC1', 'GUNIV3DAIUSDC2'],
+  // },
+  // link: { name: 'LINK', icon: 'link_circle', urlFragment: 'link', tokens: ['LINK'] },
+  // yfi: { name: 'YFI', icon: 'yfi_circle', urlFragment: 'yfi', tokens: ['YFI'] },
+  // mana: { name: 'MANA', icon: 'mana_circle', urlFragment: 'mana', tokens: ['MANA'] },
+  // matic: { name: 'MATIC', icon: 'matic_circle', urlFragment: 'matic', tokens: ['MATIC'] },
+  // gusd: { name: 'GUSD', icon: 'gusd_circle', urlFragment: 'gusd', tokens: ['GUSD'] },
+  // crvlp: { name: 'Curve LP', icon: 'curve_circle', urlFragment: 'crvlp', tokens: [] },
 } as const
 
 const ilkToEntryTokenMap = {
@@ -204,27 +204,27 @@ export const productCardsConfig: {
       genericFilters.featured,
       genericFilters.eth,
       genericFilters.btc,
-      genericFilters.unilp,
-      genericFilters.link,
-      genericFilters.yfi,
-      genericFilters.mana,
-      genericFilters.matic,
-      genericFilters.gusd,
-      genericFilters.crvlp,
+      // genericFilters.unilp,
+      // genericFilters.link,
+      // genericFilters.yfi,
+      // genericFilters.mana,
+      // genericFilters.matic,
+      // genericFilters.gusd,
+      // genericFilters.crvlp,
     ],
-    featuredIlkCards: ['ETH-C', 'WBTC-C', 'CRVV1ETHSTETH-A', 'WSTETH-B'],
+    featuredIlkCards: ['ETH-C', 'WBTC-C'],
     inactiveIlks: [],
     ordering: {
-      ETH: ['ETH-C', 'ETH-A', 'WSTETH-A', 'ETH-B', 'WSTETH-B', 'RETH-A'],
-      BTC: ['WBTC-C', 'RENBTC-A', 'WBTC-A', 'WBTC-B'],
+      ETH: ['ETH-C', 'ETH-A', 'ETH-B'],
+      BTC: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
     },
     tags: {
       'ETH-C': 'lowest-fees-for-borrowing',
       'WBTC-C': 'lowest-fees-for-borrowing',
-      'WSTETH-A': 'staking-rewards',
-      'WSTETH-B': 'staking-rewards',
-      'CRVV1ETHSTETH-A': 'staking-rewards',
-      'RETH-A': 'staking-rewards',
+      // 'WSTETH-A': 'staking-rewards',
+      // 'WSTETH-B': 'staking-rewards',
+      // 'CRVV1ETHSTETH-A': 'staking-rewards',
+      // 'RETH-A': 'staking-rewards',
     },
   },
   multiply: {
@@ -232,22 +232,22 @@ export const productCardsConfig: {
       genericFilters.featured,
       genericFilters.eth,
       genericFilters.btc,
-      genericFilters.link,
-      genericFilters.yfi,
-      genericFilters.mana,
-      genericFilters.matic,
+      // genericFilters.link,
+      // genericFilters.yfi,
+      // genericFilters.mana,
+      // genericFilters.matic,
     ],
-    featuredIlkCards: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
+    featuredIlkCards: ['ETH-B', 'WBTC-B'],
     inactiveIlks: [],
     ordering: {
-      ETH: ['ETH-B', 'ETH-A', 'WSTETH-A', 'ETH-C', 'WSTETH-B', 'RETH-A'],
-      BTC: ['WBTC-B', 'WBTC-A', 'RENBTC-A', 'WBTC-C'],
+      ETH: ['ETH-B', 'ETH-A', 'ETH-C'],
+      BTC: ['WBTC-B', 'WBTC-A', 'WBTC-C'],
     },
     tags: {
       'WBTC-B': 'max-exposure',
       'ETH-B': 'max-exposure',
-      'WSTETH-A': 'staking-rewards',
-      'RETH-A': 'staking-rewards',
+      // 'WSTETH-A': 'staking-rewards',
+      // 'RETH-A': 'staking-rewards',
     },
   },
   earn: {
@@ -263,149 +263,145 @@ export const productCardsConfig: {
         'ETH-C',
         'WBTC-C',
         // 'CRVV1ETHSTETH-A',
-        'WSTETH-B',
+        // 'WSTETH-B',
       ],
       multiply: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
-      earn: ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A'],
+      // earn: ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A'],
+      earn: [],
     },
     featuredAaveCards: {
       borrow: [],
       multiply: [],
-      earn: ['stETHeth'],
+      // earn: ['stETHeth'],
+      earn: [],
     },
   },
   descriptionCustomKeys: {
     'ETH-A': 'medium-exposure-medium-cost',
     'ETH-B': 'biggest-multiply',
     'ETH-C': 'lowest-stabilityFee-and-cheapest',
-    'WSTETH-A': 'staking-rewards',
-    'WSTETH-B': 'lowest-annual-fee-cheapest-vault',
-    'RETH-A': 'borrow-and-multiply',
+    // 'WSTETH-A': 'staking-rewards',
+    // 'WSTETH-B': 'lowest-annual-fee-cheapest-vault',
+    // 'RETH-A': 'borrow-and-multiply',
     'WBTC-A': 'medium-exposure-medium-cost',
     'WBTC-B': 'biggest-multiply',
     'WBTC-C': 'lowest-stabilityFee-and-cheapest',
-    'RENBTC-A': 'great-borrowing-and-multiplying',
-    'GUNIV3DAIUSDC1-A': 'guni',
-    'GUNIV3DAIUSDC2-A': 'guni',
+    // 'RENBTC-A': 'great-borrowing-and-multiplying',
+    // 'GUNIV3DAIUSDC1-A': 'guni',
+    // 'GUNIV3DAIUSDC2-A': 'guni',
 
-    'GUSD-A': 'borrow',
-    'LINK-A': 'borrow-and-multiply',
-    'UNI-A': 'borrow-and-multiply',
-    'YFI-A': 'borrow-and-multiply',
-    'MANA-A': 'borrow-and-multiply',
-    'MATIC-A': 'borrow-and-multiply',
+    // 'GUSD-A': 'borrow',
+    // 'LINK-A': 'borrow-and-multiply',
+    // 'UNI-A': 'borrow-and-multiply',
+    // 'YFI-A': 'borrow-and-multiply',
+    // 'MANA-A': 'borrow-and-multiply',
+    // 'MATIC-A': 'borrow-and-multiply',
 
-    'UNIV2DAIETH-A': 'lp-tokens',
-    'UNIV2WBTCETH-A': 'lp-tokens',
-    'UNIV2USDCETH-A': 'lp-tokens',
-    'UNIV2DAIUSDC-A': 'lp-tokens',
-    'UNIV2UNIETH-A': 'lp-tokens',
-    'UNIV2WBTCDAI-A': 'lp-tokens',
-    'CRVV1ETHSTETH-A': 'borrow',
+    // 'UNIV2DAIETH-A': 'lp-tokens',
+    // 'UNIV2WBTCETH-A': 'lp-tokens',
+    // 'UNIV2USDCETH-A': 'lp-tokens',
+    // 'UNIV2DAIUSDC-A': 'lp-tokens',
+    // 'UNIV2UNIETH-A': 'lp-tokens',
+    // 'UNIV2WBTCDAI-A': 'lp-tokens',
+    // 'CRVV1ETHSTETH-A': 'borrow',
   } as Record<string, string>,
   descriptionLinks: {
     'ETH-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
+      link: '/inprogress',
       name: 'Maker (ETH-A)',
     },
     'ETH-B': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
+      link: '/inprogress',
       name: 'Maker (ETH-B)',
     },
     'ETH-C': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
+      link: '/inprogress',
       name: 'Maker (ETH-C)',
     },
-    'WSTETH-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-      name: 'Maker (WSTETH-A)',
-    },
-    'WSTETH-B': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-      name: 'Maker (WSTETH-B)',
-    },
+    // 'WSTETH-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
+    //   name: 'Maker (WSTETH-A)',
+    // },
+    // 'WSTETH-B': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
+    //   name: 'Maker (WSTETH-B)',
+    // },
     'WBTC-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
+      link: '/inprogress',
       name: 'Maker (WBTC-A)',
     },
     'WBTC-B': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
+      link: '/inprogress',
       name: 'Maker (WBTC-B)',
     },
     'WBTC-C': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
+      link: '/inprogress',
       name: 'Maker (WBTC-C)',
     },
-    'RENBTC-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_414294869681652792871926',
-      name: 'Maker (RENBTC-A)',
-    },
-    'LINK-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_42582440791652792878921',
-      name: 'Maker (LINK-A)',
-    },
-    'MANA-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_536808626201652802419989',
-      name: 'Maker (MANA-A)',
-    },
-    'MATIC-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_615723980991652792924214',
-      name: 'Maker (MATIC-A)',
-    },
-    'GUSD-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4952663551081652792930397',
-      name: 'Maker (GUSD-A)',
-    },
-    'YFI-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4996750151161652792936142',
-      name: 'Maker (YFI-A)',
-    },
-    'GUNIV3DAIUSDC1-A': {
-      link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
-      name: 'Maker/Gelato/Uniswap',
-    },
-    'GUNIV3DAIUSDC2-A': {
-      link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
-      name: 'Maker/Gelato/Uniswap',
-    },
-    'UNIV2USDCETH-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
-      name: 'Maker/Uniswap',
-    },
-    'UNIV2DAIUSDC-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
-      name: 'Maker/Uniswap',
-    },
-    'CRVV1ETHSTETH-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_67885280351652802433065',
-      name: 'Maker/Curve/Lido',
-    },
-    stETHeth: {
-      link: 'https://kb.oasis.app/help/what-you-should-know-about-steth',
-      name: 'AAVE stETH / ETH',
-    },
-    'RETH-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-      name: 'Maker (RETH-A)',
-    },
+    // 'RENBTC-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_414294869681652792871926',
+    //   name: 'Maker (RENBTC-A)',
+    // },
+    // 'LINK-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_42582440791652792878921',
+    //   name: 'Maker (LINK-A)',
+    // },
+    // 'MANA-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_536808626201652802419989',
+    //   name: 'Maker (MANA-A)',
+    // },
+    // 'MATIC-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_615723980991652792924214',
+    //   name: 'Maker (MATIC-A)',
+    // },
+    // 'GUSD-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4952663551081652792930397',
+    //   name: 'Maker (GUSD-A)',
+    // },
+    // 'YFI-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4996750151161652792936142',
+    //   name: 'Maker (YFI-A)',
+    // },
+    // 'GUNIV3DAIUSDC1-A': {
+    //   link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
+    //   name: 'Maker/Gelato/Uniswap',
+    // },
+    // 'GUNIV3DAIUSDC2-A': {
+    //   link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
+    //   name: 'Maker/Gelato/Uniswap',
+    // },
+    // 'UNIV2USDCETH-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
+    //   name: 'Maker/Uniswap',
+    // },
+    // 'UNIV2DAIUSDC-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
+    //   name: 'Maker/Uniswap',
+    // },
+    // 'CRVV1ETHSTETH-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_67885280351652802433065',
+    //   name: 'Maker/Curve/Lido',
+    // },
+    // stETHeth: {
+    //   link: 'https://kb.oasis.app/help/what-you-should-know-about-steth',
+    //   name: 'AAVE stETH / ETH',
+    // },
+    // 'RETH-A': {
+    //   link:
+    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
+    //   name: 'Maker (RETH-A)',
+    // },
   },
 }
 
@@ -544,9 +540,9 @@ export function borrowPageCardsData<T extends IlkTokenMap>({
     )
   }
 
-  if (cardsFilter === 'UNI LP') {
-    return uniLpProductCards(ilkToTokenMapping)
-  }
+  // if (cardsFilter === 'UNI LP') {
+  //   return uniLpProductCards(ilkToTokenMapping)
+  // }
 
   if (cardsFilter === 'BTC') {
     return btcProductCards(ilkToTokenMapping)
@@ -556,9 +552,9 @@ export function borrowPageCardsData<T extends IlkTokenMap>({
     return ethProductCards(ilkToTokenMapping)
   }
 
-  if (cardsFilter === 'Curve LP') {
-    return ilkToTokenMapping.filter(({ ilk }) => ilk === 'CRVV1ETHSTETH-A')
-  }
+  // if (cardsFilter === 'Curve LP') {
+  //   return ilkToTokenMapping.filter(({ ilk }) => ilk === 'CRVV1ETHSTETH-A')
+  // }
 
   return ilkToTokenMapping.filter(({ token }) => token === cardsFilter)
 }
