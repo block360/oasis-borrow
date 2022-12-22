@@ -434,8 +434,8 @@ function navLinkColor(isActive: boolean) {
 const LINKS = {
   'dai-wallet': `${getConfig().publicRuntimeConfig.apiHost}/daiwallet`,
   learn: 'https://kb.oasis.app',
-  blog: 'https://blog.oasis.app',
-  multiply: `/multiply`,
+  // blog: 'https://blog.oasis.app',
+  // multiply: `/multiply`,
   borrow: `/borrow`,
   earn: '/earn',
   discover: DISCOVER_URL,
@@ -769,7 +769,7 @@ function MobileMenu() {
   const shouldHideSettings = getShouldHideHeaderSettings(context, accountData, web3Context)
 
   const links = [
-    { labelKey: 'nav.multiply', url: LINKS.multiply },
+    // { labelKey: 'nav.multiply', url: LINKS.multiply },
     { labelKey: 'nav.borrow', url: LINKS.borrow },
     { labelKey: 'nav.earn', url: LINKS.earn },
     { labelKey: 'nav.discover', url: LINKS.discover },
@@ -948,7 +948,7 @@ function MainNavigation() {
       <Logo />
       {!discoverOasisEnabled ? (
         <Flex sx={{ ml: 5, zIndex: 1 }}>
-          <AppLink
+          {/* <AppLink
             variant="links.navHeader"
             href={LINKS.multiply}
             sx={{
@@ -957,7 +957,7 @@ function MainNavigation() {
             }}
           >
             {t('nav.multiply')}
-          </AppLink>
+          </AppLink> */}
           <AppLink
             variant="links.navHeader"
             href={LINKS.borrow}
@@ -988,7 +988,6 @@ function MainNavigation() {
           <HeaderLink label={t('nav.products')}>
             <HeaderList
               links={[
-                { label: t('nav.multiply'), link: LINKS.multiply },
                 { label: t('nav.borrow'), link: LINKS.borrow },
                 { label: t('nav.earn'), link: LINKS.earn },
               ]}
