@@ -1044,7 +1044,7 @@ export function setupAppContext() {
       ilkToToken$,
       {
         borrow: supportedBorrowIlks,
-        multiply: supportedMultiplyIlks,
+        // multiply: supportedMultiplyIlks,
         earn: supportedEarnIlks,
       },
       uiChanges,
