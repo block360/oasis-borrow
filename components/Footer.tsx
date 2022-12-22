@@ -14,38 +14,38 @@ import { ChevronUpDown } from './ChevronUpDown'
 import { SelectComponents } from 'react-select/src/components'
 
 const {
-  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo, apiHost },
+  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo },
 } = getConfig()
 
 const ROUTES = {
-  CONTACT: `${apiHost}/daiwallet/contact`,
-  TWITTER: 'https://twitter.com/oasisdotapp',
-  DISCORD: 'https://discord.gg/Kc2bBB59GC',
+  CONTACT: `inprogress`,
+  TWITTER: 'https://twitter.com/GSUcoin',
+  DISCORD: 'https://discord.com/invite/cm3tmM37W3',
 }
 
 const FOOTER_SECTIONS = [
   {
     titleKey: 'nav.about',
     links: [
-      { labelKey: 'nav.team', url: '/about' },
-      { labelKey: 'nav.careers', url: '/careers' },
+      // { labelKey: 'nav.team', url: '/about' },
+      // { labelKey: 'nav.careers', url: '/careers' },
       { labelKey: 'nav.privacy', url: '/privacy' },
       { labelKey: 'nav.cookie', url: '/cookie' },
       { labelKey: 'nav.terms', url: '/terms' },
       { labelKey: 'nav.security', url: '/security' },
-      { labelKey: 'nav.contact', url: `${apiHost}/daiwallet/contact` },
+      { labelKey: 'nav.contact', url: `mailto:support@GSUcoin.app` },
     ],
   },
   {
     titleKey: 'nav.resources',
     links: [
-      { labelKey: 'nav.blog', url: 'https://blog.oasis.app', target: '_self' },
+      { labelKey: 'nav.blog', url: '/inprogress', target: '_self' },
       // add link
-      { labelKey: 'nav.knowledge-centre', url: 'https://kb.oasis.app/help', target: '_blank' },
-      { labelKey: 'nav.bug-bounty', url: 'https://immunefi.com/bounty/oasis/', target: '_blank' },
+      { labelKey: 'nav.knowledge-centre', url: '/inprogress', target: '_blank' },
+      // { labelKey: 'nav.bug-bounty', url: 'https://immunefi.com/bounty/oasis/', target: '_blank' },
       { labelKey: 'nav.oracles', url: '/oracles' },
-      { labelKey: 'nav.referrals', url: '/referrals' },
-      { labelKey: 'nav.brand-assets', url: '/brand' },
+      // { labelKey: 'nav.referrals', url: '/referrals' },
+      // { labelKey: 'nav.brand-assets', url: '/brand' },
     ],
   },
   {
@@ -53,11 +53,11 @@ const FOOTER_SECTIONS = [
     links: [
       {
         labelKey: 'nav.dai-wallet',
-        url: `${apiHost}/daiwallet`,
+        url: `/inprogress`,
         target: '_self',
       },
       { labelKey: 'nav.borrow', url: '/borrow' },
-      { labelKey: 'nav.multiply', url: '/multiply' },
+      // { labelKey: 'nav.multiply', url: '/multiply' },
       { labelKey: 'nav.earn', url: '/earn' },
     ],
   },
@@ -132,7 +132,7 @@ export function TemporaryFooter() {
           <Text>
             Commit:{' '}
             <Link
-              href={`https://github.com/OasisDex/oasis-borrow/commit/${buildHash}`}
+              href={`https://github.com/block360/oasis-borrow/commit/${buildHash}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -160,7 +160,7 @@ function SocialWithLogo() {
         <AppLink href={ROUTES.DISCORD} sx={{ mx: 3 }}>
           <Icon name="discord" size="auto" width="20px" height="23px" />
         </AppLink>
-        <AppLink href="https://github.com/OasisDEX/oasis-borrow/">
+        <AppLink href="https://github.com/block360/oasis-borrow/">
           <Icon name="github" size="auto" width="21px" />
         </AppLink>
       </Flex>
