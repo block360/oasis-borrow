@@ -33,7 +33,7 @@ const configuredFeatures: Record<Feature, boolean> = {
   StopLossOpenFlow: true,
   ReadOnlyBasicBS: false,
   Notifications: false,
-  Referrals: true,
+  Referrals: false,
   ConstantMultipleReadOnly: false,
   DisableSidebarScroll: false,
   ProxyCreationDisabled: false,

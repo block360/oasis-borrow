@@ -1,13 +1,13 @@
 import { Icon } from '@makerdao/dai-ui-icons'
 import BigNumber from 'bignumber.js'
 import { useAppContext } from 'components/AppContextProvider'
-import { HomePageBanner } from 'components/HomePageBanner'
+// import { HomePageBanner } from 'components/HomePageBanner'
 import { InfoCard } from 'components/InfoCard'
 import { AppLink } from 'components/Links'
 import {
   BorrowProductCardsContainer,
   EarnProductCardsContainer,
-  MultiplyProductCardsContainer,
+  // MultiplyProductCardsContainer,
 } from 'components/productCards/ProductCardsContainer'
 import { TabBar } from 'components/TabBar'
 import { LANDING_PILLS } from 'content/landing'
@@ -174,7 +174,7 @@ export function HomepageView() {
         flex: 1,
       }}
     >
-      <Flex
+      {/* <Flex
         sx={{
           justifyContent: 'center',
           mt: '80px',
@@ -183,6 +183,7 @@ export function HomepageView() {
       >
         <HomePageBanner heading={t('ref.banner')} link="/earn/aave/open/stETHeth" />
       </Flex>
+      */}
       {referralsEnabled && landedWithRef && context?.status === 'connectedReadonly' && (
         <NewReferralModal />
       )}
@@ -231,30 +232,30 @@ export function HomepageView() {
           useDropdownOnMobile
           defaultTab="borrow"
           sections={[
-            {
-              label: t('landing.tabs.multiply.tabLabel'),
-              value: 'multiply',
-              content: (
-                <HomepageTabLayout
-                  paraText={
-                    <>
-                      {t('landing.tabs.multiply.tabParaContent')}{' '}
-                      <AppLink href="/multiply" variant="inText">
-                        {t('landing.tabs.multiply.tabParaLinkContent')}
-                      </AppLink>
-                    </>
-                  }
-                  cards={
-                    <MultiplyProductCardsContainer
-                      strategies={{
-                        maker: productCardsConfig.landing.featuredIlkCards['multiply'],
-                        aave: [],
-                      }}
-                    />
-                  }
-                />
-              ),
-            },
+            // {
+            //   label: t('landing.tabs.multiply.tabLabel'),
+            //   value: 'multiply',
+            //   content: (
+            //     <HomepageTabLayout
+            //       paraText={
+            //         <>
+            //           {t('landing.tabs.multiply.tabParaContent')}{' '}
+            //           <AppLink href="/multiply" variant="inText">
+            //             {t('landing.tabs.multiply.tabParaLinkContent')}
+            //           </AppLink>
+            //         </>
+            //       }
+            //       cards={
+            //         <MultiplyProductCardsContainer
+            //           strategies={{
+            //             maker: productCardsConfig.landing.featuredIlkCards['multiply'],
+            //             aave: [],
+            //           }}
+            //         />
+            //       }
+            //     />
+            //   ),
+            // },
             {
               label: t('landing.tabs.borrow.tabLabel'),
               value: 'borrow',
