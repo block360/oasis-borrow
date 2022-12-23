@@ -150,8 +150,8 @@ function SocialWithLogo() {
   return (
     <Grid gap={3}>
       <Image
-        src={staticFilesRuntimeUrl('/static/img/logo_footer_v2.svg')}
-        sx={{ height: '34px', position: 'relative', top: '-2px' }}
+        src={staticFilesRuntimeUrl('/static/img/logo-footer.svg')}
+        sx={{ height: '27px', position: 'relative', top: '-2px' }}
       />
       <Flex sx={{ alignItems: 'center', a: { fontSize: '0px' }, my: 2 }}>
         <AppLink href={ROUTES.TWITTER}>
