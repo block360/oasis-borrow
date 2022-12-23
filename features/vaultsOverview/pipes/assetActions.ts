@@ -56,13 +56,13 @@ function productCategoryToAssetAction(
         text: 'Borrow',
         icon: 'collateral',
       }
-    case 'multiply':
-      return {
-        path: getProductCategoryUrl('multiply'),
-        hash: urlFragment,
-        text: 'Multiply',
-        icon: 'copy',
-      }
+    // case 'multiply':
+    //   return {
+    //     path: getProductCategoryUrl('multiply'),
+    //     hash: urlFragment,
+    //     text: 'Multiply',
+    //     icon: 'copy',
+    //   }
     case 'earn':
       return {
         path: getProductCategoryUrl('earn'),
