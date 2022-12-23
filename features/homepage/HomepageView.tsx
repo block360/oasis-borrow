@@ -345,7 +345,7 @@ export function HomepageView() {
               },
             ]}
             backgroundGradient="linear-gradient(127.5deg, #EEE1F9 0%, #FFECE8 56.77%, #DDFFF7 100%)"
-            backgroundImage="/static/img/info_cards/cubes_nov27.png"
+            backgroundImage=""
           />
           <InfoCard
             title={t('landing.info-cards.support.support')}
@@ -369,7 +369,7 @@ export function HomepageView() {
               },
             ]}
             backgroundGradient="linear-gradient(135.35deg, #FEF7FF 0.6%, #FEE9EF 100%), radial-gradient(261.45% 254.85% at 3.41% 2.19%, #FFFADD 0%, #FFFBE3 0.01%, #F0FFF2 52.6%, #FBEDFD 100%)"
-            backgroundImage="/static/img/info_cards/bubbles.png"
+            backgroundImage=""
           />
         </Grid>
       </Box>
@@ -407,7 +407,7 @@ export function HomepageView() {
               },
             ]}
             backgroundGradient="linear-gradient(141.11deg, #EBFAFF 0.79%, #EBF2FF 98.94%), linear-gradient(127.5deg, #EEE1F9 0%, #FFECE8 56.77%, #DDFFF7 100%)"
-            backgroundImage="/static/img/info_cards/pills.png"
+            backgroundImage=""
             sx={{
               gridArea: [null, 'left'],
               backgroundSize: ['70%, cover', '300px, cover'],
@@ -426,7 +426,7 @@ export function HomepageView() {
               },
             ]}
             backgroundGradient="linear-gradient(98.21deg, #FFFBE8 2.63%, #FFF0E8 99.63%), linear-gradient(127.5deg, #E4F9C9 0%, #E8FFF5 49.48%, #F9E1EB 100%)"
-            backgroundImage="/static/img/info_cards/dai.png"
+            backgroundImage=""
           />
           <InfoCard
             sx={{
@@ -441,7 +441,7 @@ export function HomepageView() {
               },
             ]}
             backgroundGradient="linear-gradient(127.5deg, #E8EAFF 0%, #EEF0FF 0%, #FFF3FA 100%), linear-gradient(127.5deg, #DDFFF7 0%, #E8EAFF 61.98%, #F9E1EF 100%)"
-            backgroundImage="/static/img/info_cards/safe.png"
+            backgroundImage=""
           />
         </Grid>
       </Box>
