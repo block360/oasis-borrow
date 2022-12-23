@@ -332,15 +332,15 @@ export function HomepageView() {
             subtitle={t('landing.info-cards.learn.deep-dive')}
             links={[
               {
-                href: 'https://kb.oasis.app/help/getting-started',
+                href: '/inprogress',
                 text: t('landing.info-cards.learn.get-started'),
               },
               {
-                href: 'https://kb.oasis.app/help/tutorials',
+                href: '/inprogress',
                 text: t('landing.info-cards.learn.tutorials'),
               },
               {
-                href: 'https://kb.oasis.app/help/borrow',
+                href: '/inprogress',
                 text: t('landing.info-cards.learn.key-concepts'),
               },
             ]}
@@ -352,19 +352,19 @@ export function HomepageView() {
             subtitle={t('landing.info-cards.support.contact-whenever')}
             links={[
               {
-                href: 'https://kb.oasis.app/help/frequently-asked-questions',
+                href: '/support',
                 text: t('landing.info-cards.support.faq'),
               },
               {
-                href: 'https://discord.gg/oasisapp',
+                href: 'https://discord.com/invite/cm3tmM37W3',
                 text: t('landing.info-cards.support.discord'),
               },
               {
-                href: '/daiwallet/contact',
+                href: '/inprogress',
                 text: t('landing.info-cards.support.contact-us'),
               },
               {
-                href: 'https://twitter.com/oasisdotapp',
+                href: 'https://twitter.com/GSUcoin',
                 text: t('landing.info-cards.support.twitter'),
               },
             ]}
