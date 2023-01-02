@@ -111,7 +111,7 @@ function ProductCardBanner({ title, description }: ProductCardBannerProps) {
         opacity={0.7}
         sx={{
           mixBlendMode: 'overlay',
-          backgroundColor: 'black',
+          backgroundColor: 'white',
           minHeight: contentHeight > 100 ? '140px' : '116px',
           border: 'unset',
         }}
