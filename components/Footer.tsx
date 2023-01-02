@@ -176,7 +176,7 @@ export function Footer() {
 
   return (
     <Box as="footer" sx={{ position: 'relative' }}>
-      <Container sx={{ maxWidth: '1200px', mb: 5, pb: 0, pt: 2 }}>
+      <Container sx={{ maxWidth: '1200px', mb: 5, pb: 0, pt: 6 }}>
         <Grid
           sx={{
             pl: 0,
