@@ -12,7 +12,53 @@ import { distinctUntilChanged, map, retry, shareReplay, switchMap } from 'rxjs/o
 
 export function createIlksSupportedOnNetwork$(context$: Observable<Context>): Observable<string[]> {
   return context$.pipe(
-    map((context) => Object.keys(context.joins).filter((join) => !['DAI', 'SAI'].includes(join))),
+    map((context) =>
+      Object.keys(context.joins).filter(
+        (join) =>
+          ![
+            //@GSUpro remove unsupported ilks
+            'WSTETH-A',
+            'WSTETH-B',
+            'CRVV1ETHSTETH-A',
+            'INST-ETH-A',
+            'INST-WBTC-A',
+            'YFI-A',
+            'GUSD-A',
+            'UNI-A',
+            'AAVE-A',
+            'UNIV2DAIETH-A',
+            'UNIV2WBTCETH-A',
+            'UNIV2USDCETH-A',
+            'UNIV2DAIUSDC-A',
+            'UNIV2ETHUSDT-A',
+            'UNIV2LINKETH-A',
+            'UNIV2UNIETH-A',
+            'UNIV2WBTCDAI-A',
+            'UNIV2AAVEETH-A',
+            'UNIV2DAIUSDT-A',
+            'MATIC-A',
+            'GUNIV3DAIUSDC1-A',
+            'GUNIV3DAIUSDC2-A',
+            'BAL-A',
+            'LINK-A',
+            'LRC-A',
+            'COMP-A',
+            'PAXUSD-A',
+            'USDT-A',
+            'MANA-A',
+            'KNC-A',
+            'ZRX-A',
+            'TUSD-A',
+            'USDC-A',
+            'USDC-B',
+            'UNI-A',
+            'BAT-A',
+            //@GSUpro remove unsupported ilks end
+            'DAI',
+            'SAI',
+          ].includes(join),
+      ),
+    ),
   )
 }
 
