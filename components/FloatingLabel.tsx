@@ -17,12 +17,13 @@ export function FloatingLabel({ text, flexSx = {}, textSx = {} }: FloatingLabelP
         px: 3,
         position: 'absolute',
         alignItems: 'center',
-        backgroundColor: 'interactive100',
+
+        backgroundColor: 'white',
         boxShadow: '0 0 8px rgba(0, 0, 0, 0.25)',
         ...flexSx,
       }}
     >
-      <Text sx={{ color: 'neutral10', fontSize: 1, fontWeight: 'heading', ...textSx }}>{text}</Text>
+      <Text sx={{ color: 'black', fontSize: 1, fontWeight: 'heading', ...textSx }}>{text}</Text>
     </Flex>
   )
 }
