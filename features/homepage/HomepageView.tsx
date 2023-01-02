@@ -387,17 +387,12 @@ export function HomepageView() {
         <Grid
           gap={4}
           sx={{
-            maxWidth: '944px',
+            maxWidth: '854px',
             margin: 'auto',
-            gridTemplateColumns: ['1fr', '379px 1fr'],
-            gridTemplateAreas: [
-              'none',
-              `"left topRight"
-            "left bottomRight"`,
-            ],
+            gridTemplateColumns: ['1fr', '1fr 1fr'],
           }}
         >
-          <InfoCard
+          {/* <InfoCard
             title={t('landing.info-cards.multiply.multiply')}
             subtitle={t('landing.info-cards.multiply.subtitle')}
             links={[
@@ -412,11 +407,8 @@ export function HomepageView() {
               gridArea: [null, 'left'],
               backgroundSize: ['70%, cover', '300px, cover'],
             }}
-          />
+          /> */}
           <InfoCard
-            sx={{
-              gridArea: [null, 'topRight'],
-            }}
             title={t('landing.info-cards.borrow.borrow-dai')}
             subtitle={t('landing.info-cards.borrow.choose-your-preferred-token')}
             links={[
@@ -429,9 +421,6 @@ export function HomepageView() {
             backgroundImage=""
           />
           <InfoCard
-            sx={{
-              gridArea: [null, 'bottomRight'],
-            }}
             title={t('landing.info-cards.manage.manage-your-vault')}
             subtitle={t('landing.info-cards.manage.make-actions')}
             links={[
