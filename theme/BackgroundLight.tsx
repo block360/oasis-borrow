@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image } from 'theme-ui'
+import { Box } from 'theme-ui'
 
 import { staticFilesRuntimeUrl } from '../helpers/staticPaths'
 
@@ -8,6 +8,7 @@ export function BackgroundLight() {
     <Box
       sx={{
         position: 'absolute',
+        height: '100%',
         left: 'calc((100% - 1617px) / 2)',
         top: 0,
         right: 0,
@@ -19,11 +20,14 @@ export function BackgroundLight() {
       <Box
         sx={{
           userSelect: 'none',
+          height: '100%',
           pointerEvents: 'none',
+          background: `url(${staticFilesRuntimeUrl(
+            '/static/img/background/background_light.png',
+          )})`,
+          backgroundRepeat: 'repeat',
         }}
-      >
-        <Image src={staticFilesRuntimeUrl('/static/img/background/background_light.png')} />
-      </Box>
+      ></Box>
     </Box>
   )
 }
