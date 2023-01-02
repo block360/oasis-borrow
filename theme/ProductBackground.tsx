@@ -22,7 +22,7 @@ export function ProductBackground() {
           pointerEvents: 'none',
         }}
       >
-        <Image src={staticFilesRuntimeUrl('/static/img/background/top_bg.png')} />
+        <Image src={staticFilesRuntimeUrl('/static/img/background/top_bg.jpeg')} />
       </Box>
     </Box>
   )

@@ -5,9 +5,7 @@ import { AppLinkProps } from 'components/Links'
 import { WithChildren } from 'helpers/types'
 import React from 'react'
 import { Container, Flex, SxStyleProp } from 'theme-ui'
-import { Background } from 'theme/Background'
 import { BackgroundLight } from 'theme/BackgroundLight'
-import { BackgroundLighter } from 'theme/BackgroundLighter'
 
 import { ProductBackground } from '../theme/ProductBackground'
 import { Announcement } from './Announcement'
@@ -105,9 +103,9 @@ export function AppLayout({ children }: WithChildren) {
 }
 
 const marketingBackgrounds = {
-  default: <Background />,
+  default: <BackgroundLight />,
   light: <BackgroundLight />,
-  lighter: <BackgroundLighter />,
+  lighter: <BackgroundLight />,
   none: null,
 }
 
@@ -124,7 +122,7 @@ export function LandingPageLayout({ children }: WithChildren) {
         showAnnouncement={false}
         variant="landingContainer"
         sx={{ position: 'relative' }}
-        bg={marketingBackgrounds['default']}
+        bg={<ProductBackground />}
       >
         {children}
       </WithAnnouncementLayout>
