@@ -308,37 +308,37 @@ export const productCardsConfig: {
   descriptionLinks: {
     'ETH-A': {
       link: '/inprogress',
-      name: 'Maker (ETH-A)',
+      name: 'GSUp (ETH-A)',
     },
     'ETH-B': {
       link: '/inprogress',
-      name: 'Maker (ETH-B)',
+      name: 'GSUp (ETH-B)',
     },
     'ETH-C': {
       link: '/inprogress',
-      name: 'Maker (ETH-C)',
+      name: 'GSUp (ETH-C)',
     },
     // 'WSTETH-A': {
     //   link:
     //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-    //   name: 'Maker (WSTETH-A)',
+    //   name: 'GSUp (WSTETH-A)',
     // },
     // 'WSTETH-B': {
     //   link:
     //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-    //   name: 'Maker (WSTETH-B)',
+    //   name: 'GSUp (WSTETH-B)',
     // },
     'WBTC-A': {
       link: '/inprogress',
-      name: 'Maker (WBTC-A)',
+      name: 'GSUp (WBTC-A)',
     },
     'WBTC-B': {
       link: '/inprogress',
-      name: 'Maker (WBTC-B)',
+      name: 'GSUp (WBTC-B)',
     },
     'WBTC-C': {
       link: '/inprogress',
-      name: 'Maker (WBTC-C)',
+      name: 'GSUp (WBTC-C)',
     },
     // 'RENBTC-A': {
     //   link:
