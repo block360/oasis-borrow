@@ -47,7 +47,7 @@ export function VaultInformation({ items }: VaultInformationProps) {
           <VaultInformationItem key={item.text} text={item.text} value={item.value} />
         ))}
       </DefinitionList>
-      <AppLink href="https://kb.oasis.app/help">
+      <AppLink href="/inprogress">
         <WithArrow sx={{ color: 'interactive100', fontSize: 1, mt: 3 }}>
           {t('learn-more-at-oasis')}
         </WithArrow>

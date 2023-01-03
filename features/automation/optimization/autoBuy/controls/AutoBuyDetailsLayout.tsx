@@ -88,7 +88,7 @@ export function AutoBuyDetailsLayout({
           description={[
             <>
               {t('auto-buy.banner.content')}{' '}
-              <AppLink href="https://kb.oasis.app/help/auto-buy-and-auto-sell" sx={{ fontSize: 2 }}>
+              <AppLink href="/inprogress" sx={{ fontSize: 2 }}>
                 {t('here')}.
               </AppLink>
             </>,

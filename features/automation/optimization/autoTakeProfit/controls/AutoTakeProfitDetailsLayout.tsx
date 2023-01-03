@@ -82,7 +82,7 @@ export function AutoTakeProfitDetailsLayout({
           description={
             <>
               {t('auto-take-profit.banner.content')}{' '}
-              <AppLink href="https://kb.oasis.app/help/take-profit" sx={{ fontSize: 2 }}>
+              <AppLink href="/inprogress" sx={{ fontSize: 2 }}>
                 {t('here')}.
               </AppLink>
             </>

@@ -253,13 +253,13 @@ function TotalAssetsContent(props: { totalValueUsd: BigNumber }) {
       <Text variant="paragraph2" sx={{ color: 'neutral80', mt: '7px' }}>
         <Trans
           i18nKey="vaults-overview.total-assets-subheader"
-          components={[
-            <AppLink
-              href="https://kb.oasis.app/help/curated-token-list"
-              target="_blank"
-              sx={{ fontWeight: 'regular', fontSize: 3 }}
-            />,
-          ]}
+          // components={[
+          //   <AppLink
+          //     href="/inprogress"
+          //     target="_blank"
+          //     sx={{ fontWeight: 'regular', fontSize: 3 }}
+          //   />,
+          // ]}
         />
       </Text>
       <Heading variant="header3" sx={{ mt: '4px' }}>

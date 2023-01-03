@@ -65,10 +65,7 @@ export function SidebarAutomationFeatureCreationStage({
                 {t('automation-creation.add-complete-content', {
                   featureName: t(sidebarAutomationFeatureCopyMap[featureName]),
                 })}{' '}
-                <AppLink
-                  href={`https://kb.oasis.app/help/${linkMap[featureName]}`}
-                  sx={{ fontSize: 2 }}
-                >
+                <AppLink href={`/inprogress`} sx={{ fontSize: 2 }}>
                   {t('here')}.
                 </AppLink>
               </>

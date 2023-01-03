@@ -31,7 +31,7 @@ export function ReferralLayout({ children }: WithChildren) {
             <Text variant="paragraph2" sx={{ textAlign: 'center', color: 'neutral80' }}>
               {t('ref.intro-1')}{' '}
               <AppLink
-                href={`https://kb.oasis.app/help/a-step-by-step-guide-to-refer-a-friend`}
+                href={`/inprogress`}
                 target="_blank"
                 sx={{
                   fontSize: 3,
@@ -56,7 +56,7 @@ export function ReferralLayout({ children }: WithChildren) {
             <AppLink
               variant="inText"
               target="_blank"
-              href="https://kb.oasis.app/help/a-step-by-step-guide-to-refer-a-friend"
+              href="/inprogress"
               sx={{
                 pt: '8px',
                 fontSize: 2,
@@ -78,7 +78,7 @@ export function ReferralLayout({ children }: WithChildren) {
             <AppLink
               variant="inText"
               target="_blank"
-              href="https://kb.oasis.app/help"
+              href="/inprogress"
               sx={{
                 pt: '8px',
                 fontSize: 2,

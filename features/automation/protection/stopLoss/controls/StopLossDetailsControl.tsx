@@ -73,7 +73,7 @@ export function StopLossDetailsControl({ isStopLossActive }: StopLossDetailsCont
           description={
             <>
               {t('vault-banners.setup-stop-loss.content', { token: token })}{' '}
-              <AppLink href="https://kb.oasis.app/help/stop-loss-protection" sx={{ fontSize: 2 }}>
+              <AppLink href="/inprogress" sx={{ fontSize: 2 }}>
                 {t('here')}.
               </AppLink>
             </>

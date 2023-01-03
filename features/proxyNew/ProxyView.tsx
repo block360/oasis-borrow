@@ -40,12 +40,7 @@ function ProxyInfoStateView({ state, send, steps }: ProxyViewStateProps) {
             <Trans
               i18nKey={'vault-form.subtext.proxy-start'}
               components={{
-                1: (
-                  <AppLink
-                    href="https://kb.oasis.app/help/what-is-a-proxy-contract"
-                    sx={{ fontSize: 2 }}
-                  />
-                ),
+                1: <AppLink href="/support" sx={{ fontSize: 2 }} />,
               }}
             />
           </Text>
@@ -90,12 +85,7 @@ function ProxyRunningView(props: { steps: [number, number] }) {
             <Trans
               i18nKey={'vault-form.subtext.proxy-progress'}
               components={{
-                1: (
-                  <AppLink
-                    href="https://kb.oasis.app/help/what-is-a-proxy-contract"
-                    sx={{ fontSize: 2 }}
-                  />
-                ),
+                1: <AppLink href="/support" sx={{ fontSize: 2 }} />,
               }}
             />
           </Text>

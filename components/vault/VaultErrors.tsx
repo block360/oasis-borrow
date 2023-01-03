@@ -10,9 +10,7 @@ import { Trans, useTranslation } from 'next-i18next'
 import React from 'react'
 import { Dictionary } from 'ts-essentials'
 
-const KbLink = (
-  <AppLink sx={{ color: 'critical100' }} href="https://kb.oasis.app/help/minimum-vault-debt-dust" />
-)
+const KbLink = <AppLink sx={{ color: 'critical100' }} href="/inprogress" />
 
 interface VaultErrorsProps {
   errorMessages: VaultErrorMessage[]
