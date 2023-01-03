@@ -400,7 +400,7 @@
     "stability-fee": "Stability Fee",
     "title": "Manage Vault",
     "action": "Manage Vault",
-    "current-price": "Current {{token}} Price",
+    "current-price": "Current Price",
     "next-price": "Next Price",
     "current-price-tooltip": "Current {{token}} Price",
     "next-price-tooltip": "Next {{token}} Price",
