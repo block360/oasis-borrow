@@ -328,11 +328,11 @@ export function UserSettings({ sx }: { sx?: SxStyleProp }) {
         {t('wallet')}
       </Heading>
       <WalletInfo />
-      <Heading as="p" variant="boldParagraph1" sx={{ mt: 4, mb: 3 }}>
+      {/* <Heading as="p" variant="boldParagraph1" sx={{ mt: 4, mb: 3 }}>
         {t('user-settings.slippage-limit.preset-title')}
       </Heading>
-      <SlippageSettingsForm />
-      <Box variant="separator" sx={{ mt: '16px', mb: '24px' }} />
+      <SlippageSettingsForm /> */}
+      <Box variant="separator" sx={{ mt: '32px', mb: '24px' }} />
       <Button
         variant="textual"
         sx={{
