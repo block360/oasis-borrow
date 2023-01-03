@@ -408,14 +408,15 @@ export const oasisBaseTheme = {
       fontWeight: 'semiBold',
       borderRadius: 'round',
       lineHeight: 'buttons',
-      color: 'black',
+      bg: 'rgb(100,100,100)',
+      color: 'white',
       transition: 'background 200ms',
       '&:hover, &:focus-visible': {
-        opacity: 0.8,
+        backgroundColor: 'secondary100',
       },
       '&:disabled': {
         pointerEvents: 'none',
-        opacity: 0.8,
+        opacity: 0.5,
       },
       '&:focus': {
         outline: 'none',

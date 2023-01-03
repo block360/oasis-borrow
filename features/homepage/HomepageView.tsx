@@ -471,6 +471,7 @@ export function Hero({ sx, isConnected }: { sx?: SxStyleProp; isConnected: boole
           display: 'flex',
           margin: '0 auto',
           px: '40px',
+          color: 'black',
           py: 2,
           alignItems: 'center',
           '&:hover svg': {
