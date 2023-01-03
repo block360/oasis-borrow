@@ -66,7 +66,7 @@ export function ProductCardsFilter({
   return (
     <>
       <Box sx={{ display: ['none', 'block'] }}>
-        <Flex sx={{ justifyContent: 'space-around', mb: 4 }}>
+        <Flex sx={{ justifyContent: 'center', mb: 4 }}>
           {filters.map((tab) => {
             return (
               <Button variant="unStyled" onClick={() => handleTabClick(tab.name)} key={tab.name}>
