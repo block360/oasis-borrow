@@ -305,6 +305,7 @@ export function ProductCard({
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  color: 'white',
                   boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.13)',
                   backgroundColor: inactive || isFull ? 'neutral10' : 'rgb(233,87,117)',
                   '&:hover': {
