@@ -53,6 +53,8 @@ export function createIlksSupportedOnNetwork$(context$: Observable<Context>): Ob
             'USDC-B',
             'UNI-A',
             'BAT-A',
+            'RENBTC-A',
+            'RETH-A',
             //@GSUpro remove unsupported ilks end
             'DAI',
             'SAI',
