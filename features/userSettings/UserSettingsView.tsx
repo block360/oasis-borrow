@@ -294,7 +294,7 @@ function WalletInfo() {
 
           {accountData && accountData.daiBalance && (
             <Flex sx={{ alignItems: 'center' }}>
-              <Icon sx={{ zIndex: 1 }} name="dai_color" size={16} />
+              <Icon sx={{ zIndex: 1 }} name="gsu_circle_color" size={16} />
               <Text
                 variant="paragraph4"
                 sx={{
