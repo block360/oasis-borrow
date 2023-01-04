@@ -34,7 +34,7 @@ export function PageSEONoFollow() {
   )
 }
 
-const APP_URL = 'https://oasis.app'
+const APP_URL = 'https://GSUcoin.app'
 
 export function PageSEOTags({
   title,
