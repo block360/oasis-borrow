@@ -30,18 +30,18 @@ export function ContentFooterItemsBorrow({
   const { t } = useTranslation()
 
   const formatted = {
-    debt: `${formatAmount(debt, 'DAI')} DAI`,
+    debt: `${formatAmount(debt, 'DAI')} GSUc`,
     freeCollateral: `${formatAmount(freeCollateral, token)} ${token}`,
-    afterDebt: `${formatAmount(afterDebt, 'DAI')} DAI`,
+    afterDebt: `${formatAmount(afterDebt, 'DAI')} GSUc`,
     afterFreeCollateral: `${formatAmount(
       !afterFreeCollateral.isNegative() ? afterFreeCollateral : zero,
       token,
     )} ${token}`,
-    daiYieldFromLockedCollateral: `${formatAmount(daiYieldFromLockedCollateral, 'DAI')} DAI`,
+    daiYieldFromLockedCollateral: `${formatAmount(daiYieldFromLockedCollateral, 'DAI')} GSUc`,
     daiYieldFromTotalCollateral: `${formatAmount(
       !daiYieldFromTotalCollateral.isNegative() ? daiYieldFromTotalCollateral : zero,
       'DAI',
-    )} DAI`,
+    )} GSUc`,
   }
 
   return (

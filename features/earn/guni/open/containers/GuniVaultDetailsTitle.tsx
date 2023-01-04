@@ -40,7 +40,7 @@ export function GuniVaultDetailsTitle({ token, depositAmount }: GuniVaultDetails
             color: 'primary100',
           }}
         >
-          {`${formatCryptoBalance(depositAmount)} DAI`}
+          {`${formatCryptoBalance(depositAmount)} GSUc`}
         </Heading>
         <Text
           variant="paragraph3"

@@ -77,7 +77,7 @@ export function FeesView({ userReferral }: Props) {
             <Text variant="header3">
               {`${userReferral.totalAmount}`}{' '}
               <Text variant="boldParagraph1" sx={{ display: 'inline' }}>
-                DAI
+                GSUc
               </Text>
             </Text>
           </Box>
@@ -98,7 +98,7 @@ export function FeesView({ userReferral }: Props) {
                   : userReferral.totalClaim}
                 {` `}
                 <Text variant="boldParagraph1" sx={{ display: 'inline' }}>
-                  DAI
+                  GSUc
                 </Text>
               </Text>
             </Box>

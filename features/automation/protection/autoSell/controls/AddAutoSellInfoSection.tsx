@@ -89,7 +89,7 @@ export function AddAutoSellInfoSection({
         {
           label: t('auto-sell.outstanding-debt-after-next-sell'),
           value: outstandingDebtAfterSellFormatted,
-          secondaryValue: `${nextOutstandingDebtAfterSellFormatted} DAI`,
+          secondaryValue: `${nextOutstandingDebtAfterSellFormatted} GSUc`,
         },
         {
           label: t('auto-sell.col-to-be-sold', { token }),

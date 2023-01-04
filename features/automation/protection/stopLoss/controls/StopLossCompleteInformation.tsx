@@ -40,7 +40,7 @@ export function StopLossCompleteInformation({
 
   const maxTokenOrDai = isCollateralActive
     ? `${formatAmount(maxToken, token)} ${token}`
-    : `${formatAmount(maxToken.multipliedBy(executionPrice), 'USD')} DAI`
+    : `${formatAmount(maxToken.multipliedBy(executionPrice), 'USD')} GSUc`
 
   return (
     <VaultChangesInformationContainer title={t('protection.summary-of-protection')}>

@@ -105,8 +105,17 @@ export function VaultActionInput({
 }: VaultActionInputProps) {
   const [auxiliaryFlag, setAuxiliaryFlag] = useState<boolean>(false)
   const [toggleStatus, setToggleStatus] = useState<boolean>(defaultToggle)
-  const tokenSymbol = currencyCode !== 'USD' ? getToken(currencyCode).symbol : 'USD'
-  const auxiliarySymbol = auxiliaryCurrencyCode ? getToken(auxiliaryCurrencyCode).symbol : 'USD'
+  const tokenSymbol =
+    currencyCode !== 'USD'
+      ? currencyCode === 'DAI'
+        ? 'GSUc'
+        : getToken(currencyCode).symbol
+      : 'USD'
+  const auxiliarySymbol = auxiliaryCurrencyCode
+    ? auxiliaryCurrencyCode === 'DAI'
+      ? 'GSUc'
+      : getToken(auxiliaryCurrencyCode).symbol
+    : 'USD'
 
   const toggleResolved = typeof defaultToggle === 'boolean' ? defaultToggle : toggleStatus
 
@@ -149,7 +158,7 @@ export function VaultActionInput({
         }}
       >
         <Text variant="paragraph4" sx={{ fontWeight: 'semiBold' }}>
-          {action} {currencyCode}
+          {action} {currencyCode === 'DAI' ? 'GSUc' : currencyCode}
         </Text>
         {(showMin || showMax || showToggle) && (
           <Text

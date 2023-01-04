@@ -82,9 +82,9 @@ export function OpenVaultChangesInformation(props: OpenVaultState) {
         label={`${t('system.vault-dai-debt')}`}
         value={
           <Flex>
-            {zeroBalance} DAI
+            {zeroBalance} GSUc
             <VaultChangesInformationArrow />
-            {formatCryptoBalance(generateAmount || zero)} DAI
+            {formatCryptoBalance(generateAmount || zero)} GSUc
           </Flex>
         }
       />
@@ -102,9 +102,9 @@ export function OpenVaultChangesInformation(props: OpenVaultState) {
         label={`${t('system.available-to-generate')}`}
         value={
           <Flex>
-            {zeroBalance} DAI
+            {zeroBalance} GSUc
             <VaultChangesInformationArrow />
-            {formatCryptoBalance(maxGenerateAmountCurrentPrice.minus(generateAmount || zero))} DAI
+            {formatCryptoBalance(maxGenerateAmountCurrentPrice.minus(generateAmount || zero))} GSUc
           </Flex>
         }
       />

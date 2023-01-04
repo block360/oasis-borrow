@@ -21,7 +21,7 @@ function manageMultiplyVaultButtonText(state: ManageMultiplyVaultState): string 
         : state.insufficientCollateralAllowance
         ? t('set-token-allowance', { token: state.vault.token })
         : state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : state.originalEditingStage === 'otherActions' && state.otherAction === 'closeVault'
         ? t('close-vault')
         : t('confirm')
@@ -30,12 +30,12 @@ function manageMultiplyVaultButtonText(state: ManageMultiplyVaultState): string 
       return state.insufficientCollateralAllowance
         ? t('set-token-allowance', { token: state.vault.token })
         : state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : t('continue')
 
     case 'collateralAllowanceSuccess':
       return state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : t('continue')
 
     case 'daiAllowanceSuccess':
@@ -59,7 +59,7 @@ function manageMultiplyVaultButtonText(state: ManageMultiplyVaultState): string 
     case 'daiAllowanceWaitingForConfirmation':
       return state.customDaiAllowanceAmountEmpty
         ? t('enter-allowance-amount')
-        : t('set-token-allowance', { token: 'DAI' })
+        : t('set-token-allowance', { token: 'GSUc' })
 
     case 'collateralAllowanceFailure':
     case 'daiAllowanceFailure':
@@ -143,7 +143,7 @@ export function ManageMultiplyVaultButton(props: ManageMultiplyVaultState) {
     switch (stage) {
       case 'daiAllowanceFailure':
       case 'collateralAllowanceFailure':
-        return t('edit-token-allowance', { token: isCollateralAllowanceStage ? token : 'DAI' })
+        return t('edit-token-allowance', { token: isCollateralAllowanceStage ? token : 'GSUc' })
       case 'borrowTransitionEditing':
       case 'borrowTransitionWaitingForConfirmation':
       case 'borrowTransitionFailure':

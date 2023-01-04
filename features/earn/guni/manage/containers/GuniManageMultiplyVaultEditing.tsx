@@ -26,7 +26,7 @@ function CloseVaultAction(props: ManageMultiplyVaultState) {
       <Grid columns={1}>
         <CloseVaultCard
           optionName="dai"
-          text="Close to DAI"
+          text="Close to GSUc"
           icon="gsu_circle_color"
           onClick={() => setCloseVaultTo!('dai')}
           isActive={!closeToCollateral}

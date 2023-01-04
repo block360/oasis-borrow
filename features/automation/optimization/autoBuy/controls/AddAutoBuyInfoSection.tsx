@@ -83,7 +83,7 @@ export function AddAutoBuyInfoSection({
         {
           label: t('auto-buy.outstanding-debt-after-next-buy'),
           value: outstandingDebtAfterBuyFormatted,
-          secondaryValue: `${nextOutstandingDebtAfterBuyFormatted} DAI`,
+          secondaryValue: `${nextOutstandingDebtAfterBuyFormatted} GSUc`,
         },
         {
           label: t('auto-buy.col-to-be-purchased', { token }),

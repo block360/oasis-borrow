@@ -105,18 +105,18 @@ export function GuniOpenMultiplyVaultDetails(
   const contentRowData: [string, string, string][] = [
     [
       t('earn-vault.simulate.rowlabel1'),
-      `${formatCryptoBalance(earnings30.earningsAfterFees)} DAI`,
-      `${formatCryptoBalance(earnings30.netValue)} DAI`,
+      `${formatCryptoBalance(earnings30.earningsAfterFees)} GSUc`,
+      `${formatCryptoBalance(earnings30.netValue)} GSUc`,
     ],
     [
       t('earn-vault.simulate.rowlabel2'),
-      `${formatCryptoBalance(earnings90.earningsAfterFees)} DAI`,
-      `${formatCryptoBalance(earnings90.netValue)} DAI`,
+      `${formatCryptoBalance(earnings90.earningsAfterFees)} GSUc`,
+      `${formatCryptoBalance(earnings90.netValue)} GSUc`,
     ],
     [
       t('earn-vault.simulate.rowlabel3'),
-      `${formatCryptoBalance(earnings1yr.earningsAfterFees)} DAI`,
-      `${formatCryptoBalance(earnings1yr.netValue)} DAI`,
+      `${formatCryptoBalance(earnings1yr.earningsAfterFees)} GSUc`,
+      `${formatCryptoBalance(earnings1yr.netValue)} GSUc`,
     ],
   ]
 

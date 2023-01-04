@@ -85,11 +85,11 @@ export function SetDownsideProtectionInformation({
 
   const maxTokenOrDai = isCollateralActive
     ? `${formatAmount(afterMaxToken, token)} ${token}`
-    : `${formatAmount(afterMaxToken.multipliedBy(executionPrice), 'USD')} DAI`
+    : `${formatAmount(afterMaxToken.multipliedBy(executionPrice), 'USD')} GSUc`
 
   const savingTokenOrDai = isCollateralActive
     ? `${formatAmount(savingCompareToLiquidation, token)} ${token}`
-    : `${formatAmount(savingCompareToLiquidation.multipliedBy(executionPrice), 'USD')} DAI`
+    : `${formatAmount(savingCompareToLiquidation.multipliedBy(executionPrice), 'USD')} GSUc`
 
   const closeVaultGasEstimation = new BigNumber(1300000) // average based on historical data from blockchain
   const closeVaultGasPrice = new BigNumber(200) // gwei

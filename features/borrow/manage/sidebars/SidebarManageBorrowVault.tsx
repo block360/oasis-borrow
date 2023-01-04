@@ -103,7 +103,7 @@ export function SidebarManageBorrowVault(props: ManageStandardBorrowVaultState) 
       items: [
         {
           label: t('system.actions.borrow.edit-collateral', { token }),
-          shortLabel: token,
+          shortLabel: token === 'DAI' ? 'GSUc' : token,
           icon: getToken(token).iconCircle,
           panel: 'collateral',
           action: () => {
@@ -113,7 +113,7 @@ export function SidebarManageBorrowVault(props: ManageStandardBorrowVaultState) 
         },
         {
           label: t('system.actions.borrow.edit-dai'),
-          shortLabel: 'DAI',
+          shortLabel: 'GSUc',
           icon: getToken('DAI').iconCircle,
           panel: 'dai',
           action: () => {
