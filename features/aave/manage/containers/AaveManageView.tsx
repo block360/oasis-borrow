@@ -5,7 +5,7 @@ import { ProtectionControl } from 'components/vault/ProtectionControl'
 import { AaveAutomationContext } from 'features/automation/contexts/AaveAutomationContext'
 import { AaveFaq } from 'features/content/faqs/aave'
 import { useEarnContext } from 'features/earn/EarnContextProvider'
-import { Survey } from 'features/survey'
+// import { Survey } from 'features/survey'
 import { VaultContainerSpinner, WithLoadingIndicator } from 'helpers/AppSpinner'
 import { WithErrorHandler } from 'helpers/errorHandlers/WithErrorHandler'
 import { useObservable } from 'helpers/observableHook'
@@ -128,7 +128,7 @@ function AaveManageContainer({
               : []),
           ]}
         />
-        <Survey for="earn" />
+        {/* <Survey for="earn" /> */}
       </Container>
     </AaveAutomationContext>
   )

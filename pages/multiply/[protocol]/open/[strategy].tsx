@@ -1,7 +1,7 @@
 import { WithWalletConnection } from 'components/connectWallet/ConnectWallet'
 import { AppLayout } from 'components/Layouts'
 import { AaveOpenView } from 'features/aave/open/containers/AaveOpenView'
-import { Survey } from 'features/survey'
+// import { Survey } from 'features/survey'
 import { WithTermsOfService } from 'features/termsOfService/TermsOfService'
 import { GetServerSidePropsContext } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -29,7 +29,7 @@ function OpenVault({ strategy: _strategy }: { strategy: string }) {
 
           <AaveOpenView config={strategies['aave-multiply']} />
 
-          <Survey for="earn" />
+          {/* <Survey for="earn" /> */}
         </WithTermsOfService>
       </WithWalletConnection>
     </AaveContextProvider>
