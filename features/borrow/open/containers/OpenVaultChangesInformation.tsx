@@ -71,7 +71,7 @@ export function OpenVaultChangesInformation(props: OpenVaultState) {
       <VaultChangesInformationItem
         label={`${t('system.liquidation-price')}`}
         value={
-          <Flex>
+          <Flex sx={{ fontFamily: '"GSU Font", "Open Sans"' }}>
             {`$${zeroBalance}`}
             <VaultChangesInformationArrow />
             {`$${formatCryptoBalance(afterLiquidationPrice || zero)}`}
