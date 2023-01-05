@@ -13,15 +13,5 @@ export const LANDING_PILLS = [
     icon: 'gsu_circle_color',
     label: 'GSUc',
     link: '/asset/GSUc',
-  },
-  // {
-  //   icon: 'uni_lp_circle_color',
-  //   label: 'UNI LP',
-  //   link: '/asset/lp-token',
-  // },
-  // {
-  //   icon: 'yfi_circle_color',
-  //   label: 'YFI',
-  //   link: '/asset/yfi',
-  // },
+  }
 ]

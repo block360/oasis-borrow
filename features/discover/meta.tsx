@@ -43,13 +43,7 @@ export const discoverPagesMeta: DiscoverPageMeta[] = [
     filters: {
       asset: getAssetOptions([
         discoverFiltersAssetItems.eth,
-        discoverFiltersAssetItems.wbtc,
-        discoverFiltersAssetItems.mana,
-        discoverFiltersAssetItems.link,
-        discoverFiltersAssetItems.yfi,
-        discoverFiltersAssetItems.matic,
-        discoverFiltersAssetItems.wsteth,
-        discoverFiltersAssetItems.crvv1ethsteth,
+        discoverFiltersAssetItems.wbtc
       ]),
       size: discoverSizeFilter,
     },
@@ -66,12 +60,7 @@ export const discoverPagesMeta: DiscoverPageMeta[] = [
     filters: {
       asset: getAssetOptions([
         discoverFiltersAssetItems.eth,
-        discoverFiltersAssetItems.wbtc,
-        discoverFiltersAssetItems.mana,
-        discoverFiltersAssetItems.link,
-        discoverFiltersAssetItems.yfi,
-        discoverFiltersAssetItems.matic,
-        discoverFiltersAssetItems.wsteth,
+        discoverFiltersAssetItems.wbtc
       ]),
       multiple: discoverMultipleFilter,
       size: discoverSizeFilter,
@@ -108,13 +97,7 @@ export const discoverPagesMeta: DiscoverPageMeta[] = [
     filters: {
       asset: getAssetOptions([
         discoverFiltersAssetItems.eth,
-        discoverFiltersAssetItems.wbtc,
-        discoverFiltersAssetItems.mana,
-        discoverFiltersAssetItems.link,
-        discoverFiltersAssetItems.yfi,
-        discoverFiltersAssetItems.matic,
-        discoverFiltersAssetItems.wsteth,
-        discoverFiltersAssetItems.crvv1ethsteth,
+        discoverFiltersAssetItems.wbtc
       ]),
       size: discoverSizeFilter,
     },

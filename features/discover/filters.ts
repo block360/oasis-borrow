@@ -3,28 +3,8 @@ import { DiscoverFiltersListItem, DiscoverFiltersListOptions } from 'features/di
 import { DiscoverFilterType } from 'features/discover/types'
 
 export const discoverFiltersAssetItems: { [key: string]: DiscoverFiltersListOptions } = {
-  crvv1ethsteth: {
-    value: 'CRVV1ETHSTETH',
-    label: 'CURVE LP',
-    icon: 'curve_full_circle_color',
-  },
   eth: { value: 'ETH', label: 'ETH', icon: getToken('ETH').iconCircle },
-  guniv3daiusdc1: {
-    value: 'GUNIV3DAIUSDC1',
-    label: 'GUNIV3DAIUSDC1',
-    icon: getToken('GUNIV3DAIUSDC1').iconCircle,
-  },
-  guniv3daiusdc2: {
-    value: 'GUNIV3DAIUSDC2',
-    label: 'GUNIV3DAIUSDC2',
-    icon: getToken('GUNIV3DAIUSDC2').iconCircle,
-  },
-  link: { value: 'LINK', label: 'LINK', icon: getToken('LINK').iconCircle },
-  mana: { value: 'MANA', label: 'MANA', icon: getToken('MANA').iconCircle },
-  matic: { value: 'MATIC', label: 'MATIC', icon: getToken('MATIC').iconCircle },
   wbtc: { value: 'WBTC', label: 'WBTC', icon: getToken('WBTC').iconCircle },
-  wsteth: { value: 'WSTETH', label: 'WSTETH', icon: getToken('WSTETH').iconCircle },
-  yfi: { value: 'YFI', label: 'YFI', icon: getToken('YFI').iconCircle },
 }
 
 export const discoverSizeFilter: DiscoverFiltersListItem = {
