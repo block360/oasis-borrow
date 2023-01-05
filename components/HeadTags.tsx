@@ -1,10 +1,14 @@
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { useTranslation } from 'next-i18next'
+import getConfig from 'next/config'
 import Head from 'next/head'
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 
 import { useTheme } from '../theme/useThemeUI'
+const {
+  publicRuntimeConfig: { apiHost },
+} = getConfig()
 
 export function HeadTags() {
   const { theme } = useTheme()
@@ -34,7 +38,7 @@ export function PageSEONoFollow() {
   )
 }
 
-const APP_URL = 'https://GSUcoin.app'
+const APP_URL = apiHost || 'https://GSUcoin.app'
 
 export function PageSEOTags({
   title,
