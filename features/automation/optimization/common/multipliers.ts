@@ -27,14 +27,9 @@ const ilksMultipliers: { [key: string]: number[] } = {
   'ETH-A': multipliersPresets['1.5-2.75'],
   'ETH-B': multipliersPresets['1.5-3.5'],
   'ETH-C': multipliersPresets['1.3-2.25'],
-  'LINK-A': multipliersPresets['1.3-2.25'],
-  'RENBTC-A': multipliersPresets['1.3-2.25'],
   'WBTC-A': multipliersPresets['1.3-2.25'],
   'WBTC-B': multipliersPresets['1.5-3.5'],
-  'WBTC-C': multipliersPresets['1.3-2.25'],
-  'WSTETH-A': multipliersPresets['1.3-2.25'],
-  'WSTETH-B': multipliersPresets['1.3-2'],
-  'YFI-A': multipliersPresets['1.3-2.25'],
+  'WBTC-C': multipliersPresets['1.3-2.25']
 }
 
 function generateMultipliers({

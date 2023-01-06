@@ -38,27 +38,11 @@ export type ProductLandingPagesFiltersKeys =
   | 'Featured'
   | 'ETH'
   | 'BTC'
-  | 'UNI LP'
-  | 'LINK'
-  | 'UNI'
-  | 'YFI'
-  | 'MANA'
-  | 'MATIC'
-  | 'GUSD'
-  | 'Curve LP'
 
 type ProductLandingPagesFiltersIcons =
   | 'star_circle'
   | 'eth_circle'
   | 'btc_circle'
-  | 'uni_lp_circle'
-  | 'link_circle'
-  | 'uni_circle'
-  | 'yfi_circle'
-  | 'mana_circle'
-  | 'matic_circle'
-  | 'gusd_circle'
-  | 'curve_circle'
 
 export type ProductLandingPagesFilter = {
   name: ProductLandingPagesFiltersKeys
@@ -75,41 +59,14 @@ export const supportedBorrowIlks = [
   'ETH-A',
   'ETH-B',
   'ETH-C',
-  // 'WSTETH-A',
   'WBTC-A',
   'WBTC-B',
   'WBTC-C',
-  // 'RENBTC-A',
-  // 'LINK-A',
-  // 'GUSD-A',
-  // 'YFI-A',
-  // 'MANA-A',
-  // 'MATIC-A',
-  // 'UNIV2USDCETH-A',
-  // 'UNIV2DAIUSDC-A',
-  // 'CRVV1ETHSTETH-A',
-  // 'WSTETH-B',
-  // 'RETH-A',
 ]
 
-export const supportedMultiplyIlks = [
-  'ETH-A',
-  'ETH-B',
-  'ETH-C',
-  'WSTETH-A',
-  'WBTC-A',
-  'WBTC-B',
-  'WBTC-C',
-  'RENBTC-A',
-  'LINK-A',
-  'YFI-A',
-  'MANA-A',
-  'MATIC-A',
-  'WSTETH-B',
-  'RETH-A',
-]
+export const supportedMultiplyIlks = []
 
-export const supportedEarnIlks = ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A']
+export const supportedEarnIlks = []
 
 type ProductPageType = {
   cardsFilters: Array<ProductLandingPagesFilter>
@@ -125,42 +82,18 @@ const genericFilters = {
     name: 'ETH',
     icon: 'eth_circle',
     urlFragment: 'eth',
-    tokens: ['ETH', 'WETH', 'wstETH', 'stETH', 'RETH'],
+    tokens: ['ETH', 'WETH'],
   },
-  btc: { name: 'BTC', icon: 'btc_circle', urlFragment: 'btc', tokens: ['WBTC', 'renBTC'] },
-  // unilp: {
-  //   name: 'UNI LP',
-  //   icon: 'uni_lp_circle',
-  //   urlFragment: 'unilp',
-  //   tokens: ['GUNIV3DAIUSDC1', 'GUNIV3DAIUSDC2'],
-  // },
-  // link: { name: 'LINK', icon: 'link_circle', urlFragment: 'link', tokens: ['LINK'] },
-  // yfi: { name: 'YFI', icon: 'yfi_circle', urlFragment: 'yfi', tokens: ['YFI'] },
-  // mana: { name: 'MANA', icon: 'mana_circle', urlFragment: 'mana', tokens: ['MANA'] },
-  // matic: { name: 'MATIC', icon: 'matic_circle', urlFragment: 'matic', tokens: ['MATIC'] },
-  // gusd: { name: 'GUSD', icon: 'gusd_circle', urlFragment: 'gusd', tokens: ['GUSD'] },
-  // crvlp: { name: 'Curve LP', icon: 'curve_circle', urlFragment: 'crvlp', tokens: [] },
+  btc: { name: 'BTC', icon: 'btc_circle', urlFragment: 'btc', tokens: ['WBTC'] }
 } as const
 
 const ilkToEntryTokenMap = {
   'ETH-A': 'ETH',
   'ETH-B': 'ETH',
   'ETH-C': 'ETH',
-  'RETH-A': 'RETH',
-  'WSTETH-A': 'WSTETH',
   'WBTC-A': 'WBTC',
   'WBTC-B': 'WBTC',
   'WBTC-C': 'WBTC',
-  'RENBTC-A': 'RENBTC',
-  'LINK-A': 'LINK',
-  'GUSD-A': 'GUSD',
-  'YFI-A': 'YFI',
-  'MANA-A': 'MANA',
-  'MATIC-A': 'MATIC',
-  'UNIV2USDCETH-A': 'UNIV2USDCETH',
-  'UNIV2DAIUSDC-A': 'UNIV2DAIUSDC',
-  'CRVV1ETHSTETH-A': 'CRVV1ETHSTETH',
-  'WSTETH-B': 'WSTETH',
 }
 
 export type IlkTokenMap = { ilk: Ilk; token: string }
@@ -203,14 +136,7 @@ export const productCardsConfig: {
     cardsFilters: [
       genericFilters.featured,
       genericFilters.eth,
-      genericFilters.btc,
-      // genericFilters.unilp,
-      // genericFilters.link,
-      // genericFilters.yfi,
-      // genericFilters.mana,
-      // genericFilters.matic,
-      // genericFilters.gusd,
-      // genericFilters.crvlp,
+      genericFilters.btc
     ],
     featuredIlkCards: ['ETH-C', 'WBTC-C'],
     inactiveIlks: [],
@@ -221,10 +147,6 @@ export const productCardsConfig: {
     tags: {
       'ETH-C': 'lowest-fees-for-borrowing',
       'WBTC-C': 'lowest-fees-for-borrowing',
-      // 'WSTETH-A': 'staking-rewards',
-      // 'WSTETH-B': 'staking-rewards',
-      // 'CRVV1ETHSTETH-A': 'staking-rewards',
-      // 'RETH-A': 'staking-rewards',
     },
   },
   multiply: {
@@ -232,22 +154,14 @@ export const productCardsConfig: {
       genericFilters.featured,
       genericFilters.eth,
       genericFilters.btc,
-      // genericFilters.link,
-      // genericFilters.yfi,
-      // genericFilters.mana,
-      // genericFilters.matic,
     ],
-    featuredIlkCards: ['ETH-B', 'WBTC-B'],
+    featuredIlkCards: [],
     inactiveIlks: [],
     ordering: {
-      ETH: ['ETH-B', 'ETH-A', 'ETH-C'],
-      BTC: ['WBTC-B', 'WBTC-A', 'WBTC-C'],
+      ETH: [],
+      BTC: []
     },
     tags: {
-      'WBTC-B': 'max-exposure',
-      'ETH-B': 'max-exposure',
-      // 'WSTETH-A': 'staking-rewards',
-      // 'RETH-A': 'staking-rewards',
     },
   },
   earn: {
@@ -262,12 +176,9 @@ export const productCardsConfig: {
       borrow: [
         'ETH-C',
         'WBTC-C',
-        // 'CRVV1ETHSTETH-A',
-        // 'WSTETH-B',
       ],
-      multiply: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
-      // earn: ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A'],
-      earn: [],
+      multiply: [],
+      earn: []
     },
     featuredAaveCards: {
       borrow: [],
@@ -280,30 +191,9 @@ export const productCardsConfig: {
     'ETH-A': 'medium-exposure-medium-cost',
     'ETH-B': 'biggest-multiply',
     'ETH-C': 'lowest-stabilityFee-and-cheapest',
-    // 'WSTETH-A': 'staking-rewards',
-    // 'WSTETH-B': 'lowest-annual-fee-cheapest-vault',
-    // 'RETH-A': 'borrow-and-multiply',
     'WBTC-A': 'medium-exposure-medium-cost',
     'WBTC-B': 'biggest-multiply',
-    'WBTC-C': 'lowest-stabilityFee-and-cheapest',
-    // 'RENBTC-A': 'great-borrowing-and-multiplying',
-    // 'GUNIV3DAIUSDC1-A': 'guni',
-    // 'GUNIV3DAIUSDC2-A': 'guni',
-
-    // 'GUSD-A': 'borrow',
-    // 'LINK-A': 'borrow-and-multiply',
-    // 'UNI-A': 'borrow-and-multiply',
-    // 'YFI-A': 'borrow-and-multiply',
-    // 'MANA-A': 'borrow-and-multiply',
-    // 'MATIC-A': 'borrow-and-multiply',
-
-    // 'UNIV2DAIETH-A': 'lp-tokens',
-    // 'UNIV2WBTCETH-A': 'lp-tokens',
-    // 'UNIV2USDCETH-A': 'lp-tokens',
-    // 'UNIV2DAIUSDC-A': 'lp-tokens',
-    // 'UNIV2UNIETH-A': 'lp-tokens',
-    // 'UNIV2WBTCDAI-A': 'lp-tokens',
-    // 'CRVV1ETHSTETH-A': 'borrow',
+    'WBTC-C': 'lowest-stabilityFee-and-cheapest'
   } as Record<string, string>,
   descriptionLinks: {
     'ETH-A': {
@@ -315,19 +205,10 @@ export const productCardsConfig: {
       name: 'GSUp (ETH-B)',
     },
     'ETH-C': {
-      link: '/inprogress',
-      name: 'GSUp (ETH-C)',
+      link:
+        '/inprogress',
+      name: 'Maker (ETH-C)',
     },
-    // 'WSTETH-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-    //   name: 'GSUp (WSTETH-A)',
-    // },
-    // 'WSTETH-B': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-    //   name: 'GSUp (WSTETH-B)',
-    // },
     'WBTC-A': {
       link: '/inprogress',
       name: 'GSUp (WBTC-A)',
@@ -337,71 +218,14 @@ export const productCardsConfig: {
       name: 'GSUp (WBTC-B)',
     },
     'WBTC-C': {
-      link: '/inprogress',
-      name: 'GSUp (WBTC-C)',
+      link:
+        '/inprogress',
+      name: 'Maker (WBTC-C)',
     },
-    // 'RENBTC-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_414294869681652792871926',
-    //   name: 'Maker (RENBTC-A)',
-    // },
-    // 'LINK-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_42582440791652792878921',
-    //   name: 'Maker (LINK-A)',
-    // },
-    // 'MANA-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_536808626201652802419989',
-    //   name: 'Maker (MANA-A)',
-    // },
-    // 'MATIC-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_615723980991652792924214',
-    //   name: 'Maker (MATIC-A)',
-    // },
-    // 'GUSD-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4952663551081652792930397',
-    //   name: 'Maker (GUSD-A)',
-    // },
-    // 'YFI-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4996750151161652792936142',
-    //   name: 'Maker (YFI-A)',
-    // },
-    // 'GUNIV3DAIUSDC1-A': {
-    //   link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
-    //   name: 'Maker/Gelato/Uniswap',
-    // },
-    // 'GUNIV3DAIUSDC2-A': {
-    //   link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
-    //   name: 'Maker/Gelato/Uniswap',
-    // },
-    // 'UNIV2USDCETH-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
-    //   name: 'Maker/Uniswap',
-    // },
-    // 'UNIV2DAIUSDC-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
-    //   name: 'Maker/Uniswap',
-    // },
-    // 'CRVV1ETHSTETH-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_67885280351652802433065',
-    //   name: 'Maker/Curve/Lido',
-    // },
-    // stETHeth: {
-    //   link: 'https://kb.oasis.app/help/what-you-should-know-about-steth',
-    //   name: 'AAVE stETH / ETH',
-    // },
-    // 'RETH-A': {
-    //   link:
-    //     'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-    //   name: 'Maker (RETH-A)',
-    // },
+    stETHeth: {
+      link: '/inprogress',
+      name: 'AAVE stETH / ETH',
+    }
   },
 }
 
@@ -491,7 +315,8 @@ export function earnPageCardsData<T extends IlkTokenMap>({
   ilkToTokenMapping: Array<T>
 }): Array<T> {
   return ilkToTokenMapping.filter((data) =>
-    ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A'].includes(data.ilk),
+    // ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A'].includes(data.ilk),
+    productCardsConfig.earn.featuredIlkCards.includes(data.ilk),
   )
 }
 
@@ -540,10 +365,6 @@ export function borrowPageCardsData<T extends IlkTokenMap>({
     )
   }
 
-  // if (cardsFilter === 'UNI LP') {
-  //   return uniLpProductCards(ilkToTokenMapping)
-  // }
-
   if (cardsFilter === 'BTC') {
     return btcProductCards(ilkToTokenMapping)
   }
@@ -551,10 +372,6 @@ export function borrowPageCardsData<T extends IlkTokenMap>({
   if (cardsFilter === 'ETH') {
     return ethProductCards(ilkToTokenMapping)
   }
-
-  // if (cardsFilter === 'Curve LP') {
-  //   return ilkToTokenMapping.filter(({ ilk }) => ilk === 'CRVV1ETHSTETH-A')
-  // }
 
   return ilkToTokenMapping.filter(({ token }) => token === cardsFilter)
 }
