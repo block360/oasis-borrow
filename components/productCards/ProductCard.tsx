@@ -1,5 +1,6 @@
 import { Icon } from '@makerdao/dai-ui-icons'
 import BigNumber from 'bignumber.js'
+import { ProtocolLongNames, TokenMetadataType } from 'blockchain/tokensMetadata'
 import { formatCryptoBalance } from 'helpers/formatters/format'
 import { ProductCardData, productCardsConfig } from 'helpers/productCards'
 import { useTranslation } from 'next-i18next'
@@ -78,8 +79,11 @@ interface ProductCardBannerProps {
 }
 
 // changed "ilk" to "strategyName" cause not everything is an ilk
-export function ProductCardProtocolLink({ ilk: strategyName }: Partial<ProductCardData>) {
-  const { link, name } = productCardsConfig.descriptionLinks[strategyName!] ?? {
+export function ProductCardProtocolLink({
+  ilk: strategyName,
+  protocol,
+}: Pick<ProductCardData, 'ilk' | 'protocol'>) {
+  const { link } = productCardsConfig.descriptionLinks[strategyName!] ?? {
     link: `https://makerburn.com/#/collateral/${strategyName}`,
     ilk: strategyName,
   }
@@ -87,7 +91,7 @@ export function ProductCardProtocolLink({ ilk: strategyName }: Partial<ProductCa
     <Box sx={{ paddingRight: '10px' }}>
       <AppLink href={link}>
         <WithArrow variant="styles.a" gap="1">
-          {name}
+          {ProtocolLongNames[protocol]}
         </WithArrow>
       </AppLink>
     </Box>
@@ -204,6 +208,7 @@ export interface ProductCardProps {
   floatingLabelText?: string
   inactive?: boolean
   labels?: { title: string; value: ReactNode }[]
+  protocol?: TokenMetadataType['protocol']
 }
 
 export function ProductCard({

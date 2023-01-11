@@ -13,6 +13,7 @@ import {
   getToken,
   LP_TOKENS,
   ONLY_MULTIPLY_TOKENS,
+  TokenMetadataType,
 } from '../blockchain/tokensMetadata'
 import { aaveStrategiesList } from '../features/aave/strategyConfig'
 import { zero } from './zero'
@@ -32,6 +33,7 @@ export interface ProductCardData {
   background: string
   name: string
   isFull: boolean
+  protocol: TokenMetadataType['protocol']
 }
 
 export type ProductLandingPagesFiltersKeys = 'Featured' | 'ETH' | 'BTC'

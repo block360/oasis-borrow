@@ -91,7 +91,7 @@ export function ProductCardEarnAave({ cardData }: ProductCardEarnAaveProps) {
               },
               {
                 title: t('system.protocol'),
-                value: <ProductCardProtocolLink ilk={cardData.symbol} />,
+                value: <ProductCardProtocolLink ilk={cardData.symbol} protocol="aave" />,
               },
             ]}
             button={{
