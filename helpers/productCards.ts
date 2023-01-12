@@ -176,27 +176,27 @@ export const productCardsConfig: {
   descriptionLinks: {
     'ETH-A': {
       link: '/inprogress',
-      name: 'GSUp (ETH-A)',
+      name: 'GSU (ETH-A)',
     },
     'ETH-B': {
       link: '/inprogress',
-      name: 'GSUp (ETH-B)',
+      name: 'GSU (ETH-B)',
     },
     'ETH-C': {
       link: '/inprogress',
-      name: 'Maker (ETH-C)',
+      name: 'GSU (ETH-C)',
     },
     'WBTC-A': {
       link: '/inprogress',
-      name: 'GSUp (WBTC-A)',
+      name: 'GSU (WBTC-A)',
     },
     'WBTC-B': {
       link: '/inprogress',
-      name: 'GSUp (WBTC-B)',
+      name: 'GSU (WBTC-B)',
     },
     'WBTC-C': {
       link: '/inprogress',
-      name: 'Maker (WBTC-C)',
+      name: 'GSU (WBTC-C)',
     },
     stETHeth: {
       link: '/inprogress',
@@ -387,6 +387,7 @@ export function createProductCardsWithBalance$(
                   bannerGif: tokenMeta.bannerGif,
                   background: tokenMeta.background,
                   name: tokenMeta.name,
+                  protocol: tokenMeta.protocol,
                   isFull: ilk.ilkDebtAvailable.lt(ilk.debtFloor),
                 })
               }),
@@ -445,9 +446,10 @@ export function createProductCardsData$(
           debtFloor: ilkData.debtFloor,
           currentCollateralPrice: oraclePriceData.currentPrice,
           bannerIcon: tokenMeta.bannerIcon,
-          bannerGif: tokenMeta.bannerGif,
-          background: tokenMeta.background,
+          bannerGif: tokenMeta.bannerGif || '',
+          background: tokenMeta.background || '',
           name: tokenMeta.name,
+          protocol: tokenMeta.protocol,
           isFull: ilkData.ilkDebtAvailable.lt(ilkData.debtFloor),
         }
       })
