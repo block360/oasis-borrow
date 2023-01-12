@@ -13,6 +13,7 @@ import {
   getToken,
   LP_TOKENS,
   ONLY_MULTIPLY_TOKENS,
+  TokenMetadataType,
 } from '../blockchain/tokensMetadata'
 import { aaveStrategiesList } from '../features/aave/strategyConfig'
 import { zero } from './zero'
@@ -32,17 +33,12 @@ export interface ProductCardData {
   background: string
   name: string
   isFull: boolean
+  protocol: TokenMetadataType['protocol']
 }
 
-export type ProductLandingPagesFiltersKeys =
-  | 'Featured'
-  | 'ETH'
-  | 'BTC'
+export type ProductLandingPagesFiltersKeys = 'Featured' | 'ETH' | 'BTC'
 
-type ProductLandingPagesFiltersIcons =
-  | 'star_circle'
-  | 'eth_circle'
-  | 'btc_circle'
+type ProductLandingPagesFiltersIcons = 'star_circle' | 'eth_circle' | 'btc_circle'
 
 export type ProductLandingPagesFilter = {
   name: ProductLandingPagesFiltersKeys
@@ -55,14 +51,7 @@ export type ProductTypes = 'borrow' | 'multiply' | 'earn'
 export type Ilk = typeof supportedIlks[number]
 export type AaveStrategy = typeof aaveStrategiesList[number]
 
-export const supportedBorrowIlks = [
-  'ETH-A',
-  'ETH-B',
-  'ETH-C',
-  'WBTC-A',
-  'WBTC-B',
-  'WBTC-C',
-]
+export const supportedBorrowIlks = ['ETH-A', 'ETH-B', 'ETH-C', 'WBTC-A', 'WBTC-B', 'WBTC-C']
 
 export const supportedMultiplyIlks = []
 
@@ -84,7 +73,7 @@ const genericFilters = {
     urlFragment: 'eth',
     tokens: ['ETH', 'WETH'],
   },
-  btc: { name: 'BTC', icon: 'btc_circle', urlFragment: 'btc', tokens: ['WBTC'] }
+  btc: { name: 'BTC', icon: 'btc_circle', urlFragment: 'btc', tokens: ['WBTC'] },
 } as const
 
 const ilkToEntryTokenMap = {
@@ -133,11 +122,7 @@ export const productCardsConfig: {
   descriptionLinks: Record<Ilk, { link: string; name: string }>
 } = {
   borrow: {
-    cardsFilters: [
-      genericFilters.featured,
-      genericFilters.eth,
-      genericFilters.btc
-    ],
+    cardsFilters: [genericFilters.featured, genericFilters.eth, genericFilters.btc],
     featuredIlkCards: ['ETH-C', 'WBTC-C'],
     inactiveIlks: [],
     ordering: {
@@ -150,19 +135,14 @@ export const productCardsConfig: {
     },
   },
   multiply: {
-    cardsFilters: [
-      genericFilters.featured,
-      genericFilters.eth,
-      genericFilters.btc,
-    ],
+    cardsFilters: [genericFilters.featured, genericFilters.eth, genericFilters.btc],
     featuredIlkCards: [],
     inactiveIlks: [],
     ordering: {
       ETH: [],
-      BTC: []
+      BTC: [],
     },
-    tags: {
-    },
+    tags: {},
   },
   earn: {
     cardsFilters: [],
@@ -173,12 +153,10 @@ export const productCardsConfig: {
   },
   landing: {
     featuredIlkCards: {
-      borrow: [
-        'ETH-C',
-        'WBTC-C',
-      ],
+      borrow: ['ETH-C', 'WBTC-C'],
       multiply: [],
-      earn: []
+      // TODO prepare proper handling for DSR
+      earn: ['DSR'],
     },
     featuredAaveCards: {
       borrow: [],
@@ -193,7 +171,7 @@ export const productCardsConfig: {
     'ETH-C': 'lowest-stabilityFee-and-cheapest',
     'WBTC-A': 'medium-exposure-medium-cost',
     'WBTC-B': 'biggest-multiply',
-    'WBTC-C': 'lowest-stabilityFee-and-cheapest'
+    'WBTC-C': 'lowest-stabilityFee-and-cheapest',
   } as Record<string, string>,
   descriptionLinks: {
     'ETH-A': {
@@ -205,8 +183,7 @@ export const productCardsConfig: {
       name: 'GSUp (ETH-B)',
     },
     'ETH-C': {
-      link:
-        '/inprogress',
+      link: '/inprogress',
       name: 'Maker (ETH-C)',
     },
     'WBTC-A': {
@@ -218,14 +195,13 @@ export const productCardsConfig: {
       name: 'GSUp (WBTC-B)',
     },
     'WBTC-C': {
-      link:
-        '/inprogress',
+      link: '/inprogress',
       name: 'Maker (WBTC-C)',
     },
     stETHeth: {
       link: '/inprogress',
       name: 'AAVE stETH / ETH',
-    }
+    },
   },
 }
 
