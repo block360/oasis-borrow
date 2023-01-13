@@ -124,7 +124,7 @@ export function createPositionsOverviewSummary$(
           return {
             missingPriceData: assetOrPosition.missingPriceData,
             token: assetOrPosition.token,
-            title: assetOrPosition.token,
+            title: assetOrPosition.token === 'DAI' ? 'GSUc' : assetOrPosition.token,
             contentsUsd: assetOrPosition.balanceUsd,
             actions: assetOrPosition.assetActions,
           }
