@@ -113,15 +113,15 @@ export function createTokenPriceInUSD$(
               coinbaseTicker,
               coinGeckoTicker,
               coinpaprikaFallbackTicker,
+              gsuRatesTicker
             } = getToken(token)
-
             const tokenPrice = getPrice(tickers, [
               coinbaseTicker,
               coinpaprikaTicker,
               coinGeckoTicker,
               coinpaprikaFallbackTicker,
-            ])
-
+              gsuRatesTicker
+            ])            
             return of({
               [token]: new BigNumber(tokenPrice),
             })
@@ -233,19 +233,19 @@ export function createOraclePriceData$(
           const combined$ =
             contractData.length > DSVALUE_APPROX_SIZE
               ? combineLatest(
-                  pipes.pipPeek$(token),
-                  pipes.pipPeep$(token),
-                  pipes.pipZzz$(token),
-                  pipes.pipHop$(token),
-                  of(false),
-                )
+                pipes.pipPeek$(token),
+                pipes.pipPeep$(token),
+                pipes.pipZzz$(token),
+                pipes.pipHop$(token),
+                of(false),
+              )
               : combineLatest(
-                  pipPeek$(token),
-                  of(undefined),
-                  of(undefined),
-                  of(undefined),
-                  of(true),
-                )
+                pipPeek$(token),
+                of(undefined),
+                of(undefined),
+                of(undefined),
+                of(true),
+              )
 
           return combined$.pipe(
             switchMap(([peek, peep, zzz, hop, isStaticPrice]) => {
