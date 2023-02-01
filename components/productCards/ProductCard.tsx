@@ -89,7 +89,7 @@ export function ProductCardProtocolLink({
   }
   return (
     <Box sx={{ paddingRight: '10px' }}>
-      <AppLink href={link}>
+      <AppLink href={'/inprogress'}>
         <WithArrow variant="styles.a" gap="1">
           {ProtocolLongNames[protocol]}
         </WithArrow>

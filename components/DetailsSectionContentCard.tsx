@@ -179,7 +179,7 @@ export function DetailsSectionContentCard({
         {value || '-'}
         {unit && (
           <Text as="small" sx={{ ml: 1, fontSize: 5, ...customUnitStyle }}>
-            {unit}
+            {unit === 'DAI' ? 'GSUc' : unit}
           </Text>
         )}
       </Text>

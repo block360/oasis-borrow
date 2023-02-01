@@ -34,11 +34,11 @@ export function ProductCardEarnDsr() {
     <ProductCard
       tokenImage="/static/img/tokens/maker_dai.png"
       tokenGif="/static/img/tokens/maker_dai.gif"
-      title={t(`DAI Savings Rate`)}
+      title={t(`GSUc Savings Rate`)}
       description={t(`dsr.product-card.description`)}
       banner={{
-        title: 'With 100,000.00 DAI 👇',
-        description: `Earn up to ${formatAmount(earnUpTo, 'USD')} Dai per year`,
+        title: 'With 100,000.00 GSUc 👇',
+        description: `Earn up to ${formatAmount(earnUpTo, 'USD')} GSUc per year`,
       }}
       labels={[
         {

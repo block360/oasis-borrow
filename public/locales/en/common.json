@@ -2004,24 +2004,24 @@
   "dsr": {
     "details": {
       "overview": "Overview",
-      "total-deposited-dai": "Total Deposited Dai",
+      "total-deposited-dai": "Total Deposited GSUc",
       "current-yield": "Current Yield",
-      "current-dai-savings-rate": "Current Dai Savings Rate"
+      "current-dai-savings-rate": "Current GSUc Savings Rate"
     },
     "titles": {
-      "manage": "Manage Your DSR strategy",
-      "heading": "Dai Savings Rate",
-      "setup": "Set up DSR strategy"
+      "manage": "Manage Your GSR strategy",
+      "heading": "GSUc Savings Rate",
+      "setup": "Set up GSR strategy"
     },
     "labels": {
       "deposit": "Deposit",
       "withdraw": "Withdraw"
     },
     "product-card": {
-      "description": "Earn on your Dai using the Maker Protocol"
+      "description": "Earn on your GSUc using the Maker Protocol"
     },
     "order": {
-      "total-dai": "Total DAI {{action}}"
+      "total-dai": "Total GSUc {{action}}"
     },
     "simulation": {
       "header1": "Duration",
@@ -2032,8 +2032,8 @@
       "rowlabel3": "Next 1 year"
     },
     "errors": {
-      "amountBiggerThanBalance": "You cannot deposit more Dai than the amount in your wallet",
-      "amountBiggerThanDeposit": "You cannot withdraw more than {{totalValue}} DAI"
+      "amountBiggerThanBalance": "You cannot deposit more GSUc than the amount in your wallet",
+      "amountBiggerThanDeposit": "You cannot withdraw more than {{totalValue}} GSUc"
     }
   }
 }

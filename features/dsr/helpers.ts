@@ -21,7 +21,7 @@ export function getDsrPosition({
       sevenDayYield: '-',
       liquidity: 'unlimited',
       icon: getToken('DAI').iconCircle,
-      ilk: 'DAI Savings Rate',
+      ilk: 'GSUc Savings Rate',
       positionId: 'n/a',
       editLinkProps: {
         href: `/earn/dsr/${address}`,
