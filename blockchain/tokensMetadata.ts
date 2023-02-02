@@ -90,6 +90,7 @@ export const tokens = [
     bannerIcon: staticFilesRuntimeUrl('/static/img/tokens/eth.png'),
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/eth.gif'),
     tags: [],
+    protocol: 'GSU',
   },
   {
     symbol: 'WBTC',
@@ -111,6 +112,7 @@ export const tokens = [
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/wbtc.gif'),
     tags: [],
     rootToken: 'BTC',
+    protocol: 'GSU',
   },
   {
     symbol: 'DAI',
