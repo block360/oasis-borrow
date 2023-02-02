@@ -7,11 +7,11 @@ import { LANDING_PILLS } from 'content/landing'
 import { DISCOVER_URL } from 'features/discover/helpers'
 import { getUnreadNotificationCount } from 'features/notifications/helpers'
 import { NOTIFICATION_CHANGE, NotificationChange } from 'features/notifications/notificationChange'
-import {
-  SWAP_WIDGET_CHANGE_SUBJECT,
-  SwapWidgetChangeAction,
-  SwapWidgetState,
-} from 'features/uniswapWidget/SwapWidgetChange'
+// import {
+//   SWAP_WIDGET_CHANGE_SUBJECT,
+//   SwapWidgetChangeAction,
+//   SwapWidgetState,
+// } from 'features/uniswapWidget/SwapWidgetChange'
 import { UserSettings, UserSettingsButtonContents } from 'features/userSettings/UserSettingsView'
 import { getShouldHideHeaderSettings } from 'helpers/functions'
 import { useObservable } from 'helpers/observableHook'
@@ -50,7 +50,7 @@ function Logo({ sx }: { sx?: SxStyleProp }) {
         ...sx,
       }}
     >
-      <Image src={staticFilesRuntimeUrl('/static/img/logo_v2.svg')} />
+      <Image width="140px" src={staticFilesRuntimeUrl('/static/img/logo.png')} />
     </AppLink>
   )
 }
@@ -234,9 +234,9 @@ function UserDesktopMenu() {
   const vaultCount = useVaultCount()
   const [exchangeOnboarded] = useOnboarding('Exchange')
   const [exchangeOpened, setExchangeOpened] = useState(false)
-  const [widgetUiChanges] = useObservable(
-    uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
-  )
+  // const [widgetUiChanges] = useObservable(
+  //   uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
+  // )
   const [notificationsState] = useUIChanges<NotificationChange>(NOTIFICATION_CHANGE)
 
   // TODO: Update this once the the notifications pannel is available
@@ -244,7 +244,7 @@ function UserDesktopMenu() {
   const notificationsRef = useOutsideElementClickHandler(() => setNotificationsPanelOpen(false))
   const notificationsToggle = useFeatureToggle('Notifications')
 
-  const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
+  // const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
 
   const showNewUniswapWidgetBeacon = !exchangeOnboarded && !exchangeOpened
 
@@ -276,7 +276,7 @@ function UserDesktopMenu() {
           {t('my-positions')} {vaultCount && `(${vaultCount})`}
         </PositionsLink>
         <PositionsButton sx={{ mr: 3, display: ['none', 'flex', 'none'] }} />
-        <Box>
+        {/* <Box>
           <Button
             variant="menuButtonRound"
             onClick={() => {
@@ -316,7 +316,7 @@ function UserDesktopMenu() {
             />
           </Button>
           <UniswapWidgetShowHide />
-        </Box>
+        </Box> */}
 
         {!shouldHideSettings && (
           <ButtonDropdown
@@ -433,9 +433,9 @@ function navLinkColor(isActive: boolean) {
 
 const LINKS = {
   'dai-wallet': `${getConfig().publicRuntimeConfig.apiHost}/daiwallet`,
-  learn: 'https://kb.oasis.app',
-  blog: 'https://blog.oasis.app',
-  multiply: `/multiply`,
+  learn: '/inprogress',
+  // blog: 'https://blog.oasis.app',
+  // multiply: `/multiply`,
   borrow: `/borrow`,
   earn: '/earn',
   discover: DISCOVER_URL,
@@ -445,11 +445,11 @@ function ConnectedHeader() {
   const { uiChanges } = useAppContext()
   const onMobile = useOnMobile()
 
-  const [widgetUiChanges] = useObservable(
-    uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
-  )
+  // const [widgetUiChanges] = useObservable(
+  //   uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
+  // )
 
-  const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
+  // const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
 
   return (
     <>
@@ -474,7 +474,7 @@ function ConnectedHeader() {
             </Flex>
             <Flex sx={{ flexShrink: 0 }}>
               <PositionsButton sx={{ mr: 2 }} />
-              <Button
+              {/* <Button
                 variant="menuButtonRound"
                 onClick={() => {
                   uiChanges.publish<SwapWidgetChangeAction>(SWAP_WIDGET_CHANGE_SUBJECT, {
@@ -497,7 +497,7 @@ function ConnectedHeader() {
                   width="20"
                   color={widgetOpen ? 'primary100' : 'inherit'}
                 />
-              </Button>
+              </Button> */}
               <UniswapWidgetShowHide
                 sxWrapper={{
                   position: 'fixed',
@@ -769,7 +769,7 @@ function MobileMenu() {
   const shouldHideSettings = getShouldHideHeaderSettings(context, accountData, web3Context)
 
   const links = [
-    { labelKey: 'nav.multiply', url: LINKS.multiply },
+    // { labelKey: 'nav.multiply', url: LINKS.multiply },
     { labelKey: 'nav.borrow', url: LINKS.borrow },
     { labelKey: 'nav.earn', url: LINKS.earn },
     { labelKey: 'nav.discover', url: LINKS.discover },
@@ -912,9 +912,9 @@ function DisconnectedHeader() {
                 sx={{ position: 'relative', left: '6px', transition: '0.2s' }}
               />
             </AppLink>
-            <LanguageDropdown
+            {/* <LanguageDropdown
               sx={{ '@media (max-width: 1330px)': { '.menu': { right: '-6px' } } }}
-            />
+            /> */}
           </Grid>
         </BasicHeader>
       </Box>
@@ -948,7 +948,7 @@ function MainNavigation() {
       <Logo />
       {!discoverOasisEnabled ? (
         <Flex sx={{ ml: 5, zIndex: 1 }}>
-          <AppLink
+          {/* <AppLink
             variant="links.navHeader"
             href={LINKS.multiply}
             sx={{
@@ -957,7 +957,7 @@ function MainNavigation() {
             }}
           >
             {t('nav.multiply')}
-          </AppLink>
+          </AppLink> */}
           <AppLink
             variant="links.navHeader"
             href={LINKS.borrow}
@@ -988,7 +988,6 @@ function MainNavigation() {
           <HeaderLink label={t('nav.products')}>
             <HeaderList
               links={[
-                { label: t('nav.multiply'), link: LINKS.multiply },
                 { label: t('nav.borrow'), link: LINKS.borrow },
                 { label: t('nav.earn'), link: LINKS.earn },
               ]}

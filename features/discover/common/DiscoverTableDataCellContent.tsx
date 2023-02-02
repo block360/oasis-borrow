@@ -81,7 +81,7 @@ export function DiscoverTableDataCellContent({
     case 'earningsToDate':
     case 'netValue':
     case 'vaultDebt':
-      return <>{formatCryptoBalance(new BigNumber(row[label]))} DAI</>
+      return <>{formatCryptoBalance(new BigNumber(row[label]))} GSUc</>
     case 'currentMultiple':
       return <>{(row.currentMultiple as number)?.toFixed(2)}x</>
     case 'colRatio':

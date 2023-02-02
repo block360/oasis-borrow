@@ -100,7 +100,7 @@ export function ManageVaultDaiAllowance({
                 })}
                 onChange={handleNumericInput(updateDaiAllowanceAmount!)}
               />
-              <Text sx={{ fontSize: 1 }}>DAI</Text>
+              <Text sx={{ fontSize: 1 }}>GSUc</Text>
             </Grid>
           </Radio>
         </>

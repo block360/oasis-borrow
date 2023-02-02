@@ -1,11 +1,13 @@
+import BigNumber from 'bignumber.js'
+import { createConvertToAaveOracleAssetPrice$ } from 'blockchain/aave/oracleAssetPriceData'
 import { getAaveAssetsPrices } from 'blockchain/calls/aave/aavePriceOracle'
 import { getAaveReserveData } from 'blockchain/calls/aave/aaveProtocolDataProvider'
 import { observe } from 'blockchain/calls/observe'
 import { getGasEstimation$, getOpenProxyStateMachine } from 'features/proxyNew/pipelines'
 import { memoize } from 'lodash'
 import { curry } from 'ramda'
-import { Observable } from 'rxjs'
-import { distinctUntilKeyChanged, shareReplay, switchMap } from 'rxjs/operators'
+import { combineLatest, from, Observable } from 'rxjs'
+import { distinctUntilKeyChanged, filter, shareReplay, switchMap } from 'rxjs/operators'
 
 import { TokenBalances } from '../../blockchain/tokens'
 import { AppContext } from '../../components/AppContext'
@@ -16,12 +18,14 @@ import {
 } from './common/services/getParametersMachines'
 import { getStrategyInfo$ } from './common/services/getStrategyInfo'
 import { prepareAaveTotalValueLocked$ } from './helpers/aavePrepareAaveTotalValueLocked'
+import { createAavePrepareReserveData$ } from './helpers/aavePrepareReserveData'
 import { getStrategyConfig$ } from './helpers/getStrategyConfig'
 import {
   getAaveProtocolData$,
   getManageAavePositionStateMachineServices,
   getManageAaveStateMachine,
 } from './manage/services'
+import { getOnChainPosition } from './oasisActionsLibWrapper'
 import {
   getOpenAavePositionStateMachineServices,
   getOpenAaveStateMachine,
@@ -76,7 +80,16 @@ export function setupAaveContext({
     gasEstimation$,
   )
 
-  const aaveReserveStEthData$ = aaveReserveConfigurationData$({ token: 'STETH' })
+  function tempPositionFromLib$(collateralToken: string, debtToken: string) {
+    return combineLatest(context$, proxyForAccount$).pipe(
+      filter(([context, proxyAddress]) => !!context && !!proxyAddress),
+      switchMap(([context, proxyAddress]) => {
+        proxyAddress = proxyAddress!
+        return from(getOnChainPosition({ context, proxyAddress, collateralToken, debtToken }))
+      }),
+      shareReplay(1),
+    )
+  }
 
   const aaveProtocolData$ = memoize(
     curry(getAaveProtocolData$)(
@@ -85,7 +98,7 @@ export function setupAaveContext({
       aaveOracleAssetPriceData$,
       aaveUserConfiguration$,
       aaveReservesList$,
-      aaveReserveConfigurationData$,
+      tempPositionFromLib$,
     ),
     (collateralToken, address) => `${collateralToken}-${address}`,
   )
@@ -100,6 +113,11 @@ export function setupAaveContext({
     tokenPriceUSD$,
     strategyInfo$,
     aaveProtocolData$,
+  )
+
+  const convertToAaveOracleAssetPrice$ = memoize(
+    curry(createConvertToAaveOracleAssetPrice$)(aaveOracleAssetPriceData$),
+    (args: { token: string; amount: BigNumber }) => args.token + args.amount.toString(),
   )
 
   const manageAaveStateMachineServices = getManageAavePositionStateMachineServices(
@@ -130,8 +148,22 @@ export function setupAaveContext({
     transactionMachine,
   )
 
-  const getAaveReserveData$ = observe(onEveryBlock$, context$, getAaveReserveData)
-  const getAaveAssetsPrices$ = observe(onEveryBlock$, context$, getAaveAssetsPrices)
+  const getAaveReserveData$ = observe(
+    onEveryBlock$,
+    context$,
+    getAaveReserveData,
+    (args) => args.token,
+  )
+
+  const wrappedGetAaveReserveData$ = memoize(
+    curry(createAavePrepareReserveData$)(
+      observe(onEveryBlock$, context$, getAaveReserveData, (args) => args.token),
+    ),
+  )
+
+  const getAaveAssetsPrices$ = observe(onEveryBlock$, context$, getAaveAssetsPrices, (args) =>
+    args.tokens.join(''),
+  )
 
   const aaveTotalValueLocked$ = curry(prepareAaveTotalValueLocked$)(
     getAaveReserveData$({ token: 'STETH' }),
@@ -148,10 +180,12 @@ export function setupAaveContext({
     aaveStateMachine,
     aaveManageStateMachine,
     aaveTotalValueLocked$,
-    aaveReserveStEthData$,
+    aaveReserveConfigurationData$,
+    wrappedGetAaveReserveData$,
     aaveSthEthYieldsQuery,
     aaveProtocolData$,
     strategyConfig$,
+    convertToAaveOracleAssetPrice$,
   }
 }
 

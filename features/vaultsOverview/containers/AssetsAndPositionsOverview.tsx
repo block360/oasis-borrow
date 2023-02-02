@@ -2,6 +2,7 @@ import { Icon } from '@makerdao/dai-ui-icons'
 import { SystemStyleObject } from '@styled-system/css'
 import BigNumber from 'bignumber.js'
 import { useAppContext } from 'components/AppContextProvider'
+import { StatefulTooltip } from 'components/Tooltip'
 import { getAddress } from 'ethers/lib/utils'
 import { WithLoadingIndicator } from 'helpers/AppSpinner'
 import { WithErrorHandler } from 'helpers/errorHandlers/WithErrorHandler'
@@ -28,10 +29,99 @@ function tokenColor(symbol: string) {
 function AssetRow(props: PositionView) {
   if (props.missingPriceData) {
     return (
+      <StatefulTooltip
+        containerSx={{ position: 'relative' }}
+        tooltipSx={{
+          p: '4px 4px 3px',
+          borderRadius: '4px',
+          background: 'darkgray',
+          bottom: -2,
+          right: '30%',
+        }}
+        tooltip={
+          <Text
+            sx={{
+              fontFamily: 'GSU Font, Open Sans',
+              color: 'white',
+              fontSize: '11px',
+              lineHeight: 1,
+            }}
+          >{`${props.title}  |  We were unable to fetch the price data for this token`}</Text>
+        }
+      >
+        <Flex
+          sx={{
+            alignItems: 'center',
+            color: 'neutral60',
+            cursor: 'pointer',
+            pt: '11px',
+            pb: '11px',
+            pl: '12px',
+            pr: '14px',
+            borderRadius: '12px',
+          }}
+        >
+          <Icon
+            name={getToken(props.token).iconCircle}
+            size="32px"
+            sx={{ verticalAlign: 'sub', flexShrink: 0 }}
+          />
+          <Text
+            variant="paragraph2"
+            sx={{
+              fontWeight: 'semiBold',
+              ml: '8px',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden',
+              fontFamily: 'GSU Font, Open Sans',
+            }}
+          >
+            {props.title}
+          </Text>
+          <Text
+            variant="paragraph3"
+            sx={{
+              ml: '8px',
+            }}
+          >
+            {`No price data`}
+          </Text>
+        </Flex>
+      </StatefulTooltip>
+    )
+  }
+
+  return (
+    <StatefulTooltip
+      containerSx={{ position: 'relative' }}
+      tooltipSx={{
+        p: '4px 4px 3px',
+        borderRadius: '4px',
+        background: 'darkgray',
+        bottom: -2,
+        right: '30%',
+      }}
+      tooltip={
+        <Text
+          sx={{
+            fontFamily: 'GSU Font, Open Sans',
+            color: 'white',
+            fontSize: '11px',
+            lineHeight: 1,
+          }}
+        >{`${props.title}  |  ${props.proportion && formatPercent(props.proportion)}  |  $${
+          props.contentsUsd && formatAmount(props.contentsUsd, 'USD')
+        }`}</Text>
+      }
+    >
       <Flex
         sx={{
           alignItems: 'center',
           color: 'neutral60',
+          '&:hover': {
+            backgroundColor: 'neutral30',
+          },
           cursor: 'pointer',
           pt: '11px',
           pb: '11px',
@@ -39,7 +129,6 @@ function AssetRow(props: PositionView) {
           pr: '14px',
           borderRadius: '12px',
         }}
-        title={`${props.title}  |  We were unable to fetch the price data for this token`}
       >
         <Icon
           name={getToken(props.token).iconCircle}
@@ -49,6 +138,7 @@ function AssetRow(props: PositionView) {
         <Text
           variant="paragraph2"
           sx={{
+            fontFamily: '"GSU Font","Open Sans"',
             fontWeight: 'semiBold',
             ml: '8px',
             whiteSpace: 'nowrap',
@@ -58,80 +148,38 @@ function AssetRow(props: PositionView) {
         >
           {props.title}
         </Text>
-        <Text
-          variant="paragraph3"
-          sx={{
-            ml: '8px',
-          }}
-        >
-          {`No price data`}
-        </Text>
+        {props.proportion && (
+          <Text
+            variant="paragraph3"
+            sx={{
+              ml: '8px',
+            }}
+          >
+            {formatPercent(props.proportion)}
+          </Text>
+        )}
+        {props.contentsUsd && (
+          <Text
+            variant="paragraph3"
+            sx={{
+              fontFamily: '"GSU Font","Open Sans"',
+              ml: '8px',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden',
+            }}
+          >
+            (${formatAmount(props.contentsUsd, 'USD')})
+          </Text>
+        )}
+        {props.actions && (
+          <Icon name="dots_v" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />
+        )}
+        {props.url && (
+          <Icon name="arrow_right" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />
+        )}
       </Flex>
-    )
-  }
-
-  return (
-    <Flex
-      sx={{
-        alignItems: 'center',
-        color: 'neutral60',
-        '&:hover': {
-          backgroundColor: 'neutral30',
-        },
-        cursor: 'pointer',
-        pt: '11px',
-        pb: '11px',
-        pl: '12px',
-        pr: '14px',
-        borderRadius: '12px',
-      }}
-      title={`${props.title}  |  ${props.proportion && formatPercent(props.proportion)}  |  $${
-        props.contentsUsd && formatAmount(props.contentsUsd, 'USD')
-      }`}
-    >
-      <Icon
-        name={getToken(props.token).iconCircle}
-        size="32px"
-        sx={{ verticalAlign: 'sub', flexShrink: 0 }}
-      />
-      <Text
-        variant="paragraph2"
-        sx={{
-          fontWeight: 'semiBold',
-          ml: '8px',
-          whiteSpace: 'nowrap',
-          textOverflow: 'ellipsis',
-          overflow: 'hidden',
-        }}
-      >
-        {props.title}
-      </Text>
-      {props.proportion && (
-        <Text
-          variant="paragraph3"
-          sx={{
-            ml: '8px',
-          }}
-        >
-          {formatPercent(props.proportion)}
-        </Text>
-      )}
-      {props.contentsUsd && (
-        <Text
-          variant="paragraph3"
-          sx={{
-            ml: '8px',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-            overflow: 'hidden',
-          }}
-        >
-          (${formatAmount(props.contentsUsd, 'USD')})
-        </Text>
-      )}
-      {props.actions && <Icon name="dots_v" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />}
-      {props.url && <Icon name="arrow_right" sx={{ fill: '#708390', ml: 'auto', flexShrink: 0 }} />}
-    </Flex>
+    </StatefulTooltip>
   )
 }
 
@@ -253,16 +301,16 @@ function TotalAssetsContent(props: { totalValueUsd: BigNumber }) {
       <Text variant="paragraph2" sx={{ color: 'neutral80', mt: '7px' }}>
         <Trans
           i18nKey="vaults-overview.total-assets-subheader"
-          components={[
-            <AppLink
-              href="https://kb.oasis.app/help/curated-token-list"
-              target="_blank"
-              sx={{ fontWeight: 'regular', fontSize: 3 }}
-            />,
-          ]}
+          // components={[
+          //   <AppLink
+          //     href="/inprogress"
+          //     target="_blank"
+          //     sx={{ fontWeight: 'regular', fontSize: 3 }}
+          //   />,
+          // ]}
         />
       </Text>
-      <Heading variant="header3" sx={{ mt: '4px' }}>
+      <Heading variant="header3" sx={{ fontFamily: '"GSU Font","Open Sans"', mt: '4px' }}>
         ${formatAmount(props.totalValueUsd, 'USD')}
       </Heading>
     </Box>

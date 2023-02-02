@@ -86,15 +86,15 @@ export function VaultDetailsCardMaxTokenOnStopLossTrigger({
 
   const maxTokenOrDai = isCollateralActive
     ? `${formatAmount(maxToken, token)} ${token}`
-    : `${formatAmount(maxToken.multipliedBy(tokenPrice), 'USD')} DAI`
+    : `${formatAmount(maxToken.multipliedBy(tokenPrice), 'USD')} GSUc`
 
   const afterMaxTokenOrDai = isCollateralActive
     ? `${formatAmount(afterMaxToken, token)} ${token}`
-    : `${formatAmount(afterMaxToken.multipliedBy(tokenPrice), 'USD')} DAI`
+    : `${formatAmount(afterMaxToken.multipliedBy(tokenPrice), 'USD')} GSUc`
 
   const savingTokenOrDai = isCollateralActive
     ? `${formatAmount(savingCompareToLiquidation, token)} ${token}`
-    : `${formatAmount(savingCompareToLiquidation.multipliedBy(tokenPrice), 'USD')} DAI`
+    : `${formatAmount(savingCompareToLiquidation.multipliedBy(tokenPrice), 'USD')} GSUc`
 
   return (
     <VaultDetailsCard

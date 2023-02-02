@@ -47,14 +47,14 @@ export function ManageVaultDetailsSummary({
         value={
           <>
             {formatAmount(debt, 'DAI')}
-            {` DAI`}
+            {` GSUc`}
           </>
         }
         valueAfter={
           showAfterPill && (
             <>
               {formatAmount(afterDebt, 'DAI')}
-              {` DAI`}
+              {` GSUc`}
             </>
           )
         }
@@ -84,14 +84,14 @@ export function ManageVaultDetailsSummary({
         value={
           <>
             {formatAmount(daiYieldFromLockedCollateral, 'DAI')}
-            {` DAI`}
+            {` GSUc`}
           </>
         }
         valueAfter={
           showAfterPill && (
             <>
               {formatAmount(daiYieldFromTotalCollateral, 'DAI')}
-              {` DAI`}
+              {` GSUc`}
             </>
           )
         }

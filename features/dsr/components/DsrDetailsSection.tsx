@@ -36,7 +36,7 @@ export function DsrDetailsSection({
                 title={t('net-value')}
                 value={`${formatCryptoBalance(netValue)}`}
                 unit="DAI"
-                footnote={`${t('net-earnings')} ${formatCryptoBalance(earnings)} DAI`}
+                footnote={`${t('net-earnings')} ${formatCryptoBalance(earnings)} GSUc`}
               />
               <DetailsSectionContentCard
                 title={t('dsr.details.current-dai-savings-rate')}

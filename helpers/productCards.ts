@@ -13,6 +13,7 @@ import {
   getToken,
   LP_TOKENS,
   ONLY_MULTIPLY_TOKENS,
+  TokenMetadataType,
 } from '../blockchain/tokensMetadata'
 import { aaveStrategiesList } from '../features/aave/strategyConfig'
 import { zero } from './zero'
@@ -32,6 +33,7 @@ export interface ProductCardData {
   background: string
   name: string
   isFull: boolean
+  protocol: TokenMetadataType['protocol']
 }
 
 export type ProductLandingPagesFiltersKeys = 'Featured' | 'ETH' | 'BTC'
@@ -159,7 +161,8 @@ export const productCardsConfig: {
     featuredAaveCards: {
       borrow: [],
       multiply: [],
-      earn: ['stETHeth'],
+      // earn: ['stETHeth'],
+      earn: [],
     },
   },
   descriptionCustomKeys: {
@@ -172,37 +175,31 @@ export const productCardsConfig: {
   } as Record<string, string>,
   descriptionLinks: {
     'ETH-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-      name: 'Maker (ETH-A)',
+      link: '/inprogress',
+      name: 'GSU (ETH-A)',
     },
     'ETH-B': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-      name: 'Maker (ETH-B)',
+      link: '/inprogress',
+      name: 'GSU (ETH-B)',
     },
     'ETH-C': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-      name: 'Maker (ETH-C)',
+      link: '/inprogress',
+      name: 'GSU (ETH-C)',
     },
     'WBTC-A': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
-      name: 'Maker (WBTC-A)',
+      link: '/inprogress',
+      name: 'GSU (WBTC-A)',
     },
     'WBTC-B': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
-      name: 'Maker (WBTC-B)',
+      link: '/inprogress',
+      name: 'GSU (WBTC-B)',
     },
     'WBTC-C': {
-      link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
-      name: 'Maker (WBTC-C)',
+      link: '/inprogress',
+      name: 'GSU (WBTC-C)',
     },
     stETHeth: {
-      link: 'https://kb.oasis.app/help/what-you-should-know-about-steth',
+      link: '/inprogress',
       name: 'AAVE stETH / ETH',
     },
   },
@@ -390,6 +387,7 @@ export function createProductCardsWithBalance$(
                   bannerGif: tokenMeta.bannerGif,
                   background: tokenMeta.background,
                   name: tokenMeta.name,
+                  protocol: tokenMeta.protocol,
                   isFull: ilk.ilkDebtAvailable.lt(ilk.debtFloor),
                 })
               }),
@@ -448,9 +446,10 @@ export function createProductCardsData$(
           debtFloor: ilkData.debtFloor,
           currentCollateralPrice: oraclePriceData.currentPrice,
           bannerIcon: tokenMeta.bannerIcon,
-          bannerGif: tokenMeta.bannerGif,
-          background: tokenMeta.background,
+          bannerGif: tokenMeta.bannerGif || '',
+          background: tokenMeta.background || '',
           name: tokenMeta.name,
+          protocol: tokenMeta.protocol,
           isFull: ilkData.ilkDebtAvailable.lt(ilkData.debtFloor),
         }
       })

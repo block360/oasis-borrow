@@ -10,7 +10,7 @@ import { Box, Flex, Grid, Heading, Text } from 'theme-ui'
 import {
   BorrowProductCardsContainer,
   EarnProductCardsContainer,
-  MultiplyProductCardsContainer,
+  // MultiplyProductCardsContainer,
 } from '../../components/productCards/ProductCardsContainer'
 
 export function AssetView({ content }: { content: AssetPageContent }) {
@@ -27,15 +27,15 @@ export function AssetView({ content }: { content: AssetPageContent }) {
       ),
     }
 
-    const multiplyTab = content.multiplyIlks && {
-      label: t('landing.tabs.multiply.tabLabel'),
-      value: 'multiply',
-      content: (
-        <Box sx={{ mt: 5 }}>
-          <MultiplyProductCardsContainer strategies={{ maker: content.multiplyIlks, aave: [] }} />
-        </Box>
-      ),
-    }
+    // const multiplyTab = content.multiplyIlks && {
+    //   label: t('landing.tabs.multiply.tabLabel'),
+    //   value: 'multiply',
+    //   content: (
+    //     <Box sx={{ mt: 5 }}>
+    //       <MultiplyProductCardsContainer strategies={{ maker: content.multiplyIlks, aave: [] }} />
+    //     </Box>
+    //   ),
+    // }
 
     const earnTab = content.earnIlks && {
       label: t('landing.tabs.earn.tabLabel'),
@@ -47,7 +47,7 @@ export function AssetView({ content }: { content: AssetPageContent }) {
       ),
     }
 
-    return [borrowTab, multiplyTab, earnTab].filter((tab) => tab) as TabSection[]
+    return [borrowTab, earnTab].filter((tab) => tab) as TabSection[]
   }
 
   return (

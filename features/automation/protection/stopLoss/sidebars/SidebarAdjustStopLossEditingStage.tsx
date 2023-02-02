@@ -85,11 +85,11 @@ export function SetDownsideProtectionInformation({
 
   const maxTokenOrDai = isCollateralActive
     ? `${formatAmount(afterMaxToken, token)} ${token}`
-    : `${formatAmount(afterMaxToken.multipliedBy(executionPrice), 'USD')} DAI`
+    : `${formatAmount(afterMaxToken.multipliedBy(executionPrice), 'USD')} GSUc`
 
   const savingTokenOrDai = isCollateralActive
     ? `${formatAmount(savingCompareToLiquidation, token)} ${token}`
-    : `${formatAmount(savingCompareToLiquidation.multipliedBy(executionPrice), 'USD')} DAI`
+    : `${formatAmount(savingCompareToLiquidation.multipliedBy(executionPrice), 'USD')} GSUc`
 
   const closeVaultGasEstimation = new BigNumber(1300000) // average based on historical data from blockchain
   const closeVaultGasPrice = new BigNumber(200) // gwei
@@ -219,7 +219,7 @@ export function SidebarAdjustStopLossEditingStage({
           <PickCloseState {...closePickerConfig} />
           <Text as="p" variant="paragraph3" sx={{ color: 'neutral80' }}>
             {t('protection.set-downside-protection-desc')}{' '}
-            <AppLink href="https://kb.oasis.app/help/stop-loss-protection" sx={{ fontSize: 2 }}>
+            <AppLink href="/inprogress" sx={{ fontSize: 2 }}>
               {t('here')}.
             </AppLink>
           </Text>
@@ -267,10 +267,7 @@ export function SidebarAdjustStopLossEditingStage({
             </Text>
             <Text as="p" variant="paragraph3">
               {t('protection.guarantee-factors')}{' '}
-              <AppLink
-                href="https://kb.oasis.app/help/stop-loss-protection"
-                sx={{ fontWeight: 'body' }}
-              >
+              <AppLink href="/support" sx={{ fontWeight: 'body' }}>
                 {t('protection.learn-more-about-automation')}
               </AppLink>
             </Text>

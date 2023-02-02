@@ -41,7 +41,7 @@ export function EarnView() {
         title={t('product-page.earn.title')}
         description={t('product-page.earn.description')}
         link={{
-          href: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
+          href: '/inprogress',
           text: t('product-page.earn.link'),
         }}
       />

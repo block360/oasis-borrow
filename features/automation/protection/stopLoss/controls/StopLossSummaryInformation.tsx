@@ -52,7 +52,7 @@ export function StopLossSummaryInformation({
 
   const tokenOrDaiWithdrawn = isToCollateral
     ? `${formatAmount(withdrawAmount, token)} ${token}`
-    : `${formatAmount(withdrawAmount, 'USD')} DAI`
+    : `${formatAmount(withdrawAmount, 'USD')} GSUc`
 
   const impact = (
     <>

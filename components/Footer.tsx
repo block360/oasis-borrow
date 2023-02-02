@@ -1,5 +1,5 @@
 import { Icon } from '@makerdao/dai-ui-icons'
-import { LanguageSelect } from 'components/LanguageSelect'
+// import { LanguageSelect } from 'components/LanguageSelect'
 import { AppLink } from 'components/Links'
 import { NewsletterSection } from 'features/newsletter/NewsletterView'
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
@@ -9,43 +9,42 @@ import getConfig from 'next/config'
 import React from 'react'
 import { Box, Card, Container, Flex, Grid, Image, Link, Text } from 'theme-ui'
 
-import { FooterBackground } from '../theme/FooterBackground'
 import { ChevronUpDown } from './ChevronUpDown'
 import { SelectComponents } from 'react-select/src/components'
 
 const {
-  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo, apiHost },
+  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo },
 } = getConfig()
 
 const ROUTES = {
-  CONTACT: `${apiHost}/daiwallet/contact`,
-  TWITTER: 'https://twitter.com/oasisdotapp',
-  DISCORD: 'https://discord.gg/Kc2bBB59GC',
+  CONTACT: `inprogress`,
+  TWITTER: 'https://twitter.com/GSUcoin',
+  DISCORD: 'https://discord.com/invite/cm3tmM37W3',
 }
 
 const FOOTER_SECTIONS = [
   {
     titleKey: 'nav.about',
     links: [
-      { labelKey: 'nav.team', url: '/about' },
-      { labelKey: 'nav.careers', url: '/careers' },
+      // { labelKey: 'nav.team', url: '/about' },
+      // { labelKey: 'nav.careers', url: '/careers' },
       { labelKey: 'nav.privacy', url: '/privacy' },
       { labelKey: 'nav.cookie', url: '/cookie' },
       { labelKey: 'nav.terms', url: '/terms' },
-      { labelKey: 'nav.security', url: '/security' },
-      { labelKey: 'nav.contact', url: `${apiHost}/daiwallet/contact` },
+      // { labelKey: 'nav.security', url: '/security' },
+      { labelKey: 'nav.contact', url: `mailto:support@GSUcoin.app` },
     ],
   },
   {
     titleKey: 'nav.resources',
     links: [
-      { labelKey: 'nav.blog', url: 'https://blog.oasis.app', target: '_self' },
+      { labelKey: 'nav.blog', url: '/inprogress', target: '_self' },
       // add link
-      { labelKey: 'nav.knowledge-centre', url: 'https://kb.oasis.app/help', target: '_blank' },
-      { labelKey: 'nav.bug-bounty', url: 'https://immunefi.com/bounty/oasis/', target: '_blank' },
+      { labelKey: 'nav.knowledge-centre', url: '/inprogress', target: '_blank' },
+      // { labelKey: 'nav.bug-bounty', url: 'https://immunefi.com/bounty/oasis/', target: '_blank' },
       { labelKey: 'nav.oracles', url: '/oracles' },
-      { labelKey: 'nav.referrals', url: '/referrals' },
-      { labelKey: 'nav.brand-assets', url: '/brand' },
+      // { labelKey: 'nav.referrals', url: '/referrals' },
+      // { labelKey: 'nav.brand-assets', url: '/brand' },
     ],
   },
   {
@@ -53,11 +52,11 @@ const FOOTER_SECTIONS = [
     links: [
       {
         labelKey: 'nav.dai-wallet',
-        url: `${apiHost}/daiwallet`,
+        url: `/inprogress`,
         target: '_self',
       },
       { labelKey: 'nav.borrow', url: '/borrow' },
-      { labelKey: 'nav.multiply', url: '/multiply' },
+      // { labelKey: 'nav.multiply', url: '/multiply' },
       { labelKey: 'nav.earn', url: '/earn' },
     ],
   },
@@ -132,7 +131,7 @@ export function TemporaryFooter() {
           <Text>
             Commit:{' '}
             <Link
-              href={`https://github.com/OasisDex/oasis-borrow/commit/${buildHash}`}
+              href={`https://github.com/block360/oasis-borrow/commit/${buildHash}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -150,8 +149,8 @@ function SocialWithLogo() {
   return (
     <Grid gap={3}>
       <Image
-        src={staticFilesRuntimeUrl('/static/img/logo_footer_v2.svg')}
-        sx={{ height: '34px', position: 'relative', top: '-2px' }}
+        src={staticFilesRuntimeUrl('/static/img/logo-footer.svg')}
+        sx={{ height: '27px', position: 'relative', top: '-2px' }}
       />
       <Flex sx={{ alignItems: 'center', a: { fontSize: '0px' }, my: 2 }}>
         <AppLink href={ROUTES.TWITTER}>
@@ -160,13 +159,13 @@ function SocialWithLogo() {
         <AppLink href={ROUTES.DISCORD} sx={{ mx: 3 }}>
           <Icon name="discord" size="auto" width="20px" height="23px" />
         </AppLink>
-        <AppLink href="https://github.com/OasisDEX/oasis-borrow/">
+        <AppLink href="https://github.com/block360/oasis-borrow/">
           <Icon name="github" size="auto" width="21px" />
         </AppLink>
       </Flex>
-      <Flex sx={{ justifyContent: ['center', 'flex-start'] }}>
+      {/* <Flex sx={{ justifyContent: ['center', 'flex-start'] }}>
         <LanguageSelect components={LangSelectComponents} />
-      </Flex>
+      </Flex> */}
     </Grid>
   )
 }
@@ -176,7 +175,7 @@ export function Footer() {
 
   return (
     <Box as="footer" sx={{ position: 'relative' }}>
-      <Container sx={{ maxWidth: '1200px', mb: 5, pb: 0, pt: 2 }}>
+      <Container sx={{ maxWidth: '1200px', mb: 5, pb: 0, pt: 6 }}>
         <Grid
           sx={{
             pl: 0,
@@ -214,7 +213,6 @@ export function Footer() {
         </Flex>
       </Container>
       <TemporaryFooter />
-      <FooterBackground />
     </Box>
   )
 }

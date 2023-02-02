@@ -112,7 +112,7 @@ export function SidebarAutoTakeProfitEditingStage({
             token,
             executionPrice: autoTakeProfitState.executionPrice.decimalPlaces(2),
           })}
-          <AppLink href="https://kb.oasis.app/help/take-profit" sx={{ fontSize: 2 }}>
+          <AppLink href="/inprogress" sx={{ fontSize: 2 }}>
             {t('here')}.
           </AppLink>
         </Text>

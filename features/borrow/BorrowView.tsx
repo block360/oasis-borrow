@@ -23,7 +23,7 @@ export function BorrowView() {
         title={t('product-page.borrow.title')}
         description={t('product-page.borrow.description')}
         link={{
-          href: 'https://kb.oasis.app/help/what-is-oasis-borrow ',
+          href: '/inprogress',
           text: t('product-page.borrow.link'),
         }}
         scrollToId={tab}

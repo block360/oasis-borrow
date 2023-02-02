@@ -33,7 +33,7 @@ const configuredFeatures: Record<Feature, boolean> = {
   StopLossRead: true,
   StopLossWrite: true,
   BatchCache: false,
-  StopLossOpenFlow: false,
+  StopLossOpenFlow: true,
   ReadOnlyBasicBS: false,
   Notifications: false,
   Referrals: false,
@@ -95,7 +95,15 @@ export function loadFeatureToggles(testFeaturesFlaggedEnabled: Array<Feature> = 
   }
 }
 
+export function getFeatureToggle(feature: Feature): boolean {
+  if (typeof localStorage !== 'undefined') {
+    const userEnabledFeatures = localStorage.getItem(FT_LOCAL_STORAGE_KEY)
+
+    return JSON.parse(userEnabledFeatures || '{}')[feature] || configuredFeatures[feature]
+  }
+  return false
+}
+
 export function useFeatureToggle(feature: Feature): boolean {
-  const userEnabledFeatures = localStorage.getItem(FT_LOCAL_STORAGE_KEY)
-  return JSON.parse(userEnabledFeatures || '{}')[feature] || configuredFeatures[feature]
+  return getFeatureToggle(feature)
 }

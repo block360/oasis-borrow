@@ -90,9 +90,9 @@ export function GuniManageMultiplyVaultChangesInformation(props: ManageMultiplyV
         label={`${t('outstanding-debt')}`}
         value={
           <Flex>
-            {`${formatCryptoBalance(debt || zero)} DAI`}
+            {`${formatCryptoBalance(debt || zero)} GSUc`}
             <VaultChangesInformationArrow />
-            {`${formatCryptoBalance(afterDebt || zero)} DAI`}
+            {`${formatCryptoBalance(afterDebt || zero)} GSUc`}
           </Flex>
         }
       />

@@ -179,7 +179,7 @@ function StandaloneAutomationEntry({
               <VaultHistoryEntryDetailsItem label={t('history.close-to')}>
                 {addOrRemoveTriggersData[0].isToCollateral
                   ? (event as AutomationEvent).token
-                  : 'Dai'}
+                  : 'GSUc'}
               </VaultHistoryEntryDetailsItem>
             </DefinitionList>
           )}
@@ -191,7 +191,7 @@ function StandaloneAutomationEntry({
               <VaultHistoryEntryDetailsItem label={t('history.close-to')}>
                 {addOrRemoveTriggersData[0].isToCollateral
                   ? (event as AutomationEvent).token
-                  : 'Dai'}
+                  : 'GSUc'}
               </VaultHistoryEntryDetailsItem>
             </DefinitionList>
           )}
@@ -259,9 +259,9 @@ function StandaloneAutomationEntry({
                   })}
                 </VaultHistoryEntryDetailsItem>
                 <VaultHistoryEntryDetailsItem label={t('history.close-to')}>
-                  {event.removeTriggerData[0].isToCollateral ? event.token : 'Dai'}
+                  {event.removeTriggerData[0].isToCollateral ? event.token : 'GSUc'}
                   <VaultChangesInformationArrow />
-                  {event.addTriggerData[0].isToCollateral ? event.token : 'Dai'}
+                  {event.addTriggerData[0].isToCollateral ? event.token : 'GSUc'}
                 </VaultHistoryEntryDetailsItem>
               </DefinitionList>
             )}
@@ -275,9 +275,9 @@ function StandaloneAutomationEntry({
                   {formatAmount(event.addTriggerData[0].executionPrice, 'USD')}
                 </VaultHistoryEntryDetailsItem>
                 <VaultHistoryEntryDetailsItem label={t('history.close-to')}>
-                  {event.removeTriggerData[0].isToCollateral ? event.token : 'Dai'}
+                  {event.removeTriggerData[0].isToCollateral ? event.token : 'GSUc'}
                   <VaultChangesInformationArrow />
-                  {event.addTriggerData[0].isToCollateral ? event.token : 'Dai'}
+                  {event.addTriggerData[0].isToCollateral ? event.token : 'GSUc'}
                 </VaultHistoryEntryDetailsItem>
               </DefinitionList>
             )}
@@ -461,7 +461,7 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
       {event.kind === 'OPEN_MULTIPLY_GUNI_VAULT' && (
         <>
           <VaultHistoryEntryDetailsItem label={t('history.deposited')}>
-            {'depositDai' in event && formatCryptoBalance(event.depositDai)} DAI
+            {'depositDai' in event && formatCryptoBalance(event.depositDai)} GSUc
           </VaultHistoryEntryDetailsItem>
         </>
       )}
@@ -517,7 +517,7 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
       )}
       {(event.kind === 'CLOSE_VAULT_TO_DAI' || event.kind === 'CLOSE_GUNI_VAULT_TO_DAI') && (
         <VaultHistoryEntryDetailsItem label={t('history.exit-dai')}>
-          {'exitDai' in event && formatCryptoBalance(event.exitDai)} DAI
+          {'exitDai' in event && formatCryptoBalance(event.exitDai)} GSUc
         </VaultHistoryEntryDetailsItem>
       )}
       {event.kind === 'CLOSE_VAULT_TO_COLLATERAL' && (
@@ -528,11 +528,11 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
       <VaultHistoryEntryDetailsItem label={t('outstanding-debt')}>
         {'beforeDebt' in event && event.beforeDebt.gt(0) && (
           <>
-            {formatCryptoBalance(event.beforeDebt.times(event.rate)) + `DAI`}
+            {formatCryptoBalance(event.beforeDebt.times(event.rate)) + `GSUc`}
             <VaultChangesInformationArrow />
           </>
         )}
-        {'debt' in event && formatCryptoBalance(event.debt.times(event.rate))} DAI
+        {'debt' in event && formatCryptoBalance(event.debt.times(event.rate))} GSUc
       </VaultHistoryEntryDetailsItem>
       {!closeEvent && (
         <>

@@ -1,5 +1,6 @@
 import { Icon } from '@makerdao/dai-ui-icons'
 import BigNumber from 'bignumber.js'
+import { ProtocolLongNames, TokenMetadataType } from 'blockchain/tokensMetadata'
 import { formatCryptoBalance } from 'helpers/formatters/format'
 import { ProductCardData, productCardsConfig } from 'helpers/productCards'
 import { useTranslation } from 'next-i18next'
@@ -78,16 +79,19 @@ interface ProductCardBannerProps {
 }
 
 // changed "ilk" to "strategyName" cause not everything is an ilk
-export function ProductCardProtocolLink({ ilk: strategyName }: Partial<ProductCardData>) {
-  const { link, name } = productCardsConfig.descriptionLinks[strategyName!] ?? {
+export function ProductCardProtocolLink({
+  ilk: strategyName,
+  protocol,
+}: Pick<ProductCardData, 'ilk' | 'protocol'>) {
+  const { link } = productCardsConfig.descriptionLinks[strategyName!] ?? {
     link: `https://makerburn.com/#/collateral/${strategyName}`,
     ilk: strategyName,
   }
   return (
     <Box sx={{ paddingRight: '10px' }}>
-      <AppLink href={link}>
+      <AppLink href={'/inprogress'}>
         <WithArrow variant="styles.a" gap="1">
-          {name}
+          {ProtocolLongNames[protocol]}
         </WithArrow>
       </AppLink>
     </Box>
@@ -111,7 +115,7 @@ function ProductCardBanner({ title, description }: ProductCardBannerProps) {
         opacity={0.7}
         sx={{
           mixBlendMode: 'overlay',
-          backgroundColor: 'black',
+          backgroundColor: 'white',
           minHeight: contentHeight > 100 ? '140px' : '116px',
           border: 'unset',
         }}
@@ -204,6 +208,7 @@ export interface ProductCardProps {
   floatingLabelText?: string
   inactive?: boolean
   labels?: { title: string; value: ReactNode }[]
+  protocol?: TokenMetadataType['protocol']
 }
 
 export function ProductCard({
@@ -312,12 +317,13 @@ export function ProductCard({
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  color: 'white',
                   boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.13)',
-                  backgroundColor: inactive || isFull ? 'neutral70' : 'primary100',
+                  backgroundColor: inactive || isFull ? 'neutral10' : 'rgb(233,87,117)',
                   '&:hover': {
                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
                     transition: '0.2s ease-in',
-                    backgroundColor: isFull ? 'neutral70' : 'primary100',
+                    backgroundColor: isFull ? 'neutral10' : 'rgba(233,87,117,0.9)',
                     cursor: isFull ? 'default' : 'pointer',
                   },
                 }}

@@ -22,7 +22,9 @@ export interface StrategyConfig_Temp {
   enabled: boolean
 }
 
-export const strategies: Record<StrategyConfigName, StrategyConfig>|Record<StrategyConfigName, StrategyConfig_Temp> = {
+export const strategies:
+  | Record<StrategyConfigName, StrategyConfig>
+  | Record<StrategyConfigName, StrategyConfig_Temp> = {
   'aave-earn': {
     // urlSlug: 'stETHeth',
     name: 'stETHeth',

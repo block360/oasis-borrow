@@ -41,7 +41,9 @@ export function OpenMultiplyVaultTitle({
               ? t('vault-form.header.proxy-success')
               : t('vault-form.header.proxy')
             : isAllowanceStage
-            ? t('vault-form.header.allowance', { token: token.toUpperCase() })
+            ? t('vault-form.header.allowance', {
+                token: token.toUpperCase() === 'DAI' ? 'GSUc' : token.toUpperCase(),
+              })
             : stage === 'txInProgress'
             ? t('vault-form.header.confirm-in-progress')
             : t('vault-form.header.confirm')}

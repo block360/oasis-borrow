@@ -1,6 +1,6 @@
 import { DeferedContextProvider } from 'components/DeferedContextProvider'
 import { earnContext, EarnContextProvider } from 'features/earn/EarnContextProvider'
-import { Survey } from 'features/survey'
+// import { Survey } from 'features/survey'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
 
@@ -20,7 +20,7 @@ function EarnPage() {
       <DeferedContextProvider context={earnContext}>
         <WithConnection>
           <EarnView />
-          <Survey for="earn" />
+          {/* <Survey for="earn" /> */}
         </WithConnection>
       </DeferedContextProvider>
     </EarnContextProvider>

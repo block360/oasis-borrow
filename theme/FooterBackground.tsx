@@ -22,7 +22,7 @@ export function FooterBackground() {
           pointerEvents: 'none',
         }}
       >
-        <Image src={staticFilesRuntimeUrl('/static/img/background/bottom_bg.png')} />
+        <Image src={staticFilesRuntimeUrl('/static/img/background/bottom_bg.jpeg')} />
       </Flex>
     </Box>
   )

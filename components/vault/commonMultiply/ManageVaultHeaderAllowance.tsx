@@ -26,7 +26,9 @@ export function ManageVaultHeaderAllowance({
               ? t('vault-form.header.proxy-success')
               : t('vault-form.header.proxy')
             : isCollateralAllowanceStage
-            ? t('vault-form.header.allowance', { token: token.toUpperCase() })
+            ? t('vault-form.header.allowance', {
+                token: token.toUpperCase() === 'DAI' ? 'GSUc' : token.toUpperCase(),
+              })
             : isDaiAllowanceStage
             ? t('vault-form.header.daiAllowance')
             : stage === 'manageInProgress'
@@ -38,7 +40,9 @@ export function ManageVaultHeaderAllowance({
         {isProxyStage ? (
           <VaultProxySubtitle stage={stage} />
         ) : isCollateralAllowanceStage ? (
-          t('vault-form.subtext.allowance', { token: token.toUpperCase() })
+          t('vault-form.subtext.allowance', {
+            token: token.toUpperCase() === 'DAI' ? 'GSUc' : token.toUpperCase(),
+          })
         ) : isDaiAllowanceStage ? (
           t('vault-form.subtext.daiAllowance')
         ) : stage === 'manageInProgress' ? (

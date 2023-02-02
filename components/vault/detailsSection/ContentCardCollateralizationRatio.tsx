@@ -33,7 +33,7 @@ function ContentCardCollateralizationRatioModal({
         {t('manage-vault.card.collateralization-ratio-calculated')}
       </Text>
       <Heading variant="header3">{t('manage-vault.card.collateralization-ratio-header2')}</Heading>
-      <Card variant="vaultDetailsCardModal" sx={{ my: 2 }}>
+      <Card variant="vaultDetailsCardModal" sx={{ fontFamily: '"GSU Font","Open Sans"', my: 2 }}>
         {positionRatioFormatted}
       </Card>
       <Text variant="paragraph2">{t('manage-vault.card.collateralization-ratio-description')}</Text>
@@ -42,7 +42,10 @@ function ContentCardCollateralizationRatioModal({
           <Heading variant="header3" sx={{ mt: 2 }}>
             {t('manage-vault.card.collateralization-ratio-next-price')}
           </Heading>
-          <Card variant="vaultDetailsCardModal" sx={{ mt: 2 }}>
+          <Card
+            variant="vaultDetailsCardModal"
+            sx={{ fontFamily: '"GSU Font","Open Sans"', mt: 2 }}
+          >
             {nextPositionRatioFormated}
           </Card>
         </>

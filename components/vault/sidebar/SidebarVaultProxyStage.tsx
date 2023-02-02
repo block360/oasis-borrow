@@ -40,12 +40,7 @@ export function SidebarVaultProxyStage({ stage, gasData }: SidebarOpenVaultProxy
                 : 'vault-form.subtext.proxy-progress'
             }
             components={{
-              1: (
-                <AppLink
-                  href="https://kb.oasis.app/help/what-is-a-proxy-contract"
-                  sx={{ fontSize: 2 }}
-                />
-              ),
+              1: <AppLink href="/inprogress" sx={{ fontSize: 2 }} />,
             }}
           />
         </Text>
@@ -80,12 +75,7 @@ export function SidebarVaultProxyStage({ stage, gasData }: SidebarOpenVaultProxy
           <Trans
             i18nKey="vault-form.subtext.new-proxy-temporally-disabled"
             components={{
-              1: (
-                <AppLink
-                  href="https://blog.oasis.app/what-to-expect-for-your-vault-after-the-merge/"
-                  sx={{ fontSize: 2 }}
-                />
-              ),
+              1: <AppLink href="inprogress" sx={{ fontSize: 2 }} />,
             }}
           />
         </Text>

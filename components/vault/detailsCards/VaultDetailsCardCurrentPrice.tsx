@@ -39,7 +39,7 @@ export function VaultDetailsCardCurrentPriceModal({
             i18nKey="manage-multiply-vault.card.more-info-oracles"
             components={[
               <AppLink
-                href="https://kb.oasis.app/help/the-oracle-security-module"
+                href="/inprogress"
                 withAccountPrefix={false}
                 target="_blank"
                 sx={{

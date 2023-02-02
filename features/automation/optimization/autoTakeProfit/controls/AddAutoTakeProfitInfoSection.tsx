@@ -40,7 +40,7 @@ export function AddAutoTakeProfitInfoSection({
         },
         {
           label: t('auto-take-profit.vault-changes.debt-repaid'),
-          value: `${formatAmount(debtRepaid, 'DAI')} DAI`,
+          value: `${formatAmount(debtRepaid, 'DAI')} GSUc`,
         },
         {
           label: t('auto-take-profit.vault-changes.total-transaction-cost'),

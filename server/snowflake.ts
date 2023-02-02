@@ -7,6 +7,6 @@ export function getSnowflakeConnection(): snowflake.Connection {
     account: config.snowflakeAccount!,
     username: config.snowflakeUser!,
     password: config.snowflakePassword,
-    application: 'Oasis.app',
+    application: 'GSUcoin.app',
   })
 }

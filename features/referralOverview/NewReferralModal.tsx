@@ -46,7 +46,7 @@ export function NewReferralModal({ account, userReferral }: NewReferralModalProp
     <>
       {!success && !userReferral && (
         <ReferralModal
-          heading="Welcome to the Oasis.app Referral Program"
+          heading="Welcome to the GSUcoin.app Referral Program"
           topButton={{ text: t('connect-wallet'), func: () => push('/connect') }}
         />
       )}

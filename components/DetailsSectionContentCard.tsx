@@ -48,6 +48,7 @@ export function DetailsSectionContentCardChangePill({
       as="p"
       variant="paragraph4"
       sx={{
+        fontFamily: '"GSU Font","Open Sans"',
         px: 3,
         py: 1,
         ...(variant === 'positive' && {
@@ -167,13 +168,18 @@ export function DetailsSectionContentCard({
       <Text
         as="p"
         variant="header3"
-        sx={{ maxWidth: '100%', lineHeight: 'loose', ...cursorStyle }}
+        sx={{
+          fontFamily: '"GSU Font","Open Sans"',
+          maxWidth: '100%',
+          lineHeight: 'loose',
+          ...cursorStyle,
+        }}
         {...hightlightableItemEvents}
       >
         {value || '-'}
         {unit && (
           <Text as="small" sx={{ ml: 1, fontSize: 5, ...customUnitStyle }}>
-            {unit}
+            {unit === 'DAI' ? 'GSUc' : unit}
           </Text>
         )}
       </Text>

@@ -1,21 +1,25 @@
 import BigNumber from 'bignumber.js'
-import { AaveReserveDataReply } from 'blockchain/calls/aave/aaveProtocolDataProvider'
+import {
+  AaveReserveDataParameters,
+  AaveReserveDataReply,
+} from 'blockchain/calls/aave/aaveProtocolDataProvider'
 import { amountFromRay } from 'blockchain/utils'
-import { combineLatest, Observable } from 'rxjs'
+import { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
 
 export type PreparedAaveReserveData = {
   variableBorrowRate: BigNumber
 }
 
-export function aavePrepareReserveData() {
-  return (
-    aaveReserveData$: Observable<AaveReserveDataReply>,
-  ): Observable<PreparedAaveReserveData> =>
-    combineLatest(aaveReserveData$).pipe(
-      map(([reserveData]: [AaveReserveDataReply]) => ({
-        // right now I just need this one
-        variableBorrowRate: amountFromRay(new BigNumber(reserveData.variableBorrowRate)), //the current variable borrow rate. Expressed in ray
-      })),
-    )
+export function createAavePrepareReserveData$(
+  aaveReserveData$: (args: AaveReserveDataParameters) => Observable<AaveReserveDataReply>,
+  token: string,
+): Observable<PreparedAaveReserveData> {
+  return aaveReserveData$({ token }).pipe(
+    map((reserveData: AaveReserveDataReply) => ({
+      // TODO: if/when all things below are required from observe(aaveReserveData$), we can get rid of this file
+      variableBorrowRate: amountFromRay(new BigNumber(reserveData.variableBorrowRate)),
+      liquidityRate: amountFromRay(new BigNumber(reserveData.liquidityRate)), // the current variable borrow rate. Expressed in ray
+    })),
+  )
 }

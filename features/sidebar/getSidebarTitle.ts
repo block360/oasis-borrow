@@ -138,13 +138,15 @@ export function getSidebarTitle({
     case 'collateralAllowanceInProgress':
     case 'collateralAllowanceFailure':
     case 'collateralAllowanceSuccess':
-      return t('vault-form.header.allowance', { token: allowanceToken })
+      return t('vault-form.header.allowance', {
+        token: allowanceToken === 'DAI' ? 'GSUc' : allowanceToken,
+      })
     case 'daiAllowanceWaitingForConfirmation':
     case 'daiAllowanceWaitingForApproval':
     case 'daiAllowanceInProgress':
     case 'daiAllowanceFailure':
     case 'daiAllowanceSuccess':
-      return t('vault-form.header.allowance', { token: 'DAI' })
+      return t('vault-form.header.allowance', { token: 'GSUc' })
     case 'txInProgress':
       const txInProgressKey = getSidebarTitleTxInProgressTranslationKey({
         flow,

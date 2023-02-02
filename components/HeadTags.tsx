@@ -1,10 +1,14 @@
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { useTranslation } from 'next-i18next'
+import getConfig from 'next/config'
 import Head from 'next/head'
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 
 import { useTheme } from '../theme/useThemeUI'
+const {
+  publicRuntimeConfig: { apiHost },
+} = getConfig()
 
 export function HeadTags() {
   const { theme } = useTheme()
@@ -34,29 +38,29 @@ export function PageSEONoFollow() {
   )
 }
 
-const APP_URL = 'https://oasis.app'
+const APP_URL = apiHost || 'https://GSUcoin.app'
 
 export function PageSEOTags({
   title,
   description,
   url = '/',
-  ogImage = 'og_default.png',
-  twitterImage = 'twitter_preview_default.png',
+  ogImage = 'og.png',
+  twitterImage = 'og_small.png',
 }: SEOTagsType) {
   const { t } = useTranslation()
-
+  // Note: these images can be updated wrt each route
   const OGImages = {
     '/borrow': {
-      ogImage: 'og_borrow.png',
-      twitterImage: 'twitter_preview_borrow.png',
+      ogImage: 'og.png',
+      twitterImage: 'og_small.png',
     },
     '/multiply': {
-      ogImage: 'og_multiply.png',
-      twitterImage: 'twitter_preview_multiply.png',
+      ogImage: 'og.png',
+      twitterImage: 'og_small.png',
     },
     '/earn': {
-      ogImage: 'og_earn.png',
-      twitterImage: 'twitter_preview_earn.png',
+      ogImage: 'og.png',
+      twitterImage: 'og_small.png',
     },
   }[url] || {
     ogImage,
@@ -99,15 +103,15 @@ export function PageSEOTags({
         content={staticFilesRuntimeUrl(`/static/img/og_images/${OGImages.twitterImage}?${uuid()}`)}
       />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@oasisdotapp" />
+      <meta name="twitter:creator" content="@GSUcoin" />
 
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Oasis" />
+      <meta property="og:site_name" content="GSUcoin" />
     </Head>
   )
 }
 
-const APP_NAME = 'Oasis'
+const APP_NAME = 'GSUcoin'
 
 export function PWATags() {
   return (

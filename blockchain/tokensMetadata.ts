@@ -4,15 +4,17 @@ import type { ElementOf } from 'ts-essentials'
 
 export interface TokenConfig {
   symbol: string
+  rootToken?: string
   precision: number
   digits: number
-  maxSell: string
+  maxSell?: string
   name: string
   icon: string
   iconCircle: string
   iconColor: string
-  coinpaprikaTicker: string
+  coinpaprikaTicker?: string
   tags: CoinTag[]
+  coinpaprikaFallbackTicker?: string
   color: string
   bannerIcon: string
   bannerGif?: string
@@ -21,12 +23,16 @@ export interface TokenConfig {
   coinbaseTicker?: string
   coinGeckoId?: string
   background?: string
-  digitsInstant?: number,
+  digitsInstant?: number
   gsuRatesTicker?: string
 }
 
 export const COIN_TAGS = ['stablecoin', 'lp-token'] as const
 export type CoinTag = ElementOf<typeof COIN_TAGS>
+export enum ProtocolLongNames {
+  GSU = 'GSU',
+  aave = 'Aave V2',
+}
 
 export const tokens = [
   {
@@ -45,6 +51,7 @@ export const tokens = [
     bannerIcon: staticFilesRuntimeUrl('/static/img/tokens/eth.png'),
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/eth.gif'),
     tags: [],
+    protocol: 'GSU',
   },
   {
     symbol: 'WETH',
@@ -62,6 +69,7 @@ export const tokens = [
     bannerIcon: staticFilesRuntimeUrl('/static/img/tokens/eth.png'),
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/eth.gif'),
     tags: [],
+    protocol: 'GSU',
   },
   {
     symbol: 'ETH',
@@ -77,7 +85,8 @@ export const tokens = [
     coinGeckoId: 'ethereum',
     gsuRatesTicker: 'eth',
     color: '#667FE3',
-    background: 'linear-gradient(160.47deg, #F0F3FD 0.35%, #FCF0FD 99.18%), #FFFFFF',
+    background:
+      'linear-gradient(120deg, rgba(233,74,116,0.19931722689075626) 0%, rgba(179,202,101,0.196516106442577) 99%)',
     bannerIcon: staticFilesRuntimeUrl('/static/img/tokens/eth.png'),
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/eth.gif'),
     tags: [],
@@ -97,7 +106,7 @@ export const tokens = [
     coinGeckoId: 'wrapped-bitcoin',
     gsuRatesTicker: 'wbtc',
     color: '#f09242',
-    background: 'linear-gradient(147.66deg, #FEF1E1 0%, #FDF2CA 88.25%)',
+    background: 'linear-gradient(120deg, rgba(179,202,101,0.2) 0%, rgba(179,95,255,0.2) 99%)',
     bannerIcon: staticFilesRuntimeUrl('/static/img/tokens/wbtc.png'),
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/wbtc.gif'),
     tags: [],
@@ -110,8 +119,8 @@ export const tokens = [
     maxSell: '10000000',
     name: 'Dai',
     icon: 'dai',
-    iconCircle: 'dai_circle_color',
-    iconColor: 'dai_color',
+    iconCircle: 'gsu_circle_color',
+    iconColor: 'gsu_color',
     coinpaprikaTicker: 'dai-dai',
     coinbaseTicker: 'dai-usd',
     gsuRatesTicker: 'gsuc',
@@ -120,7 +129,7 @@ export const tokens = [
     background: '',
     bannerGif: '',
     tags: ['stablecoin'],
-  }
+  },
 ]
 
 // ticker comes from coinpaprika api https://api.coinpaprika.com/v1/tickers
@@ -166,7 +175,7 @@ export const ONLY_MULTIPLY_TOKENS = []
 // @GSUpro, optimization and protection disabled for all ilks
 const ALLOWED_AUTOMATION_ILKS: Record<string, string[]> = {
   main: [],
-  goerli: []
+  goerli: [],
 }
 
 export function isSupportedAutomationIlk(network: string, ilk: string) {

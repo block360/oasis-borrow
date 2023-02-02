@@ -1,7 +1,7 @@
 import { useActor } from '@xstate/react'
 import { TabBar } from 'components/TabBar'
 import { AaveFaq } from 'features/content/faqs/aave'
-import { Survey } from 'features/survey'
+// import { Survey } from 'features/survey'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 import { Box, Card, Container, Grid } from 'theme-ui'
@@ -68,7 +68,7 @@ function AaveOpenContainer({
             },
           ]}
         />
-        <Survey for="earn" />
+        {/* <Survey for="earn" /> */}
       </Container>
     </OpenAaveStateMachineContextProvider>
   )

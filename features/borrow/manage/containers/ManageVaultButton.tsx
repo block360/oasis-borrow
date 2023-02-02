@@ -20,19 +20,19 @@ function manageVaultButtonText(state: ManageStandardBorrowVaultState): string {
         : state.insufficientCollateralAllowance
         ? t('set-token-allowance', { token: state.vault.token })
         : state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : t('confirm')
 
     case 'proxySuccess':
       return state.insufficientCollateralAllowance
         ? t('set-token-allowance', { token: state.vault.token })
         : state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : t('continue')
 
     case 'collateralAllowanceSuccess':
       return state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : t('continue')
 
     case 'daiAllowanceSuccess':
@@ -51,12 +51,14 @@ function manageVaultButtonText(state: ManageStandardBorrowVaultState): string {
     case 'collateralAllowanceWaitingForConfirmation':
       return state.customCollateralAllowanceAmountEmpty
         ? t('enter-allowance-amount')
-        : t('set-token-allowance', { token: state.vault.token })
+        : t('set-token-allowance', {
+            token: state.vault.token === 'DAI' ? 'GSUc' : state.vault.token,
+          })
 
     case 'daiAllowanceWaitingForConfirmation':
       return state.customDaiAllowanceAmountEmpty
         ? t('enter-allowance-amount')
-        : t('set-token-allowance', { token: 'DAI' })
+        : t('set-token-allowance', { token: 'GSUc' })
 
     case 'collateralAllowanceFailure':
     case 'daiAllowanceFailure':
@@ -88,7 +90,9 @@ function manageVaultButtonText(state: ManageStandardBorrowVaultState): string {
       ) {
         return t('borrow-to-multiply.button-start')
       } else {
-        return t('borrow-to-multiply.button-not-supported', { token: state.vault.token })
+        return t('borrow-to-multiply.button-not-supported', {
+          token: state.vault.token === 'DAI' ? 'GSUc' : state.vault.token,
+        })
       }
 
     case 'multiplyTransitionWaitingForConfirmation':
@@ -118,7 +122,7 @@ function manageVaultSecondaryButtonText(state: ManageStandardBorrowVaultState): 
   switch (state.stage) {
     case 'daiAllowanceFailure':
     case 'collateralAllowanceFailure':
-      return t('edit-token-allowance', { token: isCollateralAllowanceStage ? token : 'DAI' })
+      return t('edit-token-allowance', { token: isCollateralAllowanceStage ? token : 'GSUc' })
     case 'multiplyTransitionEditing':
     case 'multiplyTransitionWaitingForConfirmation':
     case 'multiplyTransitionFailure':

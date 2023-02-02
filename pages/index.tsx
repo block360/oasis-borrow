@@ -2,7 +2,7 @@ import { WithConnection } from 'components/connectWallet/ConnectWallet'
 import { DeferedContextProvider } from 'components/DeferedContextProvider'
 import { LandingPageLayout } from 'components/Layouts'
 import { earnContext, EarnContextProvider } from 'features/earn/EarnContextProvider'
-import { Survey } from 'features/survey'
+// import { Survey } from 'features/survey'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
 
@@ -20,7 +20,7 @@ function LandingPage() {
       <DeferedContextProvider context={earnContext}>
         <WithConnection>
           <HomepageView />
-          <Survey for="homepage" />
+          {/* <Survey for="homepage" /> */}
         </WithConnection>
       </DeferedContextProvider>
     </EarnContextProvider>

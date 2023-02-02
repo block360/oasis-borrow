@@ -147,10 +147,7 @@ function SlippageSettingsForm() {
           <Text variant="paragraph3" sx={{ color: 'neutral80', mb: -1 }}>
             {t('user-settings.slippage-limit.preset-description')}
           </Text>
-          <Link
-            href="https://kb.oasis.app/help/frequently-asked-questions#h_8073651997861662481520644"
-            passHref
-          >
+          <Link href="/support" passHref>
             <ThemeLink target="_self" sx={{ mt: -1, fontWeight: 400 }}>
               {t('user-settings.slippage-limit.read-more')}
             </ThemeLink>
@@ -297,7 +294,7 @@ function WalletInfo() {
 
           {accountData && accountData.daiBalance && (
             <Flex sx={{ alignItems: 'center' }}>
-              <Icon sx={{ zIndex: 1 }} name="dai_color" size={16} />
+              <Icon sx={{ zIndex: 1 }} name="gsu_circle_color" size={16} />
               <Text
                 variant="paragraph4"
                 sx={{
@@ -328,11 +325,11 @@ export function UserSettings({ sx }: { sx?: SxStyleProp }) {
         {t('wallet')}
       </Heading>
       <WalletInfo />
-      <Heading as="p" variant="boldParagraph1" sx={{ mt: 4, mb: 3 }}>
+      {/* <Heading as="p" variant="boldParagraph1" sx={{ mt: 4, mb: 3 }}>
         {t('user-settings.slippage-limit.preset-title')}
       </Heading>
-      <SlippageSettingsForm />
-      <Box variant="separator" sx={{ mt: '16px', mb: '24px' }} />
+      <SlippageSettingsForm /> */}
+      <Box variant="separator" sx={{ mt: '32px', mb: '24px' }} />
       <Button
         variant="textual"
         sx={{
@@ -377,12 +374,7 @@ export function UserSettings({ sx }: { sx?: SxStyleProp }) {
         >
           {t('account-privacy')}
         </AppLink>
-        <AppLink
-          variant="settings"
-          withAccountPrefix={false}
-          href="https://kb.oasis.app/help"
-          onClick={close}
-        >
+        <AppLink variant="settings" withAccountPrefix={false} href="/support" onClick={close}>
           {t('account-support')}
         </AppLink>
       </Flex>

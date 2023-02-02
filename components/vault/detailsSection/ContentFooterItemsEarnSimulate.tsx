@@ -25,7 +25,9 @@ export function ContentFooterItemsEarnSimulate({
 
   const formatted = {
     breakeven: breakeven.gt(zero) ? breakeven.toFixed(0, BigNumber.ROUND_UP) : '1',
-    entryFees: entryFees.gt(zero) ? `${formatCryptoBalance(entryFees)} ${token}` : '-',
+    entryFees: entryFees.gt(zero)
+      ? `${formatCryptoBalance(entryFees)} ${token === 'DAI' ? 'GSUc' : token}`
+      : '-',
     apy: formatPercent(apy, { precision: 2 }),
   }
 

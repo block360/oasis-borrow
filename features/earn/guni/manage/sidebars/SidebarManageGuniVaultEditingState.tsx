@@ -52,7 +52,7 @@ export function SidebarManageGuniVaultEditingState(props: ManageMultiplyVaultSta
             <EstimationOnClose
               iconCircle={getToken('DAI').iconCircle}
               label={`${t('minimum')} ${t('after-closing', { token: 'DAI' })}`}
-              value={`${formatCryptoBalance(afterCloseToDai)} DAI`}
+              value={`${formatCryptoBalance(afterCloseToDai)} GSUc`}
             />
           )}
         </>

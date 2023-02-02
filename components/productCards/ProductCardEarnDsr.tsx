@@ -39,11 +39,11 @@ export function ProductCardEarnDsr() {
     <ProductCard
       tokenImage="/static/img/tokens/maker_dai.png"
       tokenGif="/static/img/tokens/maker_dai.gif"
-      title={t(`DAI Savings Rate`)}
+      title={t(`GSUc Savings Rate`)}
       description={t(`dsr.product-card.description`)}
       banner={{
-        title: 'With 100,000.00 DAI 👇',
-        description: `Earn up to ${formatAmount(earnUpTo, 'USD')} Dai per year`,
+        title: 'With 100,000.00 GSUc 👇',
+        description: `Earn up to ${formatAmount(earnUpTo, 'USD')} GSUc per year`,
       }}
       labels={[
         {
@@ -56,7 +56,7 @@ export function ProductCardEarnDsr() {
         },
         {
           title: t('system.protocol'),
-          value: <ProductCardProtocolLink ilk={'DAI'} protocol="maker" />,
+          value: <ProductCardProtocolLink ilk={'DAI'} protocol="GSU" />,
         },
       ]}
       button={{
@@ -64,8 +64,8 @@ export function ProductCardEarnDsr() {
         text: t('nav.earn'),
         onClick: handleClick,
       }}
-      background="#E0F9F0"
-      protocol="maker"
+      background="linear-gradient(120deg, rgba(233,74,116,0.19931722689075626) 0%, rgba(179,202,101,0.196516106442577) 99%)"
+      protocol="GSU"
       isFull={false}
     />
   )

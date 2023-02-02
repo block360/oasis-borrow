@@ -77,7 +77,7 @@ export function FeesView({ userReferral }: Props) {
             <Text variant="header3">
               {`${userReferral.totalAmount}`}{' '}
               <Text variant="boldParagraph1" sx={{ display: 'inline' }}>
-                DAI
+                GSUc
               </Text>
             </Text>
           </Box>
@@ -98,7 +98,7 @@ export function FeesView({ userReferral }: Props) {
                   : userReferral.totalClaim}
                 {` `}
                 <Text variant="boldParagraph1" sx={{ display: 'inline' }}>
-                  DAI
+                  GSUc
                 </Text>
               </Text>
             </Box>
@@ -120,7 +120,7 @@ export function FeesView({ userReferral }: Props) {
                 {userReferral.claimTxnState === ClaimTxnState.PENDING ? (
                   <Spinner size={30} color="main" />
                 ) : (
-                  <Icon name="dai_circle_color" size="32px" />
+                  <Icon name="gsu_circle_color" size="32px" />
                 )}
                 <Text pl="12px" sx={{ whiteSpace: 'nowrap', fontSize: 2 }}>
                   {userReferral.claimTxnState === ClaimTxnState.SUCCEEDED ? t('ref.claimed') : null}

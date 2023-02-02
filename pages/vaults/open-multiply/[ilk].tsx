@@ -1,7 +1,7 @@
 import { WithWalletConnection } from 'components/connectWallet/ConnectWallet'
 import { AppLayout } from 'components/Layouts'
 import { OpenMultiplyVaultView } from 'features/multiply/open/containers/OpenMultiplyVaultView'
-import { Survey } from 'features/survey'
+// import { Survey } from 'features/survey'
 import { WithTermsOfService } from 'features/termsOfService/TermsOfService'
 import { GetServerSidePropsContext, GetStaticPaths } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -33,7 +33,7 @@ function OpenVault({ ilk }: { ilk: string }) {
       <WithTermsOfService>
         <WithWalletAssociatedRisk>
           <OpenMultiplyVaultView ilk={ilk} />
-          <Survey for="multiply" />
+          {/* <Survey for="multiply" /> */}
         </WithWalletAssociatedRisk>
       </WithTermsOfService>
     </WithWalletConnection>

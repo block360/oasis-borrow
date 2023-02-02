@@ -80,25 +80,25 @@ function VaultSuggestionsView({ productCardsData, context, address }: ViewProps)
         variant="large"
         useDropdownOnMobile
         sections={[
-          {
-            label: t('landing.tabs.multiply.tabLabel'),
-            value: 'multiply',
-            topContent: (
-              <TabHeaderParagraph>
-                {t('landing.tabs.multiply.tabParaContent')}{' '}
-                <AppLink href="/multiply" variant="inText">
-                  {t('landing.tabs.multiply.tabParaLinkContent')}
-                </AppLink>
-              </TabHeaderParagraph>
-            ),
-            content: (
-              <TabContent
-                type="multiply"
-                renderProductCard={ProductCardMultiply}
-                productCardsData={productCardsData}
-              />
-            ),
-          },
+          // {
+          //   label: t('landing.tabs.multiply.tabLabel'),
+          //   value: 'multiply',
+          //   topContent: (
+          //     <TabHeaderParagraph>
+          //       {t('landing.tabs.multiply.tabParaContent')}{' '}
+          //       <AppLink href="/multiply" variant="inText">
+          //         {t('landing.tabs.multiply.tabParaLinkContent')}
+          //       </AppLink>
+          //     </TabHeaderParagraph>
+          //   ),
+          //   content: (
+          //     <TabContent
+          //       type="multiply"
+          //       renderProductCard={ProductCardMultiply}
+          //       productCardsData={productCardsData}
+          //     />
+          //   ),
+          // },
           {
             label: t('landing.tabs.borrow.tabLabel'),
             value: 'borrow',

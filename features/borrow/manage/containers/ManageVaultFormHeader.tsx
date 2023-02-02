@@ -116,7 +116,12 @@ export function ManageVaultFormHeader(
                   ? t('vault-form.header.proxy-success')
                   : t('vault-form.header.proxy')
                 : isCollateralAllowanceStage
-                ? t('vault-form.header.allowance', { token: props.vault.token.toUpperCase() })
+                ? t('vault-form.header.allowance', {
+                    token:
+                      props.vault.token.toUpperCase() === 'DAI'
+                        ? 'GSUc'
+                        : props.vault.token.toUpperCase(),
+                  })
                 : isDaiAllowanceStage
                 ? t('vault-form.header.daiAllowance')
                 : isManageStage
@@ -125,7 +130,10 @@ export function ManageVaultFormHeader(
                   : t('vault-form.header.confirm-manage')
                 : stage === 'multiplyTransitionEditing'
                 ? t('vault-form.header.multiply-transition', {
-                    token: props.vault.token.toUpperCase(),
+                    token:
+                      props.vault.token.toUpperCase() === 'DAI'
+                        ? 'GSUc'
+                        : props.vault.token.toUpperCase(),
                   })
                 : t('vault-form.header.go-to-multiply')}
             </Text>
@@ -139,12 +147,7 @@ export function ManageVaultFormHeader(
                     : 'vault-form.subtext.proxy'
                 }
                 components={{
-                  1: (
-                    <AppLink
-                      href="https://kb.oasis.app/help/what-is-a-proxy-contract"
-                      sx={{ fontSize: 2 }}
-                    />
-                  ),
+                  1: <AppLink href="/support" sx={{ fontSize: 2 }} />,
                   2: (
                     <WithArrow
                       sx={{ display: 'inline', color: 'interactive100', fontWeight: 'body' }}
@@ -153,7 +156,12 @@ export function ManageVaultFormHeader(
                 }}
               />
             ) : isCollateralAllowanceStage ? (
-              t('vault-form.subtext.allowance', { token: props.vault.token.toUpperCase() })
+              t('vault-form.subtext.allowance', {
+                token:
+                  props.vault.token.toUpperCase() === 'DAI'
+                    ? 'GSUc'
+                    : props.vault.token.toUpperCase(),
+              })
             ) : isDaiAllowanceStage ? (
               t('vault-form.subtext.daiAllowance')
             ) : isManageStage ? (

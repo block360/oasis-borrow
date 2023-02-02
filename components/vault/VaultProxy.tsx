@@ -96,9 +96,7 @@ export function VaultProxySubtitle({
         stage === 'proxySuccess' ? 'vault-form.subtext.proxy-success' : 'vault-form.subtext.proxy'
       }
       components={{
-        1: (
-          <AppLink href="https://kb.oasis.app/help/what-is-a-proxy-contract" sx={{ fontSize: 2 }} />
-        ),
+        1: <AppLink href="/inprogress" sx={{ fontSize: 2 }} />,
         2: <WithArrow sx={{ display: 'inline', color: 'interactive100', fontWeight: 'body' }} />,
       }}
     />

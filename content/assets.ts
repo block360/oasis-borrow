@@ -23,10 +23,10 @@ export const ASSETS_PAGES = [
     borrowIlks: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
   },
   {
-    slug: 'dai',
-    header: 'Dai',
-    symbol: 'DAI',
-    icon: 'dai_circle_color',
+    slug: 'gsuc',
+    header: 'GSUc',
+    symbol: 'GSUc',
+    icon: 'gsu_circle_color',
     descriptionKey: 'assets.dai.description',
     link: 'assets.dai.link',
     // TODO prepare proper handling for DSR

@@ -121,9 +121,9 @@ export function ManageMultiplyVaultChangesInformation(props: ManageMultiplyVault
         label={`${t('system.vault-dai-debt')}`}
         value={
           <Flex>
-            {`${formatCryptoBalance(debt || zero)} DAI`}
+            {`${formatCryptoBalance(debt || zero)} GSUc`}
             <VaultChangesInformationArrow />
-            {`${formatCryptoBalance(afterDebt || zero)} DAI`}
+            {`${formatCryptoBalance(afterDebt || zero)} GSUc`}
           </Flex>
         }
       />

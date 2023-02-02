@@ -23,7 +23,7 @@ export function MultiplyView() {
         title={t('product-page.multiply.title')}
         description={t('product-page.multiply.description')}
         link={{
-          href: 'https://kb.oasis.app/help/what-is-multiply',
+          href: '/inprogress',
           text: t('product-page.multiply.link'),
         }}
         scrollToId={tab}

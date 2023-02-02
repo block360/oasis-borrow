@@ -158,10 +158,7 @@ export function SidebarConstantMultipleEditingStage({
       </Text>
       <Text as="p" variant="boldParagraph3" sx={{ color: 'neutral80' }}>
         {t('constant-multiple.set-trigger-risk')}
-        <AppLink
-          href="https://kb.oasis.app/help/what-are-the-risks-associated-with-constant-multiple"
-          sx={{ fontSize: 2 }}
-        >
+        <AppLink href="/inprogress" sx={{ fontSize: 2 }}>
           {t('here')}.
         </AppLink>
       </Text>

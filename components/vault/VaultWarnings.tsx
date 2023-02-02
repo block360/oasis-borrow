@@ -8,16 +8,9 @@ import { Trans, useTranslation } from 'next-i18next'
 import React from 'react'
 import { Dictionary } from 'ts-essentials'
 
-const ConstantMultipleKBLink = (
-  <AppLink
-    sx={{ color: 'warning100' }}
-    href="https://kb.oasis.app/help/what-is-constant-multiple"
-  />
-)
+const ConstantMultipleKBLink = <AppLink sx={{ color: 'warning100' }} href="/inprogress" />
 
-const AutoTakeProfitKBLink = (
-  <AppLink sx={{ color: 'warning100' }} href="https://kb.oasis.app/help/take-profit" />
-)
+const AutoTakeProfitKBLink = <AppLink sx={{ color: 'warning100' }} href="/inprogress" />
 
 interface VaultWarningsProps {
   warningMessages: VaultWarningMessage[]
