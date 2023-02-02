@@ -162,7 +162,8 @@ const conf = withBundleAnalyzer(
 
 // sentry needs to be last for accurate sourcemaps
 module.exports = withSentryConfig(conf, {
-  org: 'oazo-apps',
-  project: 'oazo-apps',
+  org: 'gsu-protocol',
+  project: 'gsuprotocol_app',
   url: 'https://sentry.io/',
+  silent: true,
 })
