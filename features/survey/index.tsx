@@ -1,4 +1,3 @@
-import React from 'react'
 
 // import { SurveyButtons } from './SurveyButtons'
 import surveysConfig from './surveysConfig.json'

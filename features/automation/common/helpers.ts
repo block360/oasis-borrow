@@ -10,7 +10,6 @@ import BigNumber from 'bignumber.js'
 import { NetworkIds } from 'blockchain/network'
 import { UIChanges } from 'components/AppContext'
 import { TriggerRecord, TriggersData } from 'features/automation/api/automationTriggersData'
-
 import {
   aaveTokenPairsAllowedAutomation,
   DEFAULT_DISTANCE_FROM_TRIGGER_TO_TARGET,

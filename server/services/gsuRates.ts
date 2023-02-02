@@ -1,9 +1,8 @@
+import { amountFromWei } from '@oasisdex/utils'
 import axios from 'axios'
+import BigNumber from 'bignumber.js'
 import { tokens } from 'blockchain/tokensMetadata'
 import { PriceServiceResponse } from 'helpers/types'
-import { amountFromWei } from '@oasisdex/utils'
-import BigNumber from 'bignumber.js'
-
 
 interface GSURateApiResponse {
   price: string

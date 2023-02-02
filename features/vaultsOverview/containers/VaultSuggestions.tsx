@@ -12,7 +12,6 @@ import { Box, Flex, Heading, Text } from 'theme-ui'
 import { AppLink } from '../../../components/Links'
 import { ProductCardBorrow } from '../../../components/productCards/ProductCardBorrow'
 import { ProductCardEarnMaker } from '../../../components/productCards/ProductCardEarnMaker'
-import { ProductCardMultiply } from '../../../components/productCards/ProductCardMultiply'
 import { ProductCardsWrapper } from '../../../components/productCards/ProductCardsWrapper'
 import { formatAddress } from '../../../helpers/formatters/format'
 import {

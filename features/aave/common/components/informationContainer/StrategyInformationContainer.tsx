@@ -10,7 +10,6 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getToken } from '../../../../../blockchain/tokensMetadata'
-import { useAppContext } from '../../../../../components/AppContextProvider'
 import { VaultChangesInformationContainer } from '../../../../../components/vault/VaultChangesInformation'
 import { HasGasEstimation } from '../../../../../helpers/form'
 import { UserSettingsState } from '../../../../userSettings/userSettings'

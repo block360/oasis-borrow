@@ -180,8 +180,8 @@ export interface MarketingLayoutProps extends WithChildren {
 export function MarketingLayout({
   children,
   variant,
-  topBackground = 'default',
-}: MarketingLayoutProps) {
+}: // topBackground = 'default',
+MarketingLayoutProps) {
   if (!isAppContextAvailable()) {
     return null
   }

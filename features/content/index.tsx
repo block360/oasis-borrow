@@ -2,9 +2,9 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { content as cookieContent } from './cookie/cookie'
+import { content as inprogress } from './inprogress/inprogress'
 import { content as privacyContent } from './privacy/privacy'
 import { content as tosContent } from './tos/tos'
-import { content as inprogress } from './inprogress/inprogress'
 export interface ContentType {
   [key: string]: any
 }

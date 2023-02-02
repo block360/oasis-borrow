@@ -43,7 +43,7 @@ const configuredFeatures: Record<Feature, boolean> = {
   AutoTakeProfit: false,
   UpdatedPnL: false,
   ReadOnlyAutoTakeProfit: false,
-  DiscoverOasis: true,
+  DiscoverOasis: false,
   ShowAaveStETHETHProductCard: false,
   FollowVaults: false,
   AaveProtection: false,

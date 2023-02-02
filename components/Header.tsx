@@ -1,6 +1,6 @@
 import { Global } from '@emotion/core'
 import { Icon } from '@makerdao/dai-ui-icons'
-import { getMixpanelUserContext, trackingEvents } from 'analytics/analytics'
+import { trackingEvents } from 'analytics/analytics'
 import { ContextConnected } from 'blockchain/network'
 import { AppLink } from 'components/Links'
 import { LANDING_PILLS } from 'content/landing'
@@ -19,9 +19,9 @@ import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { WithChildren } from 'helpers/types'
 import { useUIChanges } from 'helpers/uiChangesHook'
 import { useFeatureToggle } from 'helpers/useFeatureToggle'
-import { useOnboarding } from 'helpers/useOnboarding'
+// import { useOnboarding } from 'helpers/useOnboarding'
 import { useOutsideElementClickHandler } from 'helpers/useOutsideElementClickHandler'
-import { InitOptions } from 'i18next'
+// import { InitOptions } from 'i18next'
 import { useTranslation } from 'next-i18next'
 import getConfig from 'next/config'
 import { useRouter } from 'next/router'
@@ -227,13 +227,13 @@ function ButtonDropdown({
 
 function UserDesktopMenu() {
   const { t } = useTranslation()
-  const { accountData$, context$, web3Context$, uiChanges } = useAppContext()
+  const { accountData$, context$, web3Context$ } = useAppContext()
   const [context] = useObservable(context$)
   const [accountData] = useObservable(accountData$)
   const [web3Context] = useObservable(web3Context$)
   const vaultCount = useVaultCount()
-  const [exchangeOnboarded] = useOnboarding('Exchange')
-  const [exchangeOpened, setExchangeOpened] = useState(false)
+  // const [exchangeOnboarded] = useOnboarding('Exchange')
+  // const [exchangeOpened] = useState(false)
   // const [widgetUiChanges] = useObservable(
   //   uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
   // )
@@ -246,7 +246,7 @@ function UserDesktopMenu() {
 
   // const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
 
-  const showNewUniswapWidgetBeacon = !exchangeOnboarded && !exchangeOpened
+  // const showNewUniswapWidgetBeacon = !exchangeOnboarded && !exchangeOpened
 
   const shouldHideSettings = getShouldHideHeaderSettings(context, accountData, web3Context)
 
@@ -442,7 +442,6 @@ const LINKS = {
 }
 
 function ConnectedHeader() {
-  const { uiChanges } = useAppContext()
   const onMobile = useOnMobile()
 
   // const [widgetUiChanges] = useObservable(
@@ -710,28 +709,28 @@ function AssetsDropdown() {
   )
 }
 
-function LanguageDropdown({ sx }: { sx?: SxStyleProp }) {
-  const { t, i18n } = useTranslation()
-  const router = useRouter()
-  const { locales } = i18n.options as InitOptions & { locales: string[] }
+// function LanguageDropdown({ sx }: { sx?: SxStyleProp }) {
+//   const { t, i18n } = useTranslation()
+//   const router = useRouter()
+//   const { locales } = i18n.options as InitOptions & { locales: string[] }
 
-  return (
-    <HeaderDropdown title={t(`lang-dropdown.${i18n.language}`)} sx={sx}>
-      {locales
-        .filter((lang) => lang !== i18n.language)
-        .map((lang, index) => (
-          <Text
-            key={index}
-            variant="links.nav"
-            sx={{ fontWeight: 'body' }}
-            onClick={() => router.push(router.asPath, router.asPath, { locale: lang })}
-          >
-            {t(`lang-dropdown.${lang}`)}
-          </Text>
-        ))}
-    </HeaderDropdown>
-  )
-}
+//   return (
+//     <HeaderDropdown title={t(`lang-dropdown.${i18n.language}`)} sx={sx}>
+//       {locales
+//         .filter((lang) => lang !== i18n.language)
+//         .map((lang, index) => (
+//           <Text
+//             key={index}
+//             variant="links.nav"
+//             sx={{ fontWeight: 'body' }}
+//             onClick={() => router.push(router.asPath, router.asPath, { locale: lang })}
+//           >
+//             {t(`lang-dropdown.${lang}`)}
+//           </Text>
+//         ))}
+//     </HeaderDropdown>
+//   )
+// }
 
 function MobileMenuLink({ isActive, children }: { isActive: boolean } & WithChildren) {
   return (
@@ -929,13 +928,12 @@ function DisconnectedHeader() {
 }
 
 function MainNavigation() {
-  const { i18n, t } = useTranslation()
-  const { context$ } = useAppContext()
-  const [context] = useObservable(context$)
+  const { t } = useTranslation()
+
   const { pathname } = useRouter()
 
   const discoverOasisEnabled = useFeatureToggle('DiscoverOasis')
-  const userContext = getMixpanelUserContext(i18n.language, context)
+  // const userContext = getMixpanelUserContext(i18n.language, context)
 
   return (
     <Flex
@@ -996,13 +994,13 @@ function MainNavigation() {
           <HeaderLink label={t('nav.assets')}>
             <HeaderList links={LANDING_PILLS} columns={2} />
           </HeaderLink>
-          <HeaderLink
+          {/* <HeaderLink
             label={t('nav.discover')}
             link={LINKS.discover}
             onClick={() => {
               trackingEvents.discover.selectedInNavigation(userContext)
             }}
-          />
+          /> */}
         </Grid>
       )}
     </Flex>

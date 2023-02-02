@@ -2,7 +2,7 @@ import { Icon } from '@makerdao/dai-ui-icons'
 import BigNumber from 'bignumber.js'
 import { ProtocolLongNames, TokenMetadataType } from 'blockchain/tokensMetadata'
 import { formatCryptoBalance } from 'helpers/formatters/format'
-import { ProductCardData, productCardsConfig } from 'helpers/productCards'
+import { ProductCardData } from 'helpers/productCards'
 import { useTranslation } from 'next-i18next'
 import React, { ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { Box, Button, Card, Flex, Heading, Image, Spinner, Text } from 'theme-ui'
@@ -79,14 +79,11 @@ interface ProductCardBannerProps {
 }
 
 // changed "ilk" to "strategyName" cause not everything is an ilk
-export function ProductCardProtocolLink({
-  ilk: strategyName,
-  protocol,
-}: Pick<ProductCardData, 'ilk' | 'protocol'>) {
-  const { link } = productCardsConfig.descriptionLinks[strategyName!] ?? {
-    link: `https://makerburn.com/#/collateral/${strategyName}`,
-    ilk: strategyName,
-  }
+export function ProductCardProtocolLink({ protocol }: Pick<ProductCardData, 'ilk' | 'protocol'>) {
+  // const {} = productCardsConfig.descriptionLinks[strategyName!] ?? {
+  //   link: `https://makerburn.com/#/collateral/${strategyName}`,
+  //   ilk: strategyName,
+  // }
   return (
     <Box sx={{ paddingRight: '10px' }}>
       <AppLink href={'/inprogress'}>

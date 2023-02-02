@@ -7,8 +7,6 @@ import { VaultProtocol } from 'helpers/getVaultProtocol'
 import { zero } from 'helpers/zero'
 import React, { PropsWithChildren, useMemo } from 'react'
 
-import { AaveProtocolData } from '../../aave/manage/services'
-
 export interface AaveManageVaultState {
   address: string
   aaveReserveState: AaveReserveConfigurationData
