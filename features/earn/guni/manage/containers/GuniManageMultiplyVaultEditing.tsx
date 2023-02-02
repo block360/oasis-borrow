@@ -19,7 +19,7 @@ function CloseVaultAction(props: ManageMultiplyVaultState) {
   } = props
 
   const closeToCollateral = closeVaultTo === 'collateral'
-  const closeToTokenName = closeToCollateral ? token : 'DAI'
+  const closeToTokenName = closeToCollateral ? token : 'GSUc'
 
   return (
     <>

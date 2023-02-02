@@ -16,8 +16,8 @@ import React from 'react'
 function mapSimulation(simulation?: Simulation): string[] {
   if (!simulation) return [formatCryptoBalance(zero), formatCryptoBalance(zero)]
   return [
-    `${formatCryptoBalance(simulation.earningAfterFees)} DAI`,
-    `${formatCryptoBalance(simulation.netValue)} DAI`,
+    `${formatCryptoBalance(simulation.earningAfterFees)} GSUc`,
+    `${formatCryptoBalance(simulation.netValue)} GSUc`,
   ]
 }
 
@@ -35,17 +35,17 @@ export function DsrSimulationSection({
     next30Days: {
       earningAfterFees: amount.times(one.plus(apy.div(100).div(365).times(30))).minus(amount),
       netValue: amount.times(one.plus(apy.div(100).div(365).times(30))),
-      token: 'DAI',
+      token: 'GSUc',
     },
     next90Days: {
       earningAfterFees: amount.times(one.plus(apy.div(100).div(365).times(90))).minus(amount),
       netValue: amount.times(one.plus(apy.div(100).div(365).times(90))),
-      token: 'DAI',
+      token: 'GSUc',
     },
     next1Year: {
       earningAfterFees: amount.times(one.plus(apy.div(100))).minus(amount),
       netValue: amount.times(one.plus(apy.div(100))),
-      token: 'DAI',
+      token: 'GSUc',
     },
   }
 

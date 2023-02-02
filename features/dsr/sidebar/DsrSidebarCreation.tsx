@@ -76,7 +76,7 @@ function getSiderbarSectionStatus(state: DsrDepositState) {
     case 'allowanceSuccess':
       return [
         {
-          text: t('setting-allowance-for', { token: 'DAI' }),
+          text: t('setting-allowance-for', { token: 'GSUc' }),
           type: 'success',
           txHash,
           etherscan,

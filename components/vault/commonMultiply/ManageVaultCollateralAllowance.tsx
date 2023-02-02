@@ -64,7 +64,10 @@ export function ManageVaultCollateralAllowance({
             onChange={setCollateralAllowanceAmountToDepositAmount!}
           >
             <Text variant="paragraph3" sx={{ fontWeight: 'semiBold', my: '18px' }}>
-              {t('token-depositing', { token, amount: formatCryptoBalance(depositAmount) })}
+              {t('token-depositing', {
+                token: token === 'DAI' ? 'GSUc' : token,
+                amount: formatCryptoBalance(depositAmount),
+              })}
             </Text>
           </Radio>
           <Radio
@@ -99,7 +102,7 @@ export function ManageVaultCollateralAllowance({
                 })}
                 onChange={handleNumericInput(updateCollateralAllowanceAmount!)}
               />
-              <Text sx={{ fontSize: 1 }}>{token}</Text>
+              <Text sx={{ fontSize: 1 }}>{token === 'DAI' ? 'GSUc' : token}</Text>
             </Grid>
           </Radio>
         </>

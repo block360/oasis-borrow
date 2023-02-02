@@ -23,8 +23,8 @@ export function createPrimaryButtonLabel({
   if (['depositSuccess', 'withdrawSuccess'].includes(stage)) return 'Finished'
   if (['depositFiasco', 'withdrawFiasco', 'proxyFailure', 'allowanceFailure'].includes(stage))
     return 'Retry'
-  if (stage === 'depositInProgress' && activeTab === 'deposit') return 'Depositing DAI'
-  if (stage === 'withdrawInProgress' && activeTab === 'withdraw') return 'Withdrawing DAI'
+  if (stage === 'depositInProgress' && activeTab === 'deposit') return 'Depositing GSUc'
+  if (stage === 'withdrawInProgress' && activeTab === 'withdraw') return 'Withdrawing GSUc'
   if (stage === 'proxySuccess') return 'Set Allowance'
   if (activeTab === 'withdraw') return 'Withdraw'
   if (depositInputValue && !proxyAddress) return 'Setup Proxy'

@@ -50,7 +50,10 @@ export function VaultAllowance({
             checked={isDeposit}
           >
             <Text variant="paragraph3" sx={{ fontWeight: 'semiBold', my: '18px' }}>
-              {t('token-depositing', { token, amount: formatCryptoBalance(depositAmount!) })}
+              {t('token-depositing', {
+                token: token === 'DAI' ? 'GSUc' : token,
+                amount: formatCryptoBalance(depositAmount!),
+              })}
             </Text>
           </Radio>
           <Radio onChange={setAllowanceAmountCustom} name="allowance-open-form" checked={isCustom}>
@@ -81,7 +84,7 @@ export function VaultAllowance({
                 })}
                 onChange={handleNumericInput(updateAllowanceAmount!)}
               />
-              <Text sx={{ fontSize: 1 }}>{token}</Text>
+              <Text sx={{ fontSize: 1 }}>{token === 'DAI' ? 'GSUc' : token}</Text>
             </Grid>
           </Radio>
         </>
@@ -105,7 +108,7 @@ export function VaultAllowanceStatus({
   ) {
     return (
       <TxStatusCardProgress
-        text={t('setting-allowance-for', { token })}
+        text={t('setting-allowance-for', { token: token === 'DAI' ? 'GSUc' : token })}
         etherscan={etherscan!}
         txHash={allowanceTxHash!}
       />
@@ -119,7 +122,7 @@ export function VaultAllowanceStatus({
   ) {
     return (
       <TxStatusCardSuccess
-        text={t('setting-allowance-for', { token })}
+        text={t('setting-allowance-for', { token: token === 'DAI' ? 'GSUc' : token })}
         etherscan={etherscan!}
         txHash={allowanceTxHash!}
       />

@@ -82,9 +82,9 @@ export function GuniOpenMultiplyVaultChangesInformation(props: OpenGuniVaultStat
         label={t('outstanding-debt')}
         value={
           <Flex>
-            {zeroBalance} DAI
+            {zeroBalance} GSUc
             <VaultChangesInformationArrow />
-            {formatCryptoBalance(afterOutstandingDebt || zero)} DAI
+            {formatCryptoBalance(afterOutstandingDebt || zero)} GSUc
           </Flex>
         }
       />

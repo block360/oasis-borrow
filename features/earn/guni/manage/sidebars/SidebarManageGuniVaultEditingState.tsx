@@ -51,7 +51,7 @@ export function SidebarManageGuniVaultEditingState(props: ManageMultiplyVaultSta
           {!debt.isZero() && (
             <EstimationOnClose
               iconCircle={getToken('DAI').iconCircle}
-              label={`${t('minimum')} ${t('after-closing', { token: 'DAI' })}`}
+              label={`${t('minimum')} ${t('after-closing', { token: 'GSUc' })}`}
               value={`${formatCryptoBalance(afterCloseToDai)} GSUc`}
             />
           )}

@@ -42,7 +42,7 @@ export function AaveSimulateTitle({ token = 'ETH', depositAmount }: AaveSimulate
             color: 'primary100',
           }}
         >
-          {`${formatCryptoBalance(depositAmount || zero)} ${token}`}
+          {`${formatCryptoBalance(depositAmount || zero)} ${token === 'DAI' ? 'GSUc' : token}`}
         </Heading>
         <Text
           variant="paragraph3"

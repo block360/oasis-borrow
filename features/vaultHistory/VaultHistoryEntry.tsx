@@ -444,6 +444,7 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
     event.kind === 'CLOSE_VAULT_TO_COLLATERAL' ||
     event.kind === 'CLOSE_GUNI_VAULT_TO_DAI'
   const guniVaultEvent = event.token.includes('GUNI')
+  const tokenSymbol = event.token === 'DAI' ? 'GSUc' : event.token
 
   return (
     <DefinitionList>
@@ -454,7 +455,7 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
             {event.token}
           </VaultHistoryEntryDetailsItem>
           <VaultHistoryEntryDetailsItem label={t('history.bought')}>
-            {'bought' in event && formatCryptoBalance(event.bought)} {event.token}
+            {'bought' in event && formatCryptoBalance(event.bought)} {tokenSymbol}
           </VaultHistoryEntryDetailsItem>
         </>
       )}
@@ -467,19 +468,19 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
       )}
       {event.kind === 'INCREASE_MULTIPLE' && (
         <VaultHistoryEntryDetailsItem label={t('history.bought')}>
-          {'bought' in event && formatCryptoBalance(event.bought)} {event.token}
+          {'bought' in event && formatCryptoBalance(event.bought)} {tokenSymbol}
         </VaultHistoryEntryDetailsItem>
       )}
       {event.kind === 'INCREASE_MULTIPLE' && (
         <VaultHistoryEntryDetailsItem label={t('history.deposited')}>
           {'depositCollateral' in event && formatCryptoBalance(event.depositCollateral)}
-          {event.token}
+          {tokenSymbol}
         </VaultHistoryEntryDetailsItem>
       )}
       {(event.kind === 'DECREASE_MULTIPLE' || closeEvent) && (
         <VaultHistoryEntryDetailsItem label={t('history.sold')}>
           {'sold' in event && formatCryptoBalance(event.sold)}{' '}
-          {guniVaultEvent ? 'USDC' : event.token}
+          {guniVaultEvent ? 'USDC' : tokenSymbol}
         </VaultHistoryEntryDetailsItem>
       )}
       {!(closeEvent && guniVaultEvent) && (
@@ -502,7 +503,7 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
               </>
             )}
             {'lockedCollateral' in event && formatCryptoBalance(event.lockedCollateral)}{' '}
-            {event.token}
+            {tokenSymbol}
           </VaultHistoryEntryDetailsItem>
           <VaultHistoryEntryDetailsItem label={t('multiple')}>
             {'beforeMultiple' in event && event.beforeMultiple.gt(0) && (
@@ -522,7 +523,7 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
       )}
       {event.kind === 'CLOSE_VAULT_TO_COLLATERAL' && (
         <VaultHistoryEntryDetailsItem label={t('history.exit-collateral')}>
-          {'exitCollateral' in event && formatCryptoBalance(event.exitCollateral)} {event.token}
+          {'exitCollateral' in event && formatCryptoBalance(event.exitCollateral)} {tokenSymbol}
         </VaultHistoryEntryDetailsItem>
       )}
       <VaultHistoryEntryDetailsItem label={t('outstanding-debt')}>
