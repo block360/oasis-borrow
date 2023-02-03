@@ -59,7 +59,15 @@ export function VaultHeadlineDetails({
       <Text as="span" sx={{ color: 'neutral80' }}>
         {label}
       </Text>
-      <Text as="span" sx={{ ml: 1, fontWeight: 'semiBold', color: 'primary100' }}>
+      <Text
+        as="span"
+        sx={{
+          ml: 1,
+          fontFamily: 'GSU Font , Open Sans',
+          fontWeight: 'semiBold',
+          color: 'primary100',
+        }}
+      >
         {value}
       </Text>
       {typeof sub === 'string' && subColor && (

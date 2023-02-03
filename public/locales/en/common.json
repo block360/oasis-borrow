@@ -2018,7 +2018,7 @@
       "withdraw": "Withdraw"
     },
     "product-card": {
-      "description": "Earn on your GSUc using the Maker Protocol"
+      "description": "Earn on your GSUc using the GSU Protocol"
     },
     "order": {
       "total-dai": "Total GSUc {{action}}"

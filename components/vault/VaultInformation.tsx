@@ -18,7 +18,7 @@ function VaultInformationItem({ text, value }: VaultInformationItemProps) {
       <Text as="span" sx={{ color: 'neutral80' }}>
         {text}
       </Text>
-      <Text as="span" sx={{ color: 'primary100' }}>
+      <Text as="span" sx={{ color: 'primary100', fontFamily: 'GSU Font, Open Sans' }}>
         {value}
       </Text>
     </DefinitionListItem>

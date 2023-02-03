@@ -55,7 +55,7 @@ function Header({ name }: { name: string }) {
 function Cell({ children }: WithChildren) {
   return (
     <Box sx={{ py: 2, color: 'primary100' }}>
-      <Text sx={{ my: 1 }}>{children}</Text>
+      <Text sx={{ my: 1, fontFamily: 'GSU Font , Open Sans' }}>{children}</Text>
     </Box>
   )
 }
@@ -194,10 +194,10 @@ function getPositionInfoItems(position: PositionVM): InfoItem[] {
           header: <Header name="variable-perc" />,
           info: position.variable,
         },
-        {
-          header: <Header name="protection" />,
-          info: <AutomationButton position={position} />,
-        },
+        // {
+        //   header: <Header name="protection" />,
+        //   info: <AutomationButton position={position} />,
+        // },
       ]
     case 'multiply':
       return [
