@@ -128,7 +128,7 @@ export function TemporaryFooter() {
           <Text>
             Commit:{' '}
             <Link
-              href={`https://github.com/block360/oasis-borrow/commit/${buildHash}`}
+              href={`https://github.com/gsu-protocol/oasis-borrow/commit/${buildHash}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -156,7 +156,7 @@ function SocialWithLogo() {
         <AppLink href={ROUTES.DISCORD} sx={{ mx: 3 }}>
           <Icon name="discord" size="auto" width="20px" height="23px" />
         </AppLink>
-        <AppLink href="https://github.com/block360/oasis-borrow/">
+        <AppLink href="https://github.com/gsu-protocol">
           <Icon name="github" size="auto" width="21px" />
         </AppLink>
       </Flex>
