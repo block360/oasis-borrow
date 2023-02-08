@@ -126,7 +126,7 @@ export const tokens = [
     coinpaprikaTicker: 'dai-dai',
     coinbaseTicker: 'dai-usd',
     gsuRatesTicker: 'gsuc',
-    color: '#fdc134',
+    color: '#e73029',
     bannerIcon: '',
     background: '',
     bannerGif: '',

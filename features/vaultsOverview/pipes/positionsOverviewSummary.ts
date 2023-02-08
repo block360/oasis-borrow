@@ -74,12 +74,16 @@ export function createPositionsOverviewSummary$(
         }),
       ),
     ),
-  ).pipe(
-    map((tokenBalancesAndActions) => {
-      return [...tokenBalancesAndActions.filter(({ assetActions }) => assetActions.length > 0)]
-    }),
-    shareReplay(1),
-  )
+  ).pipe(shareReplay(1))
+
+  // )
+  // .pipe(
+  //   map((tokenBalancesAndActions) => {
+  //     return [...tokenBalancesAndActions.filter(({ assetActions }) => assetActions.length > 0)]
+  //   })
+  //   ,
+  //   shareReplay(1),
+  // )
 
   const positions$ = createPositions$(address)
 
@@ -112,19 +116,25 @@ export function createPositionsOverviewSummary$(
   const assetsAndPositions$: Observable<Array<PositionView>> = flattenedTokensAndPositions$.pipe(
     map((flattenedTokenBalances) =>
       flattenedTokenBalances.map((assetOrPosition) => {
+        const title =
+          assetOrPosition.token === 'DAI'
+            ? 'GSUc'
+            : assetOrPosition.token === 'MKR'
+            ? 'GSUp'
+            : assetOrPosition.token
         if (isPosition(assetOrPosition)) {
           return {
+            title,
             missingPriceData: false,
             token: assetOrPosition.token,
-            title: assetOrPosition.title,
             contentsUsd: assetOrPosition.contentsUsd,
             url: assetOrPosition.url,
           }
         } else {
           return {
+            title,
             missingPriceData: assetOrPosition.missingPriceData,
             token: assetOrPosition.token,
-            title: assetOrPosition.token,
             contentsUsd: assetOrPosition.balanceUsd,
             actions: assetOrPosition.assetActions,
           }

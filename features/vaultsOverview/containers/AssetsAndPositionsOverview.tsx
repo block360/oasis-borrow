@@ -206,7 +206,7 @@ function LinkedRow(props: PositionView) {
         }}
       >
         {menuPosition &&
-          props.actions &&
+          !!props.actions?.length &&
           ReactDOM.createPortal(
             <Menu
               sx={menuPosition}
