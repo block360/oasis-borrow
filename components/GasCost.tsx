@@ -28,9 +28,8 @@ function getGasText({
       return gasEstimationEth ? (
         <Text sx={{ display: 'inline' }}>{`${formatPrice(gasEstimationEth, 'ETH')} ETH`}</Text>
       ) : gasEstimationDai ? (
-        <Flex sx={{ fontSize: 5, alignItems: 'center' }}>
-          <Icon name="dai" size="24px" sx={{ position: 'relative', top: '1px' }} />
-          <Text ml={1}>{`~${formatPrice(gasEstimationDai, 'DAI')}`}</Text>
+        <Flex sx={{ fontFamily: 'GSU Font, Open Sans', fontSize: 5, alignItems: 'center' }}>
+          {'$'} <Text ml={1}>{`~${formatPrice(gasEstimationDai, 'DAI')}`}</Text>
         </Flex>
       ) : (
         '--'
