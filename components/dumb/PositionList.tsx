@@ -1,5 +1,5 @@
 import { Icon } from '@makerdao/dai-ui-icons'
-import { StatefulTooltip } from 'components/Tooltip'
+import { StatefulTooltip, StatefulTooltipWithPortal } from 'components/Tooltip'
 import { checkIfVaultEmptyAndProtectionActive } from 'helpers/functions'
 import { WithChildren } from 'helpers/types'
 import { TFunction } from 'i18next'
@@ -15,12 +15,10 @@ function DumbHeader({ label, tooltip }: { label: string; tooltip?: JSX.Element |
     <Flex sx={{ alignItems: 'center' }}>
       <Text sx={{ fontSize: 1, color: 'neutral80', fontWeight: 'semiBold' }}>{label}</Text>
       {tooltip && (
-        <StatefulTooltip
-          containerSx={{ position: 'relative' }}
-          tooltip={
+        <StatefulTooltipWithPortal
+          text={
             <Text
               sx={{
-                width: '280px',
                 fontWeight: 'semiBold',
                 fontSize: 2,
                 textAlign: 'left',
@@ -29,16 +27,9 @@ function DumbHeader({ label, tooltip }: { label: string; tooltip?: JSX.Element |
               {tooltip}
             </Text>
           }
-          tooltipSx={{
-            px: '16px',
-            py: '8px',
-            borderRadius: '8px',
-            border: 'none',
-            maxWidth: '480px',
-          }}
         >
           <Icon name="question_o" size="16px" sx={{ ml: 1, flexShrink: 0 }} color="neutral80" />
-        </StatefulTooltip>
+        </StatefulTooltipWithPortal>
       )}
     </Flex>
   )

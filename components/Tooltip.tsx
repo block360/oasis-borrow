@@ -1,5 +1,6 @@
 import { isTouchDevice } from 'helpers/isTouchDevice'
 import React, { ReactNode, useCallback, useEffect, useMemo, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Card, Flex, SxStyleProp } from 'theme-ui'
 
 export function useTooltip() {
@@ -73,5 +74,61 @@ export function StatefulTooltip({
       {children}
       {tooltipOpen && <Tooltip sx={tooltipSx}>{tooltip}</Tooltip>}
     </Flex>
+  )
+}
+
+interface Props {
+  text: React.ReactNode
+  children: React.ReactNode
+}
+
+export function StatefulTooltipWithPortal({ text, children }: Props) {
+  // Position of the bottom edge of the anchor element.
+  // Doubles as isVisible state: null means hidden
+  const [position, setPosition] = useState<{
+    x: number
+    y: number
+  } | null>(null)
+
+  const handleMouseOver = (e: React.MouseEvent<HTMLElement>) => {
+    // Place the tooltip near the anchor's bottom edge on the screen
+    const bounds = e.currentTarget.getBoundingClientRect()
+    setPosition({
+      x: bounds.x,
+      y: bounds.y + bounds.height,
+    })
+  }
+
+  const handleMouseOut = () => setPosition(null)
+
+  const anchorProps = {
+    onMouseOver: handleMouseOver,
+    onMouseOut: handleMouseOut,
+  }
+
+  const anchor = React.isValidElement(children) ? (
+    React.cloneElement(children, anchorProps)
+  ) : (
+    <span {...anchorProps}>{children}</span>
+  )
+
+  return (
+    <>
+      {anchor}
+      {position &&
+        createPortal(
+          <Tooltip
+            sx={{
+              top: position.y,
+              left: position.x,
+              position: 'absolute',
+              zIndex: 10,
+            }}
+          >
+            <div>{text}</div>
+          </Tooltip>,
+          document.body,
+        )}
+    </>
   )
 }
