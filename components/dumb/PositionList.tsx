@@ -16,9 +16,11 @@ function DumbHeader({ label, tooltip }: { label: string; tooltip?: JSX.Element |
       <Text sx={{ fontSize: 1, color: 'neutral80', fontWeight: 'semiBold' }}>{label}</Text>
       {tooltip && (
         <StatefulTooltip
+          containerSx={{ position: 'relative' }}
           tooltip={
             <Text
               sx={{
+                width: '280px',
                 fontWeight: 'semiBold',
                 fontSize: 2,
                 textAlign: 'left',
