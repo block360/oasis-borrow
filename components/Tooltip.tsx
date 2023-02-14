@@ -29,6 +29,7 @@ export function Tooltip({ children, sx }: { children: ReactNode; sx?: SxStylePro
     <Card
       sx={{
         variant: 'cards.tooltip',
+        maxWidth: '400px',
         ...sx,
       }}
     >
