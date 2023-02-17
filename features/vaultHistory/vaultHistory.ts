@@ -578,7 +578,8 @@ export function createVaultHistory$(
         switchMap(() => {
           const apiClient = makeClient(cacheApi)
 
-          return combineLatest(
+          return of([])
+          combineLatest(
             getVaultMultiplyHistory(apiClient, address.toLowerCase()),
             getVaultAutomationHistory(apiClient, id),
           )

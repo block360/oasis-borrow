@@ -28,7 +28,7 @@ export function GeneralManageControl({ id }: GeneralManageControlProps) {
   return (
     <WithErrorHandler error={[generalManageVaultError]}>
       <WithLoadingIndicator
-        value={[generalManageVaultData, vaultHistoryCheck]}
+        value={[generalManageVaultData]}
         customLoader={<VaultContainerSpinner />}
       >
         {([generalManageVault]) => (
