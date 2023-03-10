@@ -4,14 +4,14 @@ export const LANDING_PILLS = [
     label: 'ETH',
     link: '/asset/eth',
   },
-  {
-    icon: 'btc_circle_color',
-    label: 'BTC',
-    link: '/asset/btc',
-  },
+  // {
+  //   icon: 'btc_circle_color',
+  //   label: 'BTC',
+  //   link: '/asset/btc',
+  // },
   {
     icon: 'gsu_circle_color',
     label: 'GSUc',
     link: '/asset/GSUc',
-  }
+  },
 ]

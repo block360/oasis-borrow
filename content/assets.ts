@@ -13,17 +13,17 @@ export const ASSETS_PAGES = [
     multiplyIlks: [],
     borrowIlks: ['ETH-C', 'ETH-A', 'ETH-B'],
   },
-  {
-    slug: 'btc',
-    header: 'Bitcoin',
-    symbol: 'BTC',
-    icon: 'btc_circle_color',
-    descriptionKey: 'assets.btc.description',
-    link: 'assets.btc.link',
-    // @GSUpro, returns empty array for multiply ilks
-    multiplyIlks: [],
-    borrowIlks: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
-  },
+  // {
+  //   slug: 'btc',
+  //   header: 'Bitcoin',
+  //   symbol: 'BTC',
+  //   icon: 'btc_circle_color',
+  //   descriptionKey: 'assets.btc.description',
+  //   link: 'assets.btc.link',
+  //   // @GSUpro, returns empty array for multiply ilks
+  //   multiplyIlks: [],
+  //   borrowIlks: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
+  // },
   {
     slug: 'gsuc',
     header: 'GSUc',
@@ -33,7 +33,7 @@ export const ASSETS_PAGES = [
     link: 'assets.dai.link',
     // TODO prepare proper handling for DSR
     earnIlks: ['DSR'],
-  }
+  },
 ]
 
 export const assetsPageContentBySlug = keyBy(ASSETS_PAGES, 'slug')

@@ -51,7 +51,7 @@ export type ProductTypes = 'borrow' | 'multiply' | 'earn'
 export type Ilk = typeof supportedIlks[number]
 export type AaveStrategy = typeof aaveStrategiesList[number]
 
-export const supportedBorrowIlks = ['ETH-A', 'ETH-B', 'ETH-C', 'WBTC-A', 'WBTC-B', 'WBTC-C']
+export const supportedBorrowIlks = ['ETH-A', 'ETH-B', 'ETH-C']
 
 export const supportedMultiplyIlks = []
 
@@ -122,8 +122,8 @@ export const productCardsConfig: {
   descriptionLinks: Record<Ilk, { link: string; name: string }>
 } = {
   borrow: {
-    cardsFilters: [genericFilters.featured, genericFilters.eth, genericFilters.btc],
-    featuredIlkCards: ['ETH-C', 'WBTC-C'],
+    cardsFilters: [genericFilters.featured, genericFilters.eth],
+    featuredIlkCards: ['ETH-C'],
     inactiveIlks: [],
     ordering: {
       ETH: ['ETH-C', 'ETH-A', 'ETH-B'],
@@ -153,7 +153,7 @@ export const productCardsConfig: {
   },
   landing: {
     featuredIlkCards: {
-      borrow: ['ETH-C', 'WBTC-C'],
+      borrow: ['ETH-C'],
       multiply: [],
       // TODO prepare proper handling for DSR
       earn: ['DSR'],
