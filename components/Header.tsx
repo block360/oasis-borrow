@@ -963,13 +963,13 @@ function MainNavigation() {
           >
             {t('nav.borrow')}
           </AppLink>
-          <AppLink
+          {/* <AppLink
             variant="links.navHeader"
             href={LINKS.earn}
             sx={{ mr: 4, color: navLinkColor(pathname.includes(LINKS.earn)) }}
           >
             {t('nav.earn')}
-          </AppLink>
+          </AppLink> */}
           <AssetsDropdown />
         </Flex>
       ) : (
@@ -987,7 +987,7 @@ function MainNavigation() {
             <HeaderList
               links={[
                 { label: t('nav.borrow'), link: LINKS.borrow },
-                { label: t('nav.earn'), link: LINKS.earn },
+                // { label: t('nav.earn'), link: LINKS.earn },
               ]}
             />
           </HeaderLink>

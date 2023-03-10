@@ -281,30 +281,30 @@ export function HomepageView() {
               ),
             },
 
-            {
-              label: t('landing.tabs.earn.tabLabel'),
-              value: 'earn',
-              content: (
-                <HomepageTabLayout
-                  paraText={
-                    <>
-                      {t('landing.tabs.earn.tabParaContent')}{' '}
-                      <AppLink href="/earn" variant="inText">
-                        {t('landing.tabs.earn.tabParaLinkContent')}
-                      </AppLink>
-                    </>
-                  }
-                  cards={
-                    <EarnProductCardsContainer
-                      strategies={{
-                        maker: productCardsConfig.landing.featuredIlkCards['earn'],
-                        aave: productCardsConfig.landing.featuredAaveCards['earn'],
-                      }}
-                    />
-                  }
-                />
-              ),
-            },
+            // {
+            //   label: t('landing.tabs.earn.tabLabel'),
+            //   value: 'earn',
+            //   content: (
+            //     <HomepageTabLayout
+            //       paraText={
+            //         <>
+            //           {t('landing.tabs.earn.tabParaContent')}{' '}
+            //           <AppLink href="/earn" variant="inText">
+            //             {t('landing.tabs.earn.tabParaLinkContent')}
+            //           </AppLink>
+            //         </>
+            //       }
+            //       cards={
+            //         <EarnProductCardsContainer
+            //           strategies={{
+            //             maker: productCardsConfig.landing.featuredIlkCards['earn'],
+            //             aave: productCardsConfig.landing.featuredAaveCards['earn'],
+            //           }}
+            //         />
+            //       }
+            //     />
+            //   ),
+            // },
           ]}
         />
       </Box>

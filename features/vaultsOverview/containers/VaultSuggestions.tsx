@@ -117,25 +117,25 @@ function VaultSuggestionsView({ productCardsData, context, address }: ViewProps)
               />
             ),
           },
-          {
-            label: t('landing.tabs.earn.tabLabel'),
-            value: 'earn',
-            topContent: (
-              <TabHeaderParagraph>
-                {t('landing.tabs.earn.tabParaContent')}{' '}
-                <AppLink href="/earn" variant="inText">
-                  {t('landing.tabs.earn.tabParaLinkContent')}
-                </AppLink>
-              </TabHeaderParagraph>
-            ),
-            content: (
-              <TabContent
-                type="earn"
-                renderProductCard={ProductCardEarnMaker}
-                productCardsData={productCardsData}
-              />
-            ),
-          },
+          // {
+          //   label: t('landing.tabs.earn.tabLabel'),
+          //   value: 'earn',
+          //   topContent: (
+          //     <TabHeaderParagraph>
+          //       {t('landing.tabs.earn.tabParaContent')}{' '}
+          //       <AppLink href="/earn" variant="inText">
+          //         {t('landing.tabs.earn.tabParaLinkContent')}
+          //       </AppLink>
+          //     </TabHeaderParagraph>
+          //   ),
+          //   content: (
+          //     <TabContent
+          //       type="earn"
+          //       renderProductCard={ProductCardEarnMaker}
+          //       productCardsData={productCardsData}
+          //     />
+          //   ),
+          // },
         ]}
       />
     </Box>

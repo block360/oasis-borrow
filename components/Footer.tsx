@@ -54,7 +54,7 @@ const FOOTER_SECTIONS = [
       },
       { labelKey: 'nav.borrow', url: '/borrow' },
       // { labelKey: 'nav.multiply', url: '/multiply' },
-      { labelKey: 'nav.earn', url: '/earn' },
+      // { labelKey: 'nav.earn', url: '/earn' },
     ],
   },
 ]
