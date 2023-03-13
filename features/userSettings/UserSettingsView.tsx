@@ -147,7 +147,7 @@ function SlippageSettingsForm() {
           <Text variant="paragraph3" sx={{ color: 'neutral80', mb: -1 }}>
             {t('user-settings.slippage-limit.preset-description')}
           </Text>
-          <Link href="/support" passHref>
+          <Link href="/inprogress" passHref>
             <ThemeLink target="_self" sx={{ mt: -1, fontWeight: 400 }}>
               {t('user-settings.slippage-limit.read-more')}
             </ThemeLink>
@@ -362,7 +362,7 @@ export function UserSettings({ sx }: { sx?: SxStyleProp }) {
         <AppLink variant="settings" sx={{ mr: 3 }} withAccountPrefix={false} href="/privacy">
           {t('account-privacy')}
         </AppLink>
-        <AppLink variant="settings" withAccountPrefix={false} href="/support">
+        <AppLink variant="settings" withAccountPrefix={false} href="/inprogress">
           {t('account-support')}
         </AppLink>
       </Flex>
