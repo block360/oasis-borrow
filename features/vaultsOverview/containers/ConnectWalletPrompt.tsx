@@ -68,6 +68,7 @@ function ConnectView({ context, address, positions }: ViewProps) {
             sx={{
               display: 'flex',
               margin: '0 auto',
+              color: 'black',
               px: '40px',
               py: 2,
               my: 4,
