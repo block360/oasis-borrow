@@ -291,7 +291,7 @@
   "landing": {
     "hero": {
       "headlinePreAssetLandingPages": "Borrow GSUc",
-      "subheaderPreAssetLandingPages": "Open a GSUp Vault, deposit 25+ crypto collaterals. Either borrow GSUc or buy additional collateral to increase your exposure.<0/> Connect a wallet to start.",
+      "subheaderPreAssetLandingPages": "Open a GSU Vault, deposit 25+ crypto collaterals. Either borrow GSUc or buy additional collateral to increase your exposure.<0/> Connect a wallet to start.",
       "headline": "Deploy your crypto into GSUcoin.app",
       "subheader": "Borrow against your crypto. Put your crypto to work, currently ETH only."
     },
@@ -458,8 +458,8 @@
   },
   "manage-multiply-vault": {
     "tooltip": {
-      "vaultId": "The Vault ID is a unique reference for your GSUp Vault in GSUcoin.app.",
-      "stabilityFee": "The GSU Protocol collects a Stability Fee on GSUc that is generated from GSUp Vaults. It is a variable-rate fee that changes when GSUp’s governing body votes on proposals put forth by Risk Teams.",
+      "vaultId": "The Vault ID is a unique reference for your GSU Vault in GSUcoin.app.",
+      "stabilityFee": "The GSU Protocol collects a Stability Fee on GSUc that is generated from GSU Vaults. It is a variable-rate fee that changes when GSUp’s governing body votes on proposals put forth by Risk Teams.",
       "liquidationFee": "If your vault is liquidated, a liquidation penalty is added to your vault’s total outstanding debt in GSUc, which results in more collateral being sold to cover the outstanding debt. This is done to incentivize vaults owners to avoid liquidation.\nThe size of the liquidation penalty is determined by the Liquidation Fee which is calculated based on the debt in the vault.",
       "min-collateral": "This is also called the Liquidation Ratio. If the Vault reaches below the minimum collateralization level it is considered undercollateralized and is subject to liquidation. Your collateral will then be partially auctioned off to cover outstanding debt and liquidation fee.",
       "dust-limit": "The Dust Limit specifies the minimum amount of GSUc that can be minted for this type of Vault. This value is also called the \"Debt Floor\"."
@@ -881,12 +881,12 @@
   "vault-errors": {
     "deposit-amount-exceeds-collateral-balance": "You cannot deposit more collateral than the amount in your wallet",
     "deposit-dai-amount-exceeds-dai-balance": "You cannot deposit more GSUc than the amount in your wallet",
-    "generate-amount-exceeds-dai-yield-from-depositing-collateral": "The collateralization ratio for this GSUp Vault will be too low. Please generate less GSUc",
-    "generate-amount-exceeds-dai-yield-from-depositing-collateral-at-next-price": "The collateralization ratio for this GSUp Vault will be too low at the next price update. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-depositing-collateral": "The collateralization ratio for this GSU Vault will be too low. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-depositing-collateral-at-next-price": "The collateralization ratio for this GSU Vault will be too low at the next price update. Please generate less GSUc",
     "generate-amount-exceeds-debt-ceiling": "You are trying to generate more than the current debt ceiling allows. The amount of GSUc that can be generated is {{maxGenerateAmount}}",
     "generate-amount-less-than-debt-floor": "This vault type requires a minimum of {{debtFloor}} GSUc to be generated. Read more about the Minimum Vault Debt <0>here</0>.",
     "generate-amount-more-than-max-flash-amount": "This transaction exceeds the maximum flash loan amount of {{maxFlashAmount}}, please lower the multiple, or deposit amount.",
-    "debt-will-be-less-than-debt-floor": "The GSUp Vault debt amount either must be 0 or exceed {{debtFloor}} amount of GSUc. Please change your payback amount",
+    "debt-will-be-less-than-debt-floor": "The GSU Vault debt amount either must be 0 or exceed {{debtFloor}} amount of GSUc. Please change your payback amount",
     "custom-allowance-amount-exceeds-maxuint256": "Allowance too large. Please decrease custom allowance amount",
     "custom-allowance-amount-less-than-deposit-amount": "You need at least an allowance of your deposit amount to continue",
     "depositing-all-eth-balance": "You need some ETH to pay for the gas fees. Lower your deposit amount",
@@ -895,10 +895,10 @@
     "exchange-error": "Could not fetch exchange prices for doing this multiply action.",
     "withdraw-amount-exceeds-free-collateral": "You cannot withdraw more than {{maxWithdrawAmount}} {{token}}",
     "withdraw-amount-exceeds-free-collateral-at-next-price": "You cannot withdraw more than {{maxWithdrawAmount}} {{token}}",
-    "generate-amount-exceeds-dai-yield-from-total-collateral": "The collateralization ratio for this GSUp Vault is too low. Please generate less GSUc",
-    "generate-amount-exceeds-dai-yield-from-total-collateral-at-next-price": "The collateralization ratio for this GSUp Vault is too low at the next price update. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-total-collateral": "The collateralization ratio for this GSU Vault is too low. Please generate less GSUc",
+    "generate-amount-exceeds-dai-yield-from-total-collateral-at-next-price": "The collateralization ratio for this GSU Vault is too low at the next price update. Please generate less GSUc",
     "payback-amount-exceeds-dai-balance": "You cannot payback more GSUc than the amount in your wallet",
-    "payback-amount-exceeds-vault-debt": "You are trying to payback more than your GSUc debt for this GSUp Vault",
+    "payback-amount-exceeds-vault-debt": "You are trying to payback more than your GSUc debt for this GSU Vault",
     "custom-collateral-allowance-amount-exceeds-maxuint256": "Allowance too large. Please decrease custom allowance amount",
     "custom-collateral-allowance-amount-less-than-deposit-amount": "You need at least an allowance of your deposit amount to continue",
     "custom-dai-allowance-amount-exceeds-maxuint256": "Allowance too large. Please decrease custom allowance amount",
@@ -993,8 +993,8 @@
   },
   "ilks-list": {
     "headers": {
-      "noVaults": "Select a collateral type to create a GSUp Vault and borrow GSUc or buy additional collateral.",
-      "withVaults": "Open a new GSUp Vault.<0/> Borrow GSUc or buy additional collateral."
+      "noVaults": "Select a collateral type to create a GSU Vault and borrow GSUc or buy additional collateral.",
+      "withVaults": "Open a new GSU Vault.<0/> Borrow GSUc or buy additional collateral."
     }
   },
   "vaults-overview": {
@@ -1003,14 +1003,14 @@
     "headers": {
       "connected-owner-noVaults": "You have no open Vaults",
       "connected-owner-withVaults": "Your Vaults",
-      "connected-viewer-noVaults": "{{address}} currently has no GSUp Vaults",
-      "connected-viewer-withVaults": "GSUp Vaults overview of {{address}}",
-      "notConnected-noVaults": "{{address}} currently has no GSUp Vaults.<0/> Connect your wallet and open a vault.",
-      "notConnected-withVaults": "GSUp Vaults overview of {{address}}.<0/> Connect your wallet.",
+      "connected-viewer-noVaults": "{{address}} currently has no GSU Vaults",
+      "connected-viewer-withVaults": "GSU Vaults overview of {{address}}",
+      "notConnected-noVaults": "{{address}} currently has no GSU Vaults.<0/> Connect your wallet and open a vault.",
+      "notConnected-withVaults": "GSU Vaults overview of {{address}}.<0/> Connect your wallet.",
       "vault-suggestions": "{{address}}, do more on GSUcoin.app"
     },
     "number-of-vaults": "No. of Vaults",
-    "subheader-no-vaults": "Open a GSUp Vault, deposit your collateral, and borrow GSUc or buy additional collateral against it.",
+    "subheader-no-vaults": "Open a GSU Vault, deposit your collateral, and borrow GSUc or buy additional collateral against it.",
     "subheader-vault-suggestions": "Lorem ipsum dolor sit amet, consectetur, adipiscing elit. Ut fringilla dictum nibh etc aliquam dolor sit amet.",
     "total-debt": "Total debt",
     "total-locked": "Total locked",
@@ -1033,18 +1033,18 @@
       "subheader2": "You can view your positions"
     },
     "liquidating": {
-      "header1": "Your {{ collateral }} GSUp Vault {{ id }} is about to get liquidated.",
-      "header2": "{{ collateral }} GSUp Vault {{ id }} is about to get liquidated.",
-      "subheader1": "The next price update of {{ collateral }} will cause a liquidation on this GSUp Vault unless collateral is added, or GSUc is paid back.",
-      "subheader2": "Is this your GSUp Vault? Please connect with address: {{ address }} and save your GSUp Vault from liquidation.",
+      "header1": "Your {{ collateral }} GSU Vault {{ id }} is about to get liquidated.",
+      "header2": "{{ collateral }} GSU Vault {{ id }} is about to get liquidated.",
+      "subheader1": "The next price update of {{ collateral }} will cause a liquidation on this GSU Vault unless collateral is added, or GSUc is paid back.",
+      "subheader2": "Is this your GSU Vault? Please connect with address: {{ address }} and save your GSU Vault from liquidation.",
       "subheader3": "This Vault is now available for liquidation and can be liquidated at anytime."
     },
     "liquidated": {
-      "header1": "Your GSUp Vault got liquidated",
-      "header2": "This GSUp Vault got liquidated",
-      "subheader1": "This GSUp Vault has been liquidated. A portion of your collateral has been auctioned to pay back your GSUc debt.",
+      "header1": "Your GSU Vault got liquidated",
+      "header2": "This GSU Vault got liquidated",
+      "subheader1": "This GSU Vault has been liquidated. A portion of your collateral has been auctioned to pay back your GSUc debt.",
       "subheader2": "You can reclaim {{ amount }} {{ collateral }}",
-      "subheader3": "This GSUp Vault has been liquidated. A portion of collateral has been auctioned to pay back the GSUc debt.",
+      "subheader3": "This GSU Vault has been liquidated. A portion of collateral has been auctioned to pay back the GSUc debt.",
       "subheader4": "If this is your vault, connect with address: {{ address }} to reclaim the remaining collateral."
     },
     "aave-multi-position": {
