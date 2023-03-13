@@ -352,10 +352,6 @@ export function HomepageView() {
             subtitle={t('landing.info-cards.support.contact-whenever')}
             links={[
               {
-                href: '/support',
-                text: t('landing.info-cards.support.faq'),
-              },
-              {
                 href: 'https://discord.com/invite/cm3tmM37W3',
                 text: t('landing.info-cards.support.discord'),
               },
