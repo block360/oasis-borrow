@@ -120,11 +120,10 @@ export function VaultLiquidatingNextPriceNotice({
           : t('vault-notices.liquidating.header2', headerTranslationOptions)
       }`}
       subheader={`
-        ${t('vault-notices.liquidating.subheader1', { collateral: token.toUpperCase() })}
         ${
           !isVaultController && controller
             ? t('vault-notices.liquidating.subheader2', { address: formatAddress(controller) })
-            : t('vault-notices.liquidating.subheader1')
+            : t('vault-notices.liquidating.subheader1', { collateral: token.toUpperCase() })
         }
       `}
       color="banner.warning"
