@@ -82,6 +82,7 @@ export const supportedIlks = [
   'WBTC-A',
   'WBTC-B',
   'WBTC-C',
+  'USDT-A',
   ...charterIlks,
   ...cropJoinIlks,
 ] as const
@@ -266,7 +267,7 @@ const goerli: NetworkConfig = {
   magicLink: {
     apiKey: '',
   },
-  cacheApi: 'https://cache-goerli-staging.gsuprotocol.io/v1',
+  cacheApi: 'https://cache-goerli-staging.gsucoin.app/v1',
   lidoCrvLiquidityFarmingReward: contractDesc(lidoCrvLiquidityFarmingReward, '0x00'),
   aaveTokens: {},
   aaveProtocolDataProvider: contractDesc(

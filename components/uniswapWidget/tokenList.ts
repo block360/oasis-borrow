@@ -82,5 +82,14 @@ export const tokenList = {
       logoURI:
         'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
     },
+    {
+      name: 'USDT',
+      address: '0x1f1f156E0317167c11Aa412E3d1435ea29Dc3cCE',
+      symbol: 'USDT',
+      decimals: 6,
+      chainId: 5,
+      logoURI:
+        'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+    },
   ],
 }

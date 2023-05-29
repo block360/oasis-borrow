@@ -10,6 +10,11 @@ export const LANDING_PILLS = [
   //   link: '/asset/btc',
   // },
   {
+    icon: 'usdt_circle_color',
+    label: 'USDT',
+    link: '/asset/usdt',
+  },
+  {
     icon: 'gsu_circle_color',
     label: 'GSUc',
     link: '/asset/GSUc',

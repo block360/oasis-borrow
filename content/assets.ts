@@ -25,6 +25,17 @@ export const ASSETS_PAGES = [
   //   borrowIlks: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
   // },
   {
+    slug: 'usdt',
+    header: 'USD Tether',
+    symbol: 'USDT',
+    icon: 'usdt_circle_color',
+    descriptionKey: 'assets.usdt.description',
+    link: 'assets.usdt.link',
+    // @GSUpro, returns empty array for multiply ilks
+    multiplyIlks: [],
+    borrowIlks: ['USDT-A'],
+  },
+  {
     slug: 'gsuc',
     header: 'GSUc',
     symbol: 'GSUc',

@@ -36,9 +36,9 @@ export interface ProductCardData {
   protocol: TokenMetadataType['protocol']
 }
 
-export type ProductLandingPagesFiltersKeys = 'Featured' | 'ETH' | 'BTC'
+export type ProductLandingPagesFiltersKeys = 'Featured' | 'ETH' | 'BTC' | 'USDT'
 
-type ProductLandingPagesFiltersIcons = 'star_circle' | 'eth_circle' | 'btc_circle'
+type ProductLandingPagesFiltersIcons = 'star_circle' | 'eth_circle' | 'btc_circle' | 'usdt_circle'
 
 export type ProductLandingPagesFilter = {
   name: ProductLandingPagesFiltersKeys
@@ -51,7 +51,7 @@ export type ProductTypes = 'borrow' | 'multiply' | 'earn'
 export type Ilk = typeof supportedIlks[number]
 export type AaveStrategy = typeof aaveStrategiesList[number]
 
-export const supportedBorrowIlks = ['ETH-A', 'ETH-B']
+export const supportedBorrowIlks = ['ETH-A', 'ETH-B', 'USDT-A']
 
 export const supportedMultiplyIlks = []
 
@@ -74,12 +74,19 @@ const genericFilters = {
     tokens: ['ETH', 'WETH'],
   },
   btc: { name: 'BTC', icon: 'btc_circle', urlFragment: 'btc', tokens: ['WBTC'] },
+  usdt: {
+    name: 'USDT',
+    icon: "usdt_circle",
+    urlFragment: "usdt",
+    tokens: ['USDT-A'],
+  }
 } as const
 
 const ilkToEntryTokenMap = {
   'ETH-A': 'ETH',
   'ETH-B': 'ETH',
   'ETH-C': 'ETH',
+  'USDT-A': 'USDT'
   // 'WBTC-A': 'WBTC',
   // 'WBTC-B': 'WBTC',
   // 'WBTC-C': 'WBTC',
@@ -122,11 +129,12 @@ export const productCardsConfig: {
   descriptionLinks: Record<Ilk, { link: string; name: string }>
 } = {
   borrow: {
-    cardsFilters: [genericFilters.featured, genericFilters.eth],
-    featuredIlkCards: ['ETH-A', 'ETH-B', 'ETH-C'],
+    cardsFilters: [genericFilters.featured, genericFilters.eth, genericFilters.usdt],
+    featuredIlkCards: ['ETH-A', 'ETH-B', 'ETH-C', 'USDT-A'],
     inactiveIlks: [],
     ordering: {
       ETH: ['ETH-A', 'ETH-B'],
+      USDT: ['USDT-A'],
       // BTC: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
     },
     tags: {
@@ -153,7 +161,7 @@ export const productCardsConfig: {
   },
   landing: {
     featuredIlkCards: {
-      borrow: ['ETH-A', 'ETH-B', 'ETH-C'],
+      borrow: ['ETH-A', 'ETH-B', 'ETH-C', 'USDT-A'],
       multiply: [],
       // TODO prepare proper handling for DSR
       earn: ['DSR'],
@@ -168,9 +176,11 @@ export const productCardsConfig: {
     'ETH-A': 'medium-exposure-medium-cost',
     'ETH-B': 'biggest-multiply',
     'ETH-C': 'lowest-stabilityFee-and-cheapest',
+    'USDT-A': 'lowest-stabilityFee-and-cheapest',
     'WBTC-A': 'medium-exposure-medium-cost',
     'WBTC-B': 'biggest-multiply',
     'WBTC-C': 'lowest-stabilityFee-and-cheapest',
+
   } as Record<string, string>,
   descriptionLinks: {
     'ETH-A': {
@@ -196,6 +206,10 @@ export const productCardsConfig: {
     'WBTC-C': {
       link: '/inprogress',
       name: 'GSU (WBTC-C)',
+    },
+    'USDT-A': {
+      link: '/inprogress',
+      name: 'GSU (USDT-A)',
     },
     stETHeth: {
       link: '/inprogress',
@@ -351,7 +365,6 @@ export function borrowPageCardsData<T extends IlkTokenMap>({
   if (cardsFilter === 'ETH') {
     return ethProductCards(ilkToTokenMapping)
   }
-
   return ilkToTokenMapping.filter(({ token }) => token === cardsFilter)
 }
 

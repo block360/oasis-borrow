@@ -293,7 +293,7 @@
       "headlinePreAssetLandingPages": "Borrow GSUc",
       "subheaderPreAssetLandingPages": "Open a GSU Vault, deposit 25+ crypto collaterals. Either borrow GSUc or buy additional collateral to increase your exposure.<0/> Connect a wallet to start.",
       "headline": "Deploy your crypto into GSUcoin.app",
-      "subheader": "Borrow against your crypto. Put your crypto to work, currently ETH only."
+      "subheader": "Borrow against your crypto. Put your crypto to work, currently ETH and USDT."
     },
     "stats": {
       "30-day-volume": "30 Day Volume",
@@ -1335,6 +1335,7 @@
     "ETH-A": "ETH with medium cost and multiple",
     "ETH-B": "Highest ETH multiple option",
     "ETH-C": "Lowest ETH borrowing cost",
+    "USDT-A": "Lowest USDT borrowing cost",
     "WBTC-A": "wBTC with medium cost and multiple",
     "WBTC-B": "Highest wBTC multiple option",
     "WBTC-C": "Lowest wBTC borrowing cost",
@@ -1382,6 +1383,10 @@
     },
     "usdc": {
       "description": "USDC is a 1:1 USD-backed centralized stablecoin, fully regulated. USDC is natively supported on multiple layer 1 blockchains including Ethereum as an ERC-20 token, Algorand as an ASA token, Solana as a SPL token, TRON as an TRC-20 token, and Stellar as a native asset. It is operated by Circle.",
+      "link": "https://www.circle.com/en/about-circle"
+    },
+    "usdt": {
+      "description": "USDT (Tether) is a widely adopted stablecoin that is designed to maintain a 1:1 ratio with the US dollar. It is fully regulated and operates as a digital representation of traditional fiat currency. USDT is supported on various layer 1 blockchains, including Ethereum as an ERC-20 token, Algorand as an ASA token, Solana as a SPL token, TRON as a TRC-20 token, and Stellar as a native asset.",
       "link": "https://www.circle.com/en/about-circle"
     },
     "lp-token": {
@@ -1703,7 +1708,6 @@
       "successful-join": "You have successfully joined the GSUcoin.app Refer a Friend program."
     }
   },
-
   "all": "All",
   "clear-selection": "Clear selection",
   "discover": {
@@ -1781,17 +1785,14 @@
   },
   "tos-jwt-signature-expired-title": "Update Your Signature",
   "tos-jwt-signature-expired-message": "Either your signature has expired, or an update to our services requires a new signature. Please sign a new message to continue.",
-
   "selected": "Selected",
   "setup": "Setup",
-
   "automation-creation": {
     "add-content": "Your vault is currently being updated to add your {{featureName}}. {{featureName}} will not be active until this completes.",
     "remove-content": "Your {{featureName}} cancellation is in progress. Once the transaction is complete. Your {{featureName}} trigger will be removed.",
     "add-complete-content": "You have successfully set up an {{featureName}} on your vault. Find out more about how this works",
     "remove-complete-content": "Your {{featureName}} has been successfully cancelled."
   },
-
   "auto-take-profit": {
     "title": "Take Profit",
     "cancel-summary-title": "Cancel Take Profit order summary",
